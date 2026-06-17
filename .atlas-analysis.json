@@ -1,0 +1,96 @@
+{
+  "projectType": "saas",
+  "projectName": "iTeam",
+  "projectDescription": "iTeam is an AI workforce platform that lets organizations create and manage teams of AI agents to autonomously execute business operations across every department.",
+  "theme": "luma",
+  "primaryColor": "#41ca70",
+  "lightColor": "#cccccc",
+  "darkColor": "#347c54",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "core-concepts"
+            ]
+          },
+          {
+            "group": "Building Your Workforce",
+            "pages": [
+              "workforce/ai-agents",
+              "workforce/teams",
+              "workforce/goals-and-processes",
+              "workforce/collaboration"
+            ]
+          },
+          {
+            "group": "Pulse",
+            "pages": [
+              "pulse/overview",
+              "pulse/how-it-works",
+              "pulse/alerts-and-severity",
+              "pulse/configuration"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/overview",
+              "integrations/crm-erp",
+              "integrations/api-connections"
+            ]
+          },
+          {
+            "group": "Security & Control",
+            "pages": [
+              "security/permissions-and-approvals",
+              "security/audit-logs"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Use Cases",
+        "groups": [
+          {
+            "group": "By Department",
+            "pages": [
+              "use-cases/customer-support",
+              "use-cases/sales",
+              "use-cases/marketing",
+              "use-cases/operations"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "AI agent creation with defined roles and business skills",
+    "Team-based organization mirroring company hierarchy",
+    "Autonomous end-to-end workflow execution",
+    "Pulse: real-time 24/7 business monitoring with adaptive alerting",
+    "Multi-department AI workforce deployment",
+    "Native integrations with CRM, ERP, APIs, and databases",
+    "Configurable approval workflows and autonomy levels",
+    "Persistent organizational memory and continuous learning",
+    "4-level severity alerting (Calm, Boost, Alert, Critical)",
+    "Daily executive briefings and smart incident grouping"
+  ],
+  "publicApiSurface": [
+    "Agent creation and configuration",
+    "Team assembly and management",
+    "Goal and process assignment",
+    "Pulse monitoring configuration",
+    "Integration connectors (CRM, ERP, API)",
+    "Approval workflow settings",
+    "Quiet hours configuration",
+    "Audit log access",
+    "Permissions and role management"
+  ]
+}

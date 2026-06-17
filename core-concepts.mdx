@@ -1,0 +1,129 @@
+---
+title: "Core Concepts: How iTeam Structures Your AI Workforce"
+sidebarTitle: "Core Concepts"
+description: "Learn how iTeam's six-level hierarchy — Company, Departments, Teams, Agents, Processes, and Tasks — mirrors how real organizations operate."
+---
+
+iTeam is designed around a single guiding principle: your AI workforce should work the way your real organization does. That means a clear hierarchy where strategic context flows down from the top and execution results flow back up — with human oversight available at every level.
+
+Understanding this hierarchy is the foundation for building an effective AI workforce.
+
+## The organizational hierarchy
+
+iTeam structures every deployment across six levels. Each level has a distinct role, and together they give your agents the context and coordination they need to operate autonomously.
+
+### 1. Company
+
+The Company is the top-level container for your entire AI workforce. It holds:
+
+- **Organizational memory** — persistent knowledge that accumulates across every agent, team, and department over time.
+- **Global context** — your business identity, objectives, and operating norms that every agent inherits.
+- **Cross-department visibility** — a unified view of what every department and team is doing.
+
+Everything your agents learn and every outcome they produce contributes back to company-level memory, making the whole workforce smarter over time.
+
+### 2. Departments
+
+Departments group teams by business function — the same way your org chart does. Common departments include Sales, Marketing, Operations, and Support, but you can define any structure that matches your business.
+
+Each department:
+- Owns one or more teams focused on that function.
+- Operates with its own goals and reporting cadence.
+- Shares context across its teams so agents in the same department stay aligned.
+
+### 3. Teams
+
+A team is a named, specialized group of agents that collaborate to execute a shared objective. Teams are the primary unit of work in iTeam.
+
+- Teams are identified by a channel-style handle (e.g., `marketing-ops`, `sales-outbound`).
+- Agents within a team communicate directly, delegate tasks to each other, and maintain shared context.
+- A team's composition should reflect the skills needed to own a complete workflow end-to-end.
+
+<Note>
+  A well-structured team contains three to six agents covering complementary roles. Overly large teams introduce coordination overhead; teams that are too small lack the specialization to handle complex workflows.
+</Note>
+
+### 4. Agents
+
+An agent is an individual AI employee. Every agent has:
+
+- **A defined role** — the job function it performs (e.g., Lead Research Agent, Content Agent, Compliance Officer).
+- **Business skills** — specific capabilities matched to that role, from data analysis to copywriting to API automation.
+- **Tool access** — native connections to the platforms the role requires: CRM, ERP, databases, spreadsheets, third-party APIs.
+- **Process knowledge** — operational context the agent builds up over time, enabling smarter decisions on each cycle.
+- **Real responsibilities** — end-to-end ownership of the tasks assigned to it, not just assistance.
+
+Agents are the atomic unit of execution. Everything in iTeam ultimately comes down to an agent completing a task.
+
+### 5. Processes
+
+A process is a recurring workflow that one or more agents execute on a schedule or in response to a trigger. Processes encode your operational playbooks — the "how we do things here" that agents follow consistently.
+
+Examples:
+- A daily lead enrichment process run by a CRM Agent every morning.
+- A weekly performance report process run by a Performance Agent every Friday.
+- A real-time incident response process triggered whenever a monitored metric breaches a threshold.
+
+Agents accumulate process knowledge with every run, progressively improving the quality and efficiency of each execution.
+
+### 6. Tasks
+
+A task is an individual, discrete unit of work. Tasks are created dynamically — by agents themselves, by team goals, or by triggered processes — and delegated to the agent best suited to complete them.
+
+Tasks have:
+- A clear objective and expected output.
+- An assigned owner (a specific agent).
+- A status that is visible in real time from the dashboard.
+- A full audit trail of the actions taken and reasoning applied.
+
+## Agents
+
+Agents are the workers that make everything run. When you create an agent, you configure four things:
+
+1. **Role and name** — what the agent does and how it's identified within the team.
+2. **Skills** — the specific capabilities the agent can apply (data retrieval, content generation, CRM operations, analysis, etc.).
+3. **Tool access** — which integrations the agent can use to interact with external systems.
+4. **Autonomy level** — whether the agent acts immediately or pauses for human approval before executing sensitive actions.
+
+Agents do not operate in isolation. They read from and write to shared team context, coordinate directly with teammates, and contribute outcomes back to company-level memory.
+
+## Teams
+
+Teams are where collaboration happens. When a goal is assigned to a team, the agents inside it:
+
+1. **Decompose the goal** into concrete tasks based on their collective skills.
+2. **Self-organize** — each agent picks up the tasks that match its role.
+3. **Delegate** — if a task requires a skill the current agent lacks, it routes the work to the right teammate.
+4. **Report back** — completed tasks roll up into progress toward the team's goal, visible in the dashboard in real time.
+
+This peer-to-peer coordination happens automatically. You set the goal; the team figures out how to achieve it.
+
+## Process knowledge
+
+Process knowledge is the operational context an agent accumulates by running a workflow repeatedly. With each execution cycle, the agent:
+
+- Logs the inputs, actions taken, and outcomes achieved.
+- Compares the current run against historical patterns to detect drift or improvement.
+- Updates its internal model of "what normal looks like" for this process in this business.
+
+Over time, agents become progressively better at the processes they own — not because you retrain them, but because they learn from doing. This persistent learning is stored at both the agent level and, for cross-cutting patterns, at the company level.
+
+## Autonomy levels
+
+iTeam gives you fine-grained control over how much independence each agent has. You configure autonomy per action type, not as a single global setting.
+
+| Mode | Agent behavior |
+|---|---|
+| **Approval required** | The agent proposes the action and waits for a human to approve before executing. |
+| **Notify and act** | The agent acts immediately but sends you a real-time notification so you can intervene. |
+| **Fully autonomous** | The agent executes without interruption. Results appear in the activity log after the fact. |
+
+Start with approval-required for actions that touch sensitive systems (CRM writes, financial data, outbound communications), and promote agents to greater autonomy as you build confidence in their behavior.
+
+<Warning>
+  Autonomy level changes take effect immediately. Switching a high-frequency process agent to fully autonomous before validating its behavior in approval mode can result in large volumes of unreviewed actions.
+</Warning>
+
+<Info>
+  **Pulse** is a specialized agent type with its own monitoring loop, severity classification system, and adaptive check interval. Rather than executing goals on demand, Pulse continuously observes your business metrics and surfaces anomalies and opportunities in real time. [Learn more about Pulse →](/pulse/overview)
+</Info>

@@ -1,0 +1,71 @@
+---
+title: "Connect your CRM and ERP platforms to iTeam agents"
+sidebarTitle: "CRM & ERP"
+description: "Give iTeam agents real-time access to customer records, pipeline data, financial metrics, and operational information from your CRM and ERP systems."
+---
+
+Connecting your CRM and ERP gives iTeam agents real-time access to the data that drives your business — customer records, pipeline stages, financial metrics, inventory levels, and operational information. Instead of agents working from static exports or summaries, they work directly from your live systems, with the same data your team sees every day.
+
+## CRM integrations
+
+You connect a CRM at the agent level. Each agent that needs CRM access gets its own connection, with its own scope.
+
+<Steps>
+  <Step title="Open the agent you want to connect">
+    Navigate to your workspace and open the agent you want to configure. If you haven't created an agent yet, create one first and then return to its settings.
+  </Step>
+  <Step title="Go to Tool Access in the agent settings">
+    Inside the agent, select the **Tool Access** tab. This is where you manage every external platform the agent is allowed to use.
+  </Step>
+  <Step title="Select your CRM platform from the list">
+    Browse the list of native connectors and select your CRM — Salesforce, HubSpot, Pipedrive, or another supported platform.
+  </Step>
+  <Step title="Authenticate with your CRM credentials">
+    Follow the authentication prompt. Depending on the platform, this is either an OAuth flow (you'll be redirected to your CRM to authorize access) or a credentials form where you enter an API key or username and password.
+  </Step>
+  <Step title="Choose access scope">
+    Select **Read-only** or **Read-write** access. Read-only lets the agent pull data. Read-write lets the agent create and update records as well.
+  </Step>
+  <Step title="Save — the agent now has live access to your CRM">
+    Click **Save**. The connection is active immediately. The agent can now query your CRM data as part of any task it executes.
+  </Step>
+</Steps>
+
+## What agents can do with CRM access
+
+Once connected, agents can use your CRM as a live data source and an output target. Common patterns across iTeam's built-in use cases:
+
+- **Lead Research Agents** pull contact and company data to build context before an outreach sequence begins — no manual lookups required.
+- **Outreach Agents** log call and email activities back to the CRM automatically, keeping your records current without any human data entry.
+- **CRM Agents** sync meeting notes, update deal stages, and flag records that are missing key information — running continuously to keep your database clean.
+
+<Tip>
+  Use read-only access for agents whose job is analysis or monitoring. Only grant read-write access to agents whose role explicitly requires creating or updating records. This limits the blast radius if an agent ever behaves unexpectedly.
+</Tip>
+
+## ERP integrations
+
+Connecting your ERP follows the same pattern as CRM. Open the agent, go to Tool Access, select your ERP platform, authenticate, and set the scope.
+
+With ERP access, agents can work with:
+
+- **Financial data** — revenue figures, cost breakdowns, budget actuals, and forecasts
+- **Inventory and fulfillment** — stock levels, order history, and supply chain status
+- **Operational records** — project data, resource allocation, and utilization metrics
+- **Compliance information** — audit trails, regulatory records, and policy-relevant data
+
+This makes ERP integrations particularly useful for operations and finance teams building agents that produce reporting, flag anomalies, or monitor KPIs on a continuous basis.
+
+## Permissions and scopes
+
+You can go beyond the basic read-only vs. read-write toggle. For CRM platforms that support object-level permissions, iTeam lets you restrict an agent to specific record types within the system.
+
+For example, you can grant a Lead Research Agent access to **Contacts** and **Companies** only — not Deals, not billing records. The agent can't touch objects it hasn't been granted access to, even if those objects exist in the same CRM instance.
+
+To configure object-level scoping, expand the **Advanced Permissions** section during the Tool Access setup after you've selected the platform and authenticated.
+
+## Next steps
+
+- [Back to integrations overview →](/integrations/overview)
+- [Connect a custom REST API →](/integrations/api-connections)
+- [Manage permissions and approvals →](/security/permissions-and-approvals)

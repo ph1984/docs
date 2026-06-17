@@ -1,0 +1,126 @@
+---
+title: "Creating and configuring AI agents for your workforce"
+sidebarTitle: "AI Agents"
+description: "Learn how to create AI agents with defined roles, business skills, and tool access — the building blocks of your iTeam workforce."
+---
+
+Agents are the fundamental unit of iTeam. Every piece of work your AI workforce executes flows through an individual agent — a digital employee with a defined role, a specific set of skills, and direct access to the tools it needs to get the job done. Before you build teams, set goals, or run processes, you start here: by creating the right agents for the right jobs.
+
+## Agent anatomy
+
+Every agent in iTeam is built from five core components. Together, these components determine what an agent is, what it can do, and how well it performs in your organization.
+
+<CardGroup cols={2}>
+  <Card title="Role" icon="id-card">
+    The agent's identity in your organization. Roles like **Data Analyst**, **Marketing Strategist**, **Support Agent**, or **Operations Monitor** tell iTeam — and your other agents — what this agent is responsible for and how it fits into the team.
+  </Card>
+  <Card title="Business Skills" icon="brain">
+    The specific capabilities the agent brings to the table. Skills are task-level competencies: analyzing conversion funnels, writing long-form content, resolving support tickets, generating lead lists, producing revenue reports, and more.
+  </Card>
+  <Card title="Tool Access" icon="plug">
+    The external platforms and systems the agent can interact with. Connect agents to your CRM, databases, APIs, spreadsheets, email, messaging platforms, and any other tools your workflows depend on.
+  </Card>
+  <Card title="Process Knowledge" icon="book-open">
+    The operational context the agent builds and uses over time. Process knowledge includes your business rules, workflow sequences, escalation criteria, and definitions of what "normal" looks like for your operation.
+  </Card>
+  <Card title="Responsibilities" icon="list-check">
+    The actual tasks the agent executes autonomously — end-to-end, without requiring manual coordination. Responsibilities define the scope of what the agent owns, from data pulls to outreach to reporting.
+  </Card>
+</CardGroup>
+
+---
+
+## Creating an agent
+
+<Steps>
+  <Step title="Open your workspace and click New Agent">
+    Navigate to your iTeam workspace. On the **Agents** page, click **New Agent** to open the agent creation panel.
+  </Step>
+  <Step title="Define the role">
+    Give the agent a descriptive name (e.g., `Lead Research Agent`) and select its role type from the list — or describe a custom role in plain language. Be specific: `B2B Lead Research Specialist` outperforms a generic `Researcher`.
+  </Step>
+  <Step title="Configure business skills">
+    Select from the skill library or describe the agent's capabilities in plain language. For example: *"Analyze top-of-funnel performance metrics, identify drop-off points, and generate weekly summaries."* The more precise your skill definition, the more reliably the agent executes.
+  </Step>
+  <Step title="Grant tool access">
+    Connect the platforms this agent needs to do its work. Toggle on the relevant integrations — CRM, database, spreadsheet, API endpoint, or communication tool. iTeam only requests the permissions each agent actively requires.
+  </Step>
+  <Step title="Add process knowledge">
+    Describe the workflows and context the agent should understand from day one. Include your process steps, business rules, and any edge cases the agent should handle. You can paste in existing SOPs, runbooks, or process documentation directly.
+  </Step>
+  <Step title="Set the autonomy level">
+    Choose how independently the agent operates. Set it to **Ask for Approval** when the agent should surface decisions to you before acting, or **Act Autonomously** when you want it to execute without interruption. You can adjust this at any time.
+  </Step>
+</Steps>
+
+<Tip>
+  Start specific. An agent with a narrow, well-defined role — like "analyze paid search performance and flag anomalies" — consistently outperforms a broad, general-purpose agent. You can always add more agents to cover adjacent responsibilities.
+</Tip>
+
+---
+
+## Agent roles by department
+
+Use these examples as a starting point when creating agents for each area of your business.
+
+<Tabs>
+  <Tab title="Customer Support">
+    | Agent Name | Primary Responsibilities |
+    |---|---|
+    | **L1 Support Agent** | Handles incoming support tickets, applies knowledge base answers, resolves common issues without escalation |
+    | **Knowledge Agent** | Maintains and updates the support knowledge base, surfaces relevant articles during live conversations |
+    | **Resolution Agent** | Manages escalated tickets, coordinates with other departments, closes complex cases end-to-end |
+    | **Triage Agent** | Categorizes and prioritizes incoming requests, routes tickets to the right agent or team |
+  </Tab>
+  <Tab title="Sales">
+    | Agent Name | Primary Responsibilities |
+    |---|---|
+    | **Lead Research Agent** | Identifies and qualifies target accounts, enriches contact data, maintains prospect lists |
+    | **Outreach Agent** | Drafts and sends personalized outreach sequences, tracks responses, books meetings |
+    | **CRM Agent** | Keeps CRM records up to date, logs interactions, generates pipeline reports |
+    | **Deal Intelligence Agent** | Monitors deal velocity, surfaces at-risk opportunities, recommends next actions |
+  </Tab>
+  <Tab title="Marketing">
+    | Agent Name | Primary Responsibilities |
+    |---|---|
+    | **Research Agent** | Monitors market trends, competitor activity, and audience behavior; produces research briefs |
+    | **Content Agent** | Writes blog posts, email copy, social content, and ad creatives based on research briefs |
+    | **Performance Agent** | Tracks campaign metrics, identifies underperforming assets, generates optimization recommendations |
+    | **Execution Agent** | Schedules and publishes campaign assets across platforms, coordinates deployment of content and email sequences |
+    | **Marketing Strategist** | Synthesizes research and performance data into campaign plans and distributes work to the team |
+  </Tab>
+  <Tab title="Operations">
+    | Agent Name | Primary Responsibilities |
+    |---|---|
+    | **Monitoring Agent** | Watches key operational metrics in real time, detects anomalies and unusual patterns |
+    | **Reporting Agent** | Generates scheduled reports (daily, weekly, monthly) and distributes them to the right stakeholders |
+    | **Compliance Agent** | Checks process outputs against compliance rules, flags deviations, logs audit trails |
+    | **Workflow Coordinator** | Orchestrates multi-step operational processes, ensures handoffs between agents complete correctly |
+  </Tab>
+</Tabs>
+
+---
+
+## Managing and updating agents
+
+Once an agent is live, you can update any of its components at any time without rebuilding from scratch.
+
+<Accordion title="Updating skills and responsibilities">
+  Open the agent's profile and navigate to the **Skills** tab. Add, remove, or rewrite skill definitions. Changes take effect immediately — the agent applies updated skills on its next task cycle.
+</Accordion>
+
+<Accordion title="Adjusting tool access">
+  Go to the **Integrations** tab on the agent profile. Connect new platforms or revoke access to existing ones. iTeam re-authenticates the agent's permissions automatically.
+</Accordion>
+
+<Accordion title="Reviewing process knowledge">
+  The **Knowledge** tab shows the process context your agent has accumulated over time. You can view, edit, or supplement this knowledge at any point — useful when your business processes change and you need the agent to adapt immediately.
+</Accordion>
+
+<Accordion title="Changing autonomy level">
+  Navigate to **Settings → Autonomy** on the agent profile. Switch between **Ask for Approval** and **Act Autonomously** at any time. You can also set action-specific rules — for example, allowing autonomous execution for reporting tasks while requiring approval for any outbound communication.
+</Accordion>
+
+<Warning>
+  Revoking tool access while an agent has active tasks in progress will pause those tasks until access is restored or the tasks are reassigned to another agent. Check the agent's task queue before removing an integration.
+</Warning>

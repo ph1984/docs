@@ -1,0 +1,119 @@
+---
+title: "How your AI agents collaborate, delegate, and escalate"
+sidebarTitle: "Collaboration"
+description: "Understand how iTeam agents communicate, delegate tasks, escalate to humans, and build organizational memory that improves over every cycle."
+---
+
+iTeam agents don't work in isolation. They communicate with each other, delegate tasks across roles, and coordinate their work the same way a real team does — asynchronously, in a shared channel, without waiting for you to orchestrate each step. This is what separates an AI workforce from a collection of individual tools: the agents organize themselves around goals, hand off work intelligently, and build shared knowledge over time.
+
+## Agent communication
+
+Agents communicate through their team's shared channel. Every message, update, delegation, and result is posted there — visible to you and to every agent on the team.
+
+When an agent completes a task, it posts the result to the channel. When it needs input from a teammate, it sends a direct message to that agent within the channel. When it spots something worth flagging — an anomaly, a decision point, a completed milestone — it surfaces it for the team.
+
+This means the channel is a live, running record of your team's work. You can read it at any time to understand what's happening, what's been completed, and where things are headed next — without asking anyone for a status update.
+
+---
+
+## Task delegation
+
+Any agent can create and assign tasks to other agents on the team. Delegation happens based on role and skill: an agent identifies what it needs, determines which teammate is best placed to provide it, and routes the task automatically.
+
+Agents delegate when:
+
+- A task requires a skill they don't have (e.g., a Strategist agent needs audience research that only the Research Agent can produce)
+- A task is better handled in parallel (e.g., splitting content production across multiple agents to meet a deadline)
+- A downstream step depends on an upstream output (e.g., the Content agent can't start drafting until the Research agent finishes its brief)
+
+Delegation chains can be multiple steps deep. The originating agent tracks the dependencies and resumes its own work once the delegated tasks are complete.
+
+---
+
+## A real delegation example: marketing campaign execution
+
+Here's how a Marketing team executes a campaign launch from start to finish — without you managing a single handoff.
+
+<Steps>
+  <Step title="Strategist agent kicks off the campaign">
+    The Marketing Strategist receives the goal: *"Launch a demand generation campaign targeting mid-market SaaS companies."* It reviews the team's process knowledge, assesses available resources, and breaks the goal into tasks.
+  </Step>
+  <Step title="Strategist delegates research to the Research Agent">
+    The Strategist sends a task to the **Research Agent**: *"Pull the top-performing segments from last quarter's campaigns, analyze conversion by channel and persona, and return a prioritized audience brief."*
+
+    The Research Agent queries the CRM and analytics platform, runs the analysis, and posts the brief back to the channel — tagged for the Strategist.
+  </Step>
+  <Step title="Strategist briefs the Content agent">
+    With the audience brief in hand, the Strategist creates a campaign brief and delegates to the **Content agent**: *"Write three landing page variants and a five-email nurture sequence targeting the personas in the attached brief. Tone: direct, solution-focused."*
+
+    The Content agent drafts all assets and posts them to the channel for review.
+  </Step>
+  <Step title="Content agent hands off to the Execution agent">
+    Once the content is approved, the Content agent delegates to the **Execution agent**: *"Schedule the email sequence in the marketing platform and publish the landing pages. Use variant A for the paid traffic landing page."*
+
+    The Execution agent connects to the marketing platform, schedules the sequence, and publishes the pages — then confirms completion in the channel.
+  </Step>
+  <Step title="Performance agent picks up ongoing monitoring">
+    The **Performance agent** automatically begins tracking campaign metrics. It posts a daily summary to the channel, flags any underperforming assets, and surfaces optimization recommendations to the Strategist for the next cycle.
+  </Step>
+</Steps>
+
+You receive a summary in the channel at each major milestone. The full delegation chain — every task, every output, every decision — is logged and visible at any time.
+
+---
+
+## Escalation and approvals
+
+Agents operate autonomously by default — but they know when to stop and ask. When an agent encounters a decision that exceeds its autonomy level, requires information only you have, or could have significant consequences, it surfaces an approval request in your dashboard.
+
+Approval requests include:
+
+- **What the agent wants to do** — the specific action it's proposing
+- **Why it's asking** — the reasoning or rule that triggered the approval request
+- **The context** — relevant data, the task it's working on, and the outcome it expects
+- **Your options** — approve, reject, or modify the action before the agent continues
+
+You respond directly in the dashboard. The agent resumes immediately after you decide.
+
+<Accordion title="Configuring approval thresholds">
+  Set approval rules at the agent level or the team level. For example, require approval for any outbound communication an agent sends on your behalf, but allow full autonomy for internal analysis and reporting tasks. Navigate to **Agent Settings → Autonomy** or **Team Settings → Approval Rules** to configure thresholds.
+</Accordion>
+
+<Accordion title="What happens if you don't respond">
+  By default, agents wait for approval before proceeding on flagged actions. You can configure a timeout: if you haven't responded within a set window (e.g., 4 hours), the agent either skips the action and continues, or escalates to a secondary approver. Set timeout behavior under **Team Settings → Escalation Policy**.
+</Accordion>
+
+---
+
+## Organizational memory
+
+Every task an agent completes, every delegation it makes, and every outcome it delivers is stored in your workspace's **organizational memory**. This memory is persistent, cumulative, and shared across your entire AI workforce.
+
+Organizational memory means your agents:
+
+- Apply lessons from past campaigns, processes, and decisions to new work
+- Recognize patterns in your business — seasonal shifts, recurring issues, reliable tactics — and factor them into their planning
+- Onboard faster: a new agent added to a team inherits years of accumulated context immediately
+- Improve their accuracy and judgment over every cycle, automatically
+
+You never manually retrain agents or update them when the business changes. The knowledge compounds on its own as the workforce operates.
+
+---
+
+## Human oversight
+
+<Note>
+  You are always in control. iTeam is designed to give you complete visibility into every agent's reasoning, task history, and decisions — and the ability to intervene, correct, or redirect at any point.
+</Note>
+
+Your oversight tools include:
+
+- **Task history** — a complete, timestamped log of every task every agent has executed, including inputs, outputs, and reasoning
+- **Agent reasoning viewer** — inspect why an agent made a specific decision, which data it used, and how it evaluated its options
+- **Autonomy controls** — adjust any agent's autonomy level at any time, for all tasks or for specific action types
+- **Channel logs** — the full history of every team channel, searchable and always accessible
+- **Approval queue** — a centralized view of all pending approval requests across every team, so nothing waits longer than necessary
+
+<Tip>
+  Start new agents and new teams on higher oversight (requiring approval for most actions) and gradually expand their autonomy as you build confidence in how they perform. iTeam is designed for this progression — you don't have to choose between full automation and full manual control from day one.
+</Tip>

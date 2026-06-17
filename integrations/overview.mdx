@@ -1,0 +1,62 @@
+---
+title: "Connect your tools and data sources to iTeam agents"
+sidebarTitle: "Overview"
+description: "Grant your iTeam agents access to the external platforms they need — CRM, ERP, databases, APIs, spreadsheets, and communication tools."
+---
+
+iTeam agents need access to your business tools to do their work. Integrations are how you grant that access. Without a connection to your data sources, an agent can reason and plan — but it can't read your pipeline, update a record, or pull a financial report. Once you connect a platform, the agent has live, scoped access to act on your behalf.
+
+## How integrations work
+
+Integrations in iTeam are configured at the agent level. When you create or edit an agent, you grant it access to the specific platforms it needs to carry out its responsibilities. An agent only has access to the tools you explicitly assign to it — nothing more.
+
+Once a connection is established, the agent can:
+
+- **Read data** — pull records, reports, and metrics from connected platforms in real time
+- **Write outputs** — create or update records, log activities, and push results back to source systems
+- **Trigger actions** — call APIs, move data between systems, and kick off downstream workflows
+
+Because access is granted per-agent, you can give a Lead Research Agent read-only access to your CRM while a CRM Agent gets full read-write access. Each agent operates within exactly the boundaries you define.
+
+## Supported integration categories
+
+<CardGroup cols={2}>
+  <Card title="CRM & Sales" icon="users">
+    Connect Salesforce, HubSpot, Pipedrive, and other CRM platforms. Agents can read contact and company records, update pipeline stages, and log activities.
+  </Card>
+  <Card title="ERP & Finance" icon="building-columns">
+    Link your business management and financial platforms. Agents can access order history, inventory data, financial metrics, and compliance records.
+  </Card>
+  <Card title="Databases" icon="database">
+    Connect SQL databases, data warehouses, and real-time data feeds. Agents query and write structured data directly from your connected data sources.
+  </Card>
+  <Card title="APIs & Custom Connections" icon="code">
+    Connect any REST API through iTeam's custom connector. If a native integration doesn't exist for your tool, you can build the connection yourself.
+  </Card>
+  <Card title="Spreadsheets & Files" icon="table">
+    Integrate Google Sheets, Microsoft Excel, and CSV data sources. Agents can read, analyze, and update tabular data without manual exports.
+  </Card>
+  <Card title="Communication Platforms" icon="bell">
+    Route agent outputs, alerts, and notifications to the channels your team already uses — so results land where people are paying attention.
+  </Card>
+</CardGroup>
+
+## Integration security
+
+Your credentials stay yours. When you connect a platform to iTeam, the agent authenticates using your own account credentials or API keys — iTeam does not share a pool of generic credentials across customers.
+
+Every integration supports configurable access scopes:
+
+- **Read-only** — the agent can pull data but cannot create, modify, or delete records. Ideal for monitoring, analysis, and reporting agents.
+- **Read-write** — the agent can both read data and push changes back to the platform. Required for agents that log activities, update records, or create new entries.
+
+You choose the scope when you configure the integration, and you can change it at any time from the agent's Tool Access settings.
+
+<Note>
+  Removing an integration from an agent immediately revokes its access. The agent will no longer be able to read from or write to that platform until you reconnect it.
+</Note>
+
+## Next steps
+
+- [Connect your CRM or ERP →](/integrations/crm-erp)
+- [Connect a custom REST API →](/integrations/api-connections)

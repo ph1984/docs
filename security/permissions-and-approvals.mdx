@@ -1,0 +1,93 @@
+---
+title: "Set agent permissions and approval workflows in iTeam"
+sidebarTitle: "Permissions"
+description: "Control what each agent can do autonomously and which actions require your sign-off before executing — configured per action, per agent."
+---
+
+iTeam gives you precise control over what each agent can do — from which external platforms it can access, to which actions require your sign-off before executing. You don't choose between full autonomy and full oversight; you set the right level for every action individually.
+
+## Autonomy levels
+
+Every action an agent can take has its own autonomy setting. There are two levels:
+
+<CardGroup cols={2}>
+  <Card title="Approval required" icon="hand">
+    The agent surfaces the proposed action and waits for you to approve or reject it before proceeding. Use this for any action with external side-effects — sending messages, updating records, triggering workflows.
+  </Card>
+  <Card title="Autonomous" icon="bolt">
+    The agent executes immediately without interrupting you, then logs the action so you can review it at any time. Use this once you've validated the agent's judgment on a particular type of action.
+  </Card>
+</CardGroup>
+
+<Tip>
+  Start with **Approval required** on all write actions. Review the agent's reasoning for a week, then promote individual actions to **Autonomous** as you gain confidence in its judgment. Calibrating incrementally is safer than unlocking everything at once.
+</Tip>
+
+## Configuring action permissions
+
+<Steps>
+  <Step title="Open agent or team settings">
+    From your workspace dashboard, navigate to the agent or team you want to configure and open its **Settings** panel.
+  </Step>
+  <Step title="Navigate to Permissions">
+    Select the **Permissions** tab. You'll see every action type available to that agent — for example: send message, update record, execute workflow, query data source.
+  </Step>
+  <Step title="Set the autonomy level for each action">
+    For each action type, choose **Approval required** or **Autonomous**. Team-level defaults are pre-filled, but you can override any individual action here.
+  </Step>
+  <Step title="Save your changes">
+    Click **Save**. Changes take effect immediately — the agent will apply the new settings on its very next action.
+  </Step>
+</Steps>
+
+## Approval workflow
+
+When an agent reaches an action marked **Approval required**, it pauses and surfaces a request in your dashboard.
+
+Each approval request shows you:
+
+- **What** the agent wants to do — the specific action and its target (e.g., "Update deal stage for Acme Corp to Closed Won")
+- **Why** the agent wants to do it — the reasoning and evidence that led to this decision
+- **What data it's working from** — the sources the agent consulted before proposing the action
+
+From the approval request you can:
+
+1. **Approve** — the agent proceeds immediately
+2. **Reject** — the action is cancelled and logged as rejected
+3. **Modify then approve** — edit the action parameters before confirming, so the agent executes your adjusted version
+
+You receive a notification in the dashboard whenever an agent is waiting on your approval. Agents do not time out — they hold their position until you respond.
+
+## Tool access permissions
+
+Beyond individual actions, you also control which external platforms each agent can connect to. An agent with CRM access can read and write to your CRM; one without it cannot, even if its role would otherwise call for it.
+
+Grant the minimum access each role actually requires:
+
+<CardGroup cols={2}>
+  <Card title="Read-only access" icon="eye">
+    Suitable for agents whose role is analysis, monitoring, or reporting. They can query data but cannot modify anything in the connected platform.
+  </Card>
+  <Card title="Read + write access" icon="pen-to-square">
+    Required for agents that execute operational tasks — updating records, sending communications, triggering workflows. Scope tightly to the specific platforms the role needs.
+  </Card>
+</CardGroup>
+
+<Note>
+  iTeam Pulse is always read-only. It queries your connected platforms to monitor for anomalies and opportunities but never modifies external data directly. Any actions Pulse proposes go through the normal approval or autonomous workflow you configure.
+</Note>
+
+## Team-level vs. agent-level permissions
+
+You can manage permissions at two scopes:
+
+| Scope | What it controls |
+|---|---|
+| **Team level** | Default autonomy settings that apply to every agent on the team |
+| **Agent level** | Per-agent overrides that take precedence over the team default |
+
+Set sensible defaults at the team level, then use agent-level overrides for agents with narrower or broader responsibilities. For example, a monitoring agent on your Operations team might be autonomous on alerting but require approval before escalating to an external ticketing system.
+
+<Warning>
+  Granting **Autonomous** permission to an agent with write access means it can modify external systems — update CRM records, send emails, trigger workflows — without asking you first. Review the agent's reasoning trail in the audit logs thoroughly before enabling autonomous write permissions. See [Audit Logs](/security/audit-logs) for how to inspect that history.
+</Warning>

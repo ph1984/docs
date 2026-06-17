@@ -1,0 +1,85 @@
+---
+title: "Connect any external REST API to your iTeam agents"
+sidebarTitle: "API Connections"
+description: "Connect any REST API to your iTeam agents — define allowed endpoints, configure authentication, and assign the connection to the agents that need it."
+---
+
+If your tool isn't in the native connector list, you can connect any REST API directly. iTeam's custom API connector lets agents call any external service — third-party platforms, data providers, proprietary services, or anything else that exposes a REST API. You define exactly which endpoints the agent can reach, and iTeam handles authentication and secure credential storage.
+
+## Setting up a custom API connection
+
+<Steps>
+  <Step title="Go to Integrations → API Connections in your workspace">
+    From your workspace sidebar, navigate to **Integrations**, then select **API Connections**. This is the central hub for all custom API configurations in your account.
+  </Step>
+  <Step title="Click Add API Connection">
+    Select **Add API Connection** to open the connection setup form.
+  </Step>
+  <Step title="Enter the base URL of the API">
+    Provide the base URL for the API (for example, `https://api.yourservice.com/v2`). All endpoint paths you define later will be resolved relative to this base URL.
+  </Step>
+  <Step title="Configure authentication">
+    Choose your authentication method and enter the required credentials. See [Authentication methods](#authentication-methods) below for details on each option.
+  </Step>
+  <Step title="Define the endpoints the agent is allowed to call">
+    Add the specific endpoints this connection exposes. For each endpoint, specify the path, the HTTP method (GET, POST, PATCH, etc.), and an optional description so it's clear what the endpoint does.
+  </Step>
+  <Step title="Test the connection">
+    Use the **Test** button to verify that iTeam can reach the API with the credentials you provided. The test makes a request to the first endpoint you've defined and shows you the response status.
+  </Step>
+  <Step title="Assign the connection to an agent">
+    Once the connection passes the test, go to the agent you want to give access to, open **Tool Access**, and select the API connection from your saved connections list.
+  </Step>
+</Steps>
+
+## Authentication methods
+
+<Tabs>
+  <Tab title="API Key">
+    Enter your API key and specify the header name your API expects. Common header names are `X-API-Key` and `Authorization`. iTeam sends the key in every request header automatically once the connection is configured.
+
+    ```text
+    Header name:  X-API-Key
+    Value:        your-api-key-here
+    ```
+
+    If your API expects the key in a query parameter rather than a header, you can specify that in the advanced options during setup.
+  </Tab>
+  <Tab title="Bearer Token">
+    Paste your Bearer token. iTeam stores it encrypted and injects it into the `Authorization` header as `Bearer <token>` on every request the agent makes through this connection.
+
+    Use this method for APIs that issue long-lived access tokens, service account tokens, or JWT tokens that you manage outside of a full OAuth flow.
+  </Tab>
+  <Tab title="OAuth 2.0">
+    Select **OAuth 2.0** and follow the authorization flow. You'll provide your client ID and client secret, and iTeam will redirect you through the OAuth consent screen for the target service.
+
+    Once authorized, iTeam stores the access token and refresh token securely. Token refresh is handled automatically — your agent's connection stays valid without any manual intervention when the access token expires.
+  </Tab>
+  <Tab title="Basic Auth">
+    Enter a username and password. iTeam encodes the credentials and sends them as a Base64-encoded `Authorization` header on every request.
+
+    Basic Auth is common for internal APIs, legacy services, and tools that haven't adopted token-based authentication. If the API supports more modern auth methods, prefer those instead.
+  </Tab>
+</Tabs>
+
+## Scoping API access
+
+The most important practice when setting up a custom API connection is to limit it to the minimum endpoints an agent actually needs.
+
+Rather than creating a single connection that exposes your entire API surface, create separate, narrowly scoped connections:
+
+- A **reporting agent** might only need `GET /reports` and `GET /metrics` — give it a read-only connection with just those two endpoints.
+- An **order management agent** might need `GET /orders`, `PATCH /orders/{id}`, and `POST /orders` — scoped specifically to order resources.
+- A **data pipeline agent** might call a single dedicated service endpoint to fetch processed data.
+
+This approach limits what an agent can do if it's misconfigured or operating on unexpected input. It also makes it easier to audit: each connection's endpoint list tells you exactly what that agent is capable of doing externally.
+
+<Note>
+  API credentials are stored encrypted at rest. iTeam never logs request payloads that contain credentials or sensitive data. If you rotate an API key or token, update it in the API Connection settings — all agents using that connection will pick up the new credential immediately.
+</Note>
+
+## Next steps
+
+- [Back to integrations overview →](/integrations/overview)
+- [Connect your CRM or ERP →](/integrations/crm-erp)
+- [Manage permissions and approvals →](/security/permissions-and-approvals)

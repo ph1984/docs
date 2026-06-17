@@ -1,0 +1,59 @@
+---
+title: "Pulse alert severity levels and notification types"
+sidebarTitle: "Alerts & Severity"
+description: "Pulse uses four severity levels — CALM, BOOST, ALERT, and CRITICAL — to communicate urgency clearly and respect your team's time outside working hours."
+---
+
+Pulse uses four severity levels to classify what it finds in each cycle. The level determines whether a notification is sent, how urgently the team is contacted, and whether quiet hours apply. The goal is signal clarity: your team gets notified when it matters, at the right level of urgency, with no noise in between.
+
+## The four severity levels
+
+<CardGroup cols={2}>
+  <Card title="CALM" icon="circle-check" iconType="solid" color="#22c55e">
+    Metrics are within normal range. No notification is sent, and Pulse continues its regular 10-minute cycle. Everything is working as expected.
+
+    **Example:** *"Retention metrics within range. Next cycle in 10min."*
+  </Card>
+  <Card title="BOOST" icon="arrow-trend-up" iconType="solid" color="#3b82f6">
+    A positive opportunity has been detected — something above normal that your team should know about immediately so you can act while the window is open.
+
+    **Example:** *"Signups 2× above normal. Ideal moment for first-deposit bonus push."*
+  </Card>
+  <Card title="ALERT" icon="triangle-exclamation" iconType="solid" color="#f59e0b">
+    Something unusual has been detected that warrants attention, but has not yet reached a critical threshold. Pulse accelerates its monitoring cycle and notifies the team so you can investigate before the situation escalates.
+
+    **Example:** *"Conversion rate down 12% over the last 3 hours. Monitoring closely — no critical threshold reached yet."*
+  </Card>
+  <Card title="CRITICAL" icon="circle-xmark" iconType="solid" color="#ef4444">
+    A serious issue requires immediate attention. CRITICAL alerts override quiet hours — your team will be notified regardless of the time or your notification schedule.
+
+    **Example:** *"Conversion dropped 30% in the last hour. Pattern suggests payment gateway failure."*
+  </Card>
+</CardGroup>
+
+<Tip>
+  **BOOST is intentionally its own severity level.** Capturing positive opportunities is as important as detecting problems. A signup surge at the right moment, acted on quickly, can deliver outsized returns — and it deserves the same immediate attention as an anomaly.
+</Tip>
+
+## Smart incidents
+
+When Pulse detects related alerts across multiple cycles, it groups them into a single incident rather than flooding your team with individual notifications. Each incident has a full timeline showing when the anomaly started, how it evolved, what actions were suggested, and when it was resolved.
+
+You see the complete picture, not a stream of disconnected pings. Smart incidents also give Pulse a clean record to learn from — patterns that span hours or days are tracked and factored into future baselines.
+
+## Suggested actions
+
+Every ALERT and CRITICAL notification includes a suggested action. Pulse tells you what it recommends, not just what happened. Suggestions are based on the pattern Pulse has detected, historical outcomes, and the context of your business at that moment.
+
+You decide whether to follow the suggestion, modify it, or escalate — but you always have a clear starting point, even at 3 AM.
+
+## Daily briefing
+
+Every morning, Pulse sends an automatic summary of the past 24 hours. It's designed to replace the "what happened yesterday?" conversation at your team standup. The briefing includes:
+
+- Any incidents that were detected and their resolution status
+- Opportunities that were surfaced (and whether they were acted on)
+- Metric trends across key areas of your business
+- Any anomalies that are still open or unresolved
+
+The daily briefing is sent on a schedule you configure. You can direct it to a Slack channel, an email distribution list, or both.

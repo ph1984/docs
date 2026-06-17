@@ -1,0 +1,130 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "almond",
+  "name": "iTeam",
+  "description": "Build and manage your AI workforce. Deploy teams of AI agents that execute real business operations around the clock.",
+  "colors": {
+    "primary": "#41ca70",
+    "light": "#cccccc",
+    "dark": "#347c54"
+  },
+  "favicon": "https://media.brand.dev/e03294f6-0b5e-4074-ada6-8c284c64c285.png",
+  "icons": {
+    "library": "lucide"
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "contextual": {
+    "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
+  },
+  "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Home",
+          "icon": "house",
+          "href": "/"
+        },
+        {
+          "anchor": "iTeam Website",
+          "icon": "globe",
+          "href": "https://iteam.works"
+        }
+      ]
+    },
+    "directory": "card",
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "icon": "rocket",
+            "expanded": true,
+            "pages": [
+              "introduction",
+              "quickstart",
+              "core-concepts"
+            ]
+          },
+          {
+            "group": "Your AI Workforce",
+            "icon": "users",
+            "expanded": true,
+            "pages": [
+              "workforce/ai-agents",
+              "workforce/teams",
+              "workforce/goals-and-processes",
+              "workforce/collaboration"
+            ]
+          },
+          {
+            "group": "Pulse",
+            "icon": "activity",
+            "expanded": true,
+            "pages": [
+              "pulse/overview",
+              "pulse/how-it-works",
+              "pulse/alerts-and-severity",
+              "pulse/configuration"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "icon": "plug",
+            "expanded": true,
+            "pages": [
+              "integrations/overview",
+              "integrations/crm-erp",
+              "integrations/api-connections"
+            ]
+          },
+          {
+            "group": "Security & Control",
+            "icon": "shield",
+            "expanded": true,
+            "pages": [
+              "security/permissions-and-approvals",
+              "security/audit-logs"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Use Cases",
+        "groups": [
+          {
+            "group": "By Department",
+            "icon": "building-2",
+            "expanded": true,
+            "pages": [
+              "use-cases/customer-support",
+              "use-cases/sales",
+              "use-cases/marketing",
+              "use-cases/operations"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "https://media.brand.dev/7bbf701f-c290-40fb-8936-df76c2228a54.png",
+    "dark": "https://media.brand.dev/7bbf701f-c290-40fb-8936-df76c2228a54.png"
+  },
+  "navbar": {
+    "links": [],
+    "primary": {
+      "type": "button",
+      "label": "Get Started",
+      "href": "https://iteam.works"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/iteamworks",
+      "linkedin": "https://linkedin.com/company/iteamworks"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+---
+title: "Configure Pulse monitoring intervals and autonomy settings"
+sidebarTitle: "Configuration"
+description: "Control exactly how much autonomy Pulse has, when it sends notifications, and how it connects to your data sources — one setting at a time."
+---
+
+Pulse is configurable at the action level. You don't choose a single global mode — you decide, for each individual action Pulse can take, whether it should ask for your approval first or execute on its own. This lets you move at your own pace: start cautious, build confidence, and grant autonomy where you're ready for it.
+
+<Warning>
+  Granting full autonomy means Pulse will execute actions without asking. Start with read-only observation and approval-required actions while you calibrate your baselines. Expand autonomy incrementally as you gain confidence in Pulse's pattern recognition for your business.
+</Warning>
+
+## Autonomy settings
+
+For every action Pulse can take — sending a notification, executing a workflow, escalating an incident — you independently choose one of two modes:
+
+- **Ask for approval** — Pulse surfaces the finding and its suggested action, but waits for a human to confirm before doing anything.
+- **Act autonomously** — Pulse executes the action immediately without waiting for approval.
+
+The recommended starting point is approval-required for everything. As you observe how Pulse behaves and validate that its suggestions are accurate for your business, you can flip individual actions to autonomous one at a time.
+
+<Steps>
+  <Step title="Open Pulse settings">
+    Navigate to **Pulse → Settings → Autonomy** in your iTeam dashboard.
+  </Step>
+  <Step title="Select an action">
+    You'll see a list of every action Pulse is configured to take. Select the action you want to configure.
+  </Step>
+  <Step title="Choose the autonomy mode">
+    Toggle between **Ask for approval** and **Act autonomously**. The change takes effect immediately on the next Pulse cycle.
+  </Step>
+  <Step title="Review the action log">
+    After a few cycles, review the action log for that setting to confirm Pulse is behaving as expected before expanding autonomy to additional actions.
+  </Step>
+</Steps>
+
+## Quiet hours
+
+Quiet hours tell Pulse when not to send notifications. During a configured quiet window, non-critical alerts are held and delivered in the next morning's daily briefing instead of waking anyone up.
+
+<Note>
+  **CRITICAL alerts always override quiet hours.** If Pulse detects a serious issue — a major conversion drop, a payment failure, a fraud spike — it will notify your team immediately regardless of the time.
+</Note>
+
+<Steps>
+  <Step title="Open notification settings">
+    Navigate to **Pulse → Settings → Notifications → Quiet Hours**.
+  </Step>
+  <Step title="Set your quiet window">
+    Define the start and end time for your quiet period (for example, 11 PM – 7 AM). Pulse will suppress CALM, BOOST, and ALERT notifications during this window.
+  </Step>
+  <Step title="Save and confirm">
+    Your quiet hours take effect immediately. You can set different windows per team member or per team channel.
+  </Step>
+</Steps>
+
+<Tip>
+  Set quiet hours per individual, not just per team. An on-call engineer may want full notifications overnight while the rest of the team does not.
+</Tip>
+
+## Monitoring interval
+
+Pulse manages its monitoring interval automatically based on what it observes:
+
+| State | Interval |
+|---|---|
+| Calm — all metrics within normal range | Every 10 minutes |
+| Anomaly detected — elevated or critical state | Every 2 minutes |
+
+You don't need to configure this. Pulse handles the acceleration and deceleration automatically, returning to the 10-minute cadence once a situation is resolved.
+
+If your infrastructure requires a minimum floor on query frequency (for example, to protect a database under heavy load), you can set a **minimum interval floor** in **Pulse → Settings → Monitoring → Interval Floor**. Setting a floor will prevent Pulse from accelerating below that threshold even during anomalies.
+
+## Connecting data sources
+
+Pulse needs access to your business data to run its analysis cycles. Supported source types include:
+
+- **Databases** — PostgreSQL, MySQL, and other SQL-compatible databases
+- **CRM platforms** — connect your customer records and activity data
+- **Analytics platforms** — link to your existing product or web analytics
+- **Custom APIs** — connect any internal or third-party data source via REST API
+
+To add or manage data source connections, navigate to **Pulse → Settings → Data Sources**, or see the full connection guide in [Integrations](/integrations/overview).
+
+<Note>
+  Pulse connects to your data sources in **read-only mode**. It will never write to, modify, or delete records in any connected source.
+</Note>

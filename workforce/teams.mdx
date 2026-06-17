@@ -1,0 +1,117 @@
+---
+title: "Build and manage AI teams that run your departments"
+sidebarTitle: "Teams"
+description: "Group agents into coordinated teams that mirror your department structure, share context, and execute workflows together across your organization."
+---
+
+Individual agents are powerful on their own — but the real leverage comes when you group them into teams. A team is a coordinated unit of agents that shares context, communicates through a dedicated channel, and owns a defined slice of your business operations. Teams in iTeam mirror how your real departments work: they have a scope, they divide up responsibilities, and they hand work off to each other fluidly.
+
+## How teams work
+
+When you put agents together in a team, three things happen automatically:
+
+1. **Shared context** — every agent on the team has visibility into the team's goals, active processes, and recent task history. An agent doesn't need to be briefed; it already knows what the team is working on.
+2. **Coordinated execution** — agents can delegate tasks to one another, request outputs from teammates, and sequence their work without manual orchestration from you.
+3. **Unified reporting** — all activity rolls up to the team level, so you see what the team is accomplishing as a whole, not just individual task logs.
+
+Teams mirror real department structure: a Marketing team owns marketing workflows, a Sales team owns the pipeline, and so on. As your workforce grows, you can add more agents to an existing team or spin up additional specialized teams within the same department.
+
+<Note>
+  You can create multiple teams within a single department. For example, you might run a `content-team` and a `performance-team` both under Marketing — each with its own agents, scope, and channel — while keeping them coordinated under the same department umbrella.
+</Note>
+
+---
+
+## Creating a team
+
+<Steps>
+  <Step title="Name the team">
+    Give the team a clear, functional name that reflects its purpose. Use lowercase with hyphens for consistency: `marketing-ops`, `sales-outreach`, `support-tier-1`. This name becomes the team's channel identifier.
+  </Step>
+  <Step title="Add agents to the team">
+    Select the agents you've already created that belong to this team. If you haven't created the agents yet, you can add them later — the team will start with whoever is available and you can expand it at any time.
+  </Step>
+  <Step title="Define the team's scope">
+    Describe which processes and workflows this team owns. Be explicit: *"This team owns all inbound lead qualification, outreach sequencing, and CRM data hygiene."* Scope keeps teams from overlapping and makes it clear who is responsible for what.
+  </Step>
+  <Step title="Connect team-level integrations">
+    Some tools are shared across all agents on a team — a shared inbox, a CRM workspace, a reporting dashboard. Connect these at the team level so every agent has access without configuring the same integration on each one individually.
+  </Step>
+</Steps>
+
+---
+
+## Team channels
+
+Every team gets a dedicated communication channel — for example, `#marketing-ops` or `#sales-outreach`. This is where the team's work surfaces in real time.
+
+Inside a team channel, you'll see:
+
+- **Status updates** from agents as they complete tasks or hit milestones
+- **Delegation requests** when one agent hands work to another
+- **Findings and summaries** that agents post for the team's shared awareness
+- **Approval requests** when an agent needs a human decision before continuing
+- **Completed results** — reports, analyses, drafted content, resolved tickets — delivered directly in the channel
+
+You can read the channel like a team standup: at any point, you can check in and see exactly what every agent is doing and what they've produced. You can also post directly to the channel to give the team new instructions, adjust priorities, or ask a question.
+
+---
+
+## Example team setups
+
+<CardGroup cols={2}>
+  <Card title="Marketing Team" icon="megaphone">
+    **Agents:** Research Agent, Marketing Strategist, Content Agent, Performance Agent
+
+    **Owns:** Campaign planning, content production, market research, performance reporting
+
+    **Channel:** `#marketing-ops`
+  </Card>
+  <Card title="Sales Team" icon="chart-line">
+    **Agents:** Lead Research Agent, Outreach Agent, CRM Agent, Deal Intelligence Agent
+
+    **Owns:** Prospect identification, outreach sequences, pipeline management, CRM data quality
+
+    **Channel:** `#sales-ops`
+  </Card>
+  <Card title="Operations Team" icon="gears">
+    **Agents:** Monitoring Agent, Reporting Agent, Compliance Agent, Workflow Coordinator
+
+    **Owns:** Real-time metric monitoring, scheduled reporting, compliance checks, process orchestration
+
+    **Channel:** `#ops-core`
+  </Card>
+  <Card title="Support Team" icon="headset">
+    **Agents:** L1 Support Agent, Knowledge Agent, Resolution Agent, Triage Agent
+
+    **Owns:** Ticket intake, L1 resolution, knowledge base management, escalation handling
+
+    **Channel:** `#support-ops`
+  </Card>
+</CardGroup>
+
+---
+
+## Managing team membership
+
+Teams are designed to grow. As your operations expand, add new specialist agents to handle higher volume or cover new responsibilities.
+
+<Accordion title="Adding an agent to an existing team">
+  Open the team settings and click **Add Agent**. Select an existing agent from your workforce or create a new one on the spot. The new agent immediately inherits the team's shared context and joins the team channel.
+</Accordion>
+
+<Accordion title="Removing an agent from a team">
+  Navigate to **Team Settings → Members** and remove the agent. Any in-progress tasks assigned to that agent are flagged for reassignment. Other agents on the team can pick them up, or you can manually route them to a specific agent.
+</Accordion>
+
+<Accordion title="Moving an agent between teams">
+  An agent can belong to more than one team. This is useful for cross-functional agents — for example, a Reporting Agent that serves both the Operations and Finance teams simultaneously. Add the agent to the second team without removing it from the first.
+</Accordion>
+
+<Accordion title="Archiving a team">
+  When a team is no longer needed, archive it from **Team Settings → Archive**. Archived teams retain their full task history and channel logs, but their agents stop executing new work. You can reactivate an archived team at any time.
+</Accordion>
+
+<Tip>
+  When setting up a new team, start with three to five tightly scoped agents before expanding. A small, well-configured team with clear ownership outperforms a large team with overlapping responsibilities. Add agents as the volume and complexity of the team's work grows.
+</Tip>

@@ -1,0 +1,82 @@
+---
+title: "Audit logs: full visibility into every agent action"
+sidebarTitle: "Audit Logs"
+description: "iTeam logs every agent action with full context — what it did, when, why, and what data it used — so you always know exactly what's happening."
+---
+
+iTeam maintains a complete audit log of every action taken by every agent — what it did, when it did it, why it decided to act, and what data it worked from. Nothing happens silently. Every execution, every approval decision, and every Pulse cycle is recorded and available for your review at any time.
+
+## What's logged
+
+Every agent action produces a log entry containing the following fields:
+
+| Field | Description |
+|---|---|
+| **Agent** | The name and role of the agent that took the action |
+| **Action** | What the agent did — the specific operation and its target |
+| **Reasoning** | Why the agent decided to take this action, including the logic it applied |
+| **Data sources** | Which connected platforms or data sources the agent accessed |
+| **Outcome** | Result of the action: success, failure, or pending approval |
+| **Timestamp** | Exact date and time the action occurred |
+
+Approval events are also logged separately — including who approved or rejected the action, when, and any modifications made before approval.
+
+## Viewing audit logs
+
+<Steps>
+  <Step title="Go to your workspace dashboard">
+    Log in to iTeam and open your workspace. The dashboard is the starting point for all administrative views.
+  </Step>
+  <Step title="Select Audit Logs from the sidebar">
+    In the left navigation, click **Audit Logs**. You'll see a reverse-chronological list of every agent action across your entire workspace.
+  </Step>
+  <Step title="Filter to what you need">
+    Use the filter bar to narrow results by **agent**, **team**, **date range**, or **action type**. You can combine filters — for example, all autonomous write actions taken by your Sales team in the last 7 days.
+  </Step>
+  <Step title="Inspect a log entry">
+    Click any entry to expand it and see the full reasoning chain: the data the agent queried, the conclusion it reached, and the action it took or proposed. Nothing is summarized away.
+  </Step>
+</Steps>
+
+## Pulse transparency
+
+Every iTeam Pulse monitoring cycle produces its own audit record. A Pulse cycle log shows:
+
+<CardGroup cols={2}>
+  <Card title="Data queried" icon="database">
+    Every platform and data source Pulse checked during the cycle, and what it retrieved.
+  </Card>
+  <Card title="What was found" icon="magnifying-glass">
+    The specific signals, anomalies, or patterns Pulse identified — including the values that triggered a detection.
+  </Card>
+  <Card title="How it was interpreted" icon="brain">
+    The reasoning Pulse applied to classify the finding as CRITICAL, BOOST, CALM, or another status.
+  </Card>
+  <Card title="What was communicated" icon="bell">
+    Any alerts surfaced, approvals requested, or autonomous actions taken as a result of the cycle.
+  </Card>
+</CardGroup>
+
+Because Pulse is read-only, its logs reflect observations and decisions — not data modifications. When Pulse proposes an action, that action's execution is logged separately under the executing agent.
+
+## Using logs for oversight
+
+Audit logs are your primary tool for understanding how your AI workforce behaves and for calibrating its autonomy settings over time. A few practices that help:
+
+- **Review reasoning on CRITICAL alerts.** Any time Pulse surfaces a CRITICAL detection, open the full log entry to verify the reasoning chain — confirm the data it cited and the logic it applied before acting on the recommendation.
+- **Review autonomous actions weekly.** Filter to autonomous write actions for the past 7 days and scan for anything unexpected. Look for actions taken on edge-case data or in unusual contexts.
+- **Use logs to calibrate permissions.** Before promoting an action from approval-required to autonomous, read the last 10–20 reasoning entries for that action type. If the judgment looks consistently sound, you can promote with confidence.
+
+<Note>
+  Audit logs cover every agent in your workspace — including agents that are paused or archived. You can audit historical behavior even after restructuring your teams.
+</Note>
+
+## Log retention
+
+Logs are retained for the duration of your current plan. You can export logs at any time from the **Audit Logs** view using the **Export** button, which produces a CSV or JSON file of the filtered result set.
+
+If your organization requires longer retention periods — for compliance, legal hold, or internal governance reasons — contact [iTeam support](https://iteam.works) to discuss extended retention options.
+
+<Tip>
+  Use audit logs to build confidence before granting additional autonomy. Review the reasoning trail for a week of approval-required actions. If the agent's judgment looks sound across a range of situations, promote that action type to autonomous — you'll have the log history to back up the decision.
+</Tip>

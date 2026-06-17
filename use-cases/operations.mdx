@@ -1,0 +1,94 @@
+---
+title: "Automate business operations monitoring with iTeam"
+sidebarTitle: "Operations"
+description: "Run continuous monitoring, automated reporting, and compliance oversight with a team of AI operations agents — no manual chasing, no missed alerts."
+---
+
+Operations teams run on continuous monitoring, regular reporting, and compliance oversight — exactly the kind of systematic, high-frequency work where AI agents excel. iTeam lets you deploy a coordinated operations team that watches your metrics around the clock, generates reports automatically, and keeps compliance documentation current, so your team focuses on decisions rather than data collection.
+
+## The operations team setup
+
+Three agents handle the core pillars of operational work. They run continuously, collaborate when an issue requires cross-functional context, and surface findings to your team in structured, actionable form.
+
+<CardGroup cols={3}>
+  <Card title="Monitoring Agent" icon="eye">
+    Watches your key operational metrics continuously — system health, process SLAs, resource utilization, and any custom indicators you define. When a metric deviates from expected range, it alerts immediately and captures context for the Reporting Agent.
+  </Card>
+  <Card title="Reporting Agent" icon="file-chart-column">
+    Pulls from your connected data sources and produces structured operational reports on your schedule — daily standups, weekly reviews, monthly summaries. Reports are consistent, accurate, and ready without anyone having to compile them manually.
+  </Card>
+  <Card title="Compliance Agent" icon="shield-check">
+    Tracks policy adherence across your defined compliance areas, flags violations as they occur, runs scheduled audits, and maintains the documentation your teams and auditors need. Nothing falls through the cracks between manual review cycles.
+  </Card>
+</CardGroup>
+
+## Pulse + Operations
+
+<Note>
+  **iTeam Pulse** and your Operations agent team are complementary — use both. Pulse is purpose-built for high-frequency anomaly detection, running checks every 2–10 minutes, spotting statistical deviations, and executing immediate responses (with or without approval, depending on your settings). Your Operations agents handle the structured workflow layer: generating formal reports, running compliance checks, investigating flagged issues in depth, and producing the documentation that Pulse's raw alerts don't provide. Think of Pulse as the always-on radar and your Operations team as the crew that acts on what it finds.
+</Note>
+
+## A monitoring and reporting cycle
+
+This is the standard day-to-day loop for an operations team running in iTeam.
+
+<Steps>
+  <Step title="Monitoring Agent watches metrics">
+    The **Monitoring Agent** runs continuously against your defined metric thresholds. It checks system health indicators, SLA timers, resource utilization, and any custom operational KPIs you've configured — with no gaps between cycles.
+  </Step>
+  <Step title="Deviation detected">
+    When a metric moves outside its expected range, the Monitoring Agent raises an alert immediately. The alert includes the metric, the deviation magnitude, the time it started, and any correlated signals from other monitored data points.
+  </Step>
+  <Step title="Reporting Agent captures it">
+    The **Reporting Agent** picks up the alert and adds it to the active reporting context. Deviations are logged with full detail so they appear in the next scheduled report with appropriate context, not just as a raw number change.
+  </Step>
+  <Step title="Human team reviews the daily brief">
+    Your team receives the Reporting Agent's daily brief — a structured summary of what was monitored, what deviated, what was resolved, and what needs attention. No one has to go hunting for status; it comes to them.
+  </Step>
+  <Step title="Team acts and closes the loop">
+    Your team reviews flagged items, makes decisions, and logs actions. The Monitoring Agent updates its context, and the Reporting Agent records the resolution — keeping the audit trail complete.
+  </Step>
+</Steps>
+
+## Compliance workflows
+
+Compliance work runs on schedules and documentation — both things the Compliance Agent handles natively.
+
+<Tabs>
+  <Tab title="Scheduled audits">
+    Configure the **Compliance Agent** to run checks on a defined schedule. Daily access log audits, weekly policy adherence reviews, monthly vendor compliance checks — each runs automatically and produces a structured findings report. You receive the report; the agent has already done the work.
+  </Tab>
+  <Tab title="Violation flagging">
+    The Compliance Agent monitors for policy violations in real time as part of its continuous workflow. When it detects a violation — a permission change that breaks access policy, a process step that was skipped, a record that doesn't match required format — it flags it immediately and documents the finding.
+  </Tab>
+  <Tab title="Compliance documentation">
+    Every audit the Compliance Agent runs produces structured documentation: what was checked, what was found, what was flagged, and what was resolved. This trail is maintained automatically, so when an auditor asks for records, they already exist.
+  </Tab>
+</Tabs>
+
+## Setting up your operations team
+
+<Steps>
+  <Step title="Create the three agents">
+    In iTeam, create the Monitoring Agent, Reporting Agent, and Compliance Agent. Group them as an Operations team so they share context — alerts the Monitoring Agent raises are automatically available to the Reporting and Compliance agents.
+  </Step>
+  <Step title="Define your metric thresholds">
+    Give the Monitoring Agent your key metrics and their acceptable ranges. Be specific: not just "response time should be fast" but "p95 API response time should stay below 800ms." Clear thresholds mean actionable alerts.
+  </Step>
+  <Step title="Connect your data sources">
+    Link the Reporting Agent to your data warehouse, BI tool, or operational databases. Reports are only as accurate as their source data — a single connected source of truth eliminates the inconsistencies that come from pulling data manually from multiple places.
+  </Step>
+  <Step title="Configure report schedules">
+    Set the Reporting Agent's cadence for each report type — daily operational summary, weekly trend review, monthly leadership brief. Define the format and recipients for each so reports land in the right hands without any manual distribution.
+  </Step>
+  <Step title="Load compliance policies">
+    Add your compliance requirements, policy documents, and audit checklists as process knowledge on the Compliance Agent. The more precisely you document what "compliant" looks like, the more accurately it can detect when something isn't.
+  </Step>
+  <Step title="Set escalation paths">
+    Define which types of alerts and violations route to which team members, and at what severity level a human must be notified immediately versus flagged in the next report. Configure this on both the Monitoring Agent and the Compliance Agent.
+  </Step>
+</Steps>
+
+<Tip>
+  Connect the Reporting Agent directly to your data warehouse or primary BI tool rather than pulling from downstream exports or spreadsheets. Reports built from a single authoritative source stay consistent across time periods and don't drift when someone updates a spreadsheet. This one integration decision prevents more report-related confusion than any amount of template tuning.
+</Tip>

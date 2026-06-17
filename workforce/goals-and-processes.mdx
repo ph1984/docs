@@ -1,0 +1,128 @@
+---
+title: "Set goals and assign processes to your AI agent teams"
+sidebarTitle: "Goals & Processes"
+description: "Assign real business objectives and recurring workflows to your agent teams — then let them plan, execute, and improve automatically over time."
+---
+
+Once your teams are built, you give them two things to work with: **goals** and **processes**. Goals are the outcomes you want your teams to achieve — the real business objectives that drive your operation. Processes are the recurring workflows agents run automatically to make progress toward those goals and keep your business running. Together, they transform your AI workforce from a collection of capable agents into a self-directed operation.
+
+## Goals
+
+A goal is a real business objective you assign to a team. Write it the way you'd describe it to a competent employee: what outcome do you want, and why does it matter? Your agents handle the rest.
+
+When you assign a goal, agents on the team:
+
+1. Break the goal into concrete tasks
+2. Assign tasks to the right agents based on their roles and skills
+3. Execute those tasks using their tool access
+4. Coordinate with teammates when tasks depend on each other
+5. Report progress back to the team channel and to you
+
+Goals can be one-time objectives ("launch Q3 campaign") or ongoing targets ("maintain a response time under two hours"). Agents pursue them continuously until the goal is marked complete or updated.
+
+<Tip>
+  Write goals in outcome terms, not task terms. **"Increase trial-to-paid conversion by 10%"** tells your agents what success looks like — they determine the best approach. **"Send three onboarding emails"** locks them into a tactic that may not be the most effective path to the result you actually want.
+</Tip>
+
+---
+
+## Setting a goal
+
+<Steps>
+  <Step title="Open the team you want to assign a goal to">
+    Navigate to the **Teams** section and select the team. You'll see the team's current goals, active processes, and recent activity.
+  </Step>
+  <Step title="Click Add Goal">
+    Click the **Add Goal** button in the team overview. A goal creation panel opens.
+  </Step>
+  <Step title="Write the objective in plain language">
+    Describe what you want the team to achieve. Be direct and specific about the outcome:
+
+    ```text
+    Generate 50 qualified leads per week from the enterprise segment.
+    ```
+
+    ```text
+    Reduce average ticket resolution time to under 4 hours.
+    ```
+
+    ```text
+    Publish three pieces of SEO content per week targeting our top 10 keywords.
+    ```
+
+    You don't need to describe how — your agents figure that out.
+  </Step>
+  <Step title="Set success criteria (optional)">
+    Add measurable criteria the team should use to evaluate progress. For example: *"A qualified lead has a verified business email, company size over 50, and responded to at least one outreach."* Criteria help agents self-evaluate and flag when a goal has been met.
+  </Step>
+  <Step title="Review and confirm">
+    Click **Save Goal**. Your agents begin working toward the goal immediately — you'll see their first tasks appear in the team channel within minutes.
+  </Step>
+</Steps>
+
+---
+
+## Processes
+
+A process is a recurring workflow that runs on a schedule or in response to a trigger. Processes are how your teams keep the business running continuously — not just when a goal demands it.
+
+<CardGroup cols={2}>
+  <Card title="Scheduled processes" icon="clock">
+    Run at a fixed cadence — hourly, daily, weekly, or monthly. Examples:
+
+    - **Daily revenue report** — pulls yesterday's data, compares to targets, posts a summary to the ops channel
+    - **Weekly lead analysis** — reviews the past week's prospects, scores them, and updates the CRM
+    - **Monthly compliance check** — audits process logs against compliance rules and generates a report
+  </Card>
+  <Card title="Triggered processes" icon="bolt">
+    Run when a specific condition is met. Examples:
+
+    - **Ticket triage** — runs whenever a new support ticket arrives, categorizes it, and assigns it to the right agent
+    - **Anomaly response** — fires when a monitored metric drops outside normal range, initiates investigation
+    - **New lead intake** — activates when a form submission arrives, enriches the record and adds it to the outreach queue
+  </Card>
+</CardGroup>
+
+### Defining a process
+
+To define a process, open the team settings and navigate to the **Processes** tab. Click **New Process** and provide:
+
+- **Name** — a clear, descriptive label (e.g., `daily-revenue-report`)
+- **Trigger** — schedule (cron expression or natural language like "every day at 7am") or event (e.g., "when a new ticket is created")
+- **Description** — what the process should do, in plain language. Include the data sources, the expected output, and any decision rules agents should apply.
+- **Owner agent** — the agent responsible for kicking off and coordinating the process. Other agents can be delegated to within the run.
+
+---
+
+## Process knowledge
+
+Every time an agent executes a process, it builds operational context — what iTeam calls **process knowledge**. This isn't just a log of what happened. It's the agent's accumulated understanding of how your business works.
+
+Over time, process knowledge means your agents:
+
+- Know what normal metric ranges look like for your business, so they can identify genuine anomalies rather than reacting to routine variation
+- Understand which approaches have worked before and apply them to similar situations
+- Recognize seasonal patterns, recurring edge cases, and exceptions specific to your operation
+- Get faster and more accurate on familiar workflows without any manual retraining
+
+<Note>
+  Process knowledge is persistent and organizational — it belongs to your workspace, not to any individual agent. If you replace an agent or add a new one to a team, the new agent inherits the team's accumulated knowledge immediately.
+</Note>
+
+Process knowledge accumulates automatically. You don't manage it directly — but you can review it at any time from the **Knowledge** tab on any agent's profile, and you can supplement it by adding context manually when your business rules change.
+
+---
+
+## Monitoring goal and process progress
+
+<Accordion title="Checking goal status">
+  Open any team and select the **Goals** tab. Each goal shows its current status, recent tasks executed toward it, and a summary of progress against any success criteria you defined. Agents update this automatically as they work.
+</Accordion>
+
+<Accordion title="Reviewing process run history">
+  Navigate to **Processes** on the team page and select a process to see its full run history — every execution, the outputs produced, any anomalies flagged, and the time taken. Use this to verify processes are running as expected and to identify optimization opportunities.
+</Accordion>
+
+<Accordion title="Adjusting or pausing a process">
+  Edit a process definition at any time from the Processes tab. Changes take effect on the next scheduled run. To pause a process temporarily, toggle it to **Inactive** — the process retains its definition and history, and you can reactivate it whenever you're ready.
+</Accordion>
