@@ -1,0 +1,78 @@
+---
+title: "Security & Access"
+sidebarTitle: "Security & Access"
+description: "Control who sees and does what, require human approval for sensitive actions, and keep everything logged. In iTeam, you're always in command."
+---
+
+Security isn't a detail in iTeam — it's the foundation. Here you control **who accesses what**, **what requires human approval**, and follow **the record of everything**. Your AI operation is powerful **and** under control.
+
+<Frame caption="📸 Screenshot to add: Security & Access screen (roles and permissions).">
+  <img src="/images/placeholder.svg" alt="Security and Access" />
+</Frame>
+
+## The three pillars
+
+<CardGroup cols={3}>
+  <Card title="Who has access" icon="users-lock">
+    Each person sees only the agents, data, and screens they're allowed to. Access per person and per role.
+  </Card>
+  <Card title="What needs approval" icon="shield-check">
+    Sensitive actions wait for a human's "ok" before they happen.
+  </Card>
+  <Card title="What happened" icon="scroll-text">
+    A record of actions for audit and trust.
+  </Card>
+</CardGroup>
+
+## Roles and permissions
+
+iTeam uses **roles** to keep it simple: instead of configuring person by person, you define what each role can do.
+
+| Role | Generally can |
+|---|---|
+| **Owner / Admin** | Everything: configure, grant access, see all. |
+| **Manager** | Manage agents and teams in their scope. |
+| **Member** | Use the agents/resources they were granted. |
+| **Viewer** | View, without changing. |
+
+<Info>
+Access to an **agent** extends to its resources: someone who can't see the agent **won't see its widgets** or its data. Consistent protection end-to-end.
+</Info>
+
+## Human approvals
+
+For actions that require caution (sending something external, changing critical data), you can require **human approval**. The agent prepares the action and **waits for your signal** — autonomy with a handbrake.
+
+<Steps>
+  <Step title="Define which actions require approval" />
+  <Step title="The agent pauses and notifies when it reaches one of them" />
+  <Step title="You approve or reject — and it's recorded" />
+</Steps>
+
+## Security best practices
+
+<CardGroup cols={2}>
+  <Card title="Least privilege" icon="key">
+    Grant only the access each person and agent needs.
+  </Card>
+  <Card title="Approval on the sensitive" icon="hand">
+    Keep irreversible actions under human review.
+  </Card>
+  <Card title="Credentials in the right place" icon="lock">
+    Register keys under [APIs](/en/resources/apis) — never in conversations.
+  </Card>
+  <Card title="Review access periodically" icon="refresh-cw">
+    Remove access from those who no longer need it.
+  </Card>
+</CardGroup>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Settings" icon="settings" href="/en/administration/settings">
+    Company preferences (language, timezone, identity).
+  </Card>
+  <Card title="Agents" icon="bot" href="/en/intelligence/agents">
+    Define each agent's access.
+  </Card>
+</CardGroup>

@@ -1,0 +1,83 @@
+---
+title: "Agents"
+sidebarTitle: "Agents"
+description: "Create, configure, and manage your AI employees. Each agent has a role, skills, tool and data access — and you control it all."
+---
+
+An **agent** is an AI employee. You give it a role, it gains skills and access to the right tools, and it starts executing work when you chat with it or when a routine fires.
+
+<Frame caption="📸 Screenshot to add: Agents list (Intelligence → Agents).">
+  <img src="/images/placeholder.svg" alt="Agents list" />
+</Frame>
+
+## Create an agent
+
+<Steps>
+  <Step title="Open Intelligence → Agents and click Create agent" />
+  <Step title="Describe the role in plain language">
+    > "Financial analyst that tracks daily revenue, explains variations, and produces weekly reports."
+
+    iTeam suggests a name, description, skills, and tone of voice.
+  </Step>
+  <Step title="Adjust whatever you want and save">
+    You can refine before saving — or leave it as is and tweak later.
+  </Step>
+</Steps>
+
+## What you configure in an agent
+
+<AccordionGroup>
+  <Accordion title="Identity — name, role, and icon" icon="id-card">
+    How the agent appears to your team. Pick an icon that makes it quick to recognize.
+  </Accordion>
+  <Accordion title="Instructions — the 'personality' and rules" icon="scroll">
+    Here you define how it should behave: tone, priorities, what it can and cannot do.
+  </Accordion>
+  <Accordion title="Skills" icon="puzzle">
+    Extra capabilities that expand what the agent can do. [See Skills →](/en/resources/skills)
+  </Accordion>
+  <Accordion title="Tools and Data Sources" icon="database">
+    Which systems and data it can access. [See Data Sources →](/en/resources/data-sources)
+  </Accordion>
+  <Accordion title="AI model" icon="cpu">
+    By default iTeam picks the best model for each request. You can pin one if you want.
+  </Accordion>
+  <Accordion title="Access (who can use it)" icon="lock">
+    Define who can see and use this agent. [See Security & Access →](/en/administration/security-and-access)
+  </Accordion>
+  <Accordion title="Agent widgets" icon="layout-dashboard">
+    The interactive screens it has built. [See Widgets →](/en/chat/widgets)
+  </Accordion>
+</AccordionGroup>
+
+## Best practices
+
+<CardGroup cols={2}>
+  <Card title="One clear role per agent" icon="bullseye">
+    Focused agents answer better. Prefer "Sales Analyst" over "does everything".
+  </Card>
+  <Card title="Give context in the instructions" icon="book">
+    The more it knows about your company, the sharper the answers.
+  </Card>
+  <Card title="Less is more on tools" icon="filter">
+    Grant only the access needed — it's safer and faster.
+  </Card>
+  <Card title="Evolve with use" icon="trending-up">
+    Tune the instructions as you learn what works.
+  </Card>
+</CardGroup>
+
+<Info>
+iTeam **learns from use**: the agent remembers what's already been done and gets more accurate over time, without you repeating context.
+</Info>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Agent Teams" icon="users" href="/en/intelligence/agent-teams">
+    Group agents that work together.
+  </Card>
+  <Card title="Chat" icon="messages-square" href="/en/chat/chat-with-agents">
+    Put your agent to work.
+  </Card>
+</CardGroup>

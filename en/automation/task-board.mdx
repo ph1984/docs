@@ -1,0 +1,60 @@
+---
+title: "Task Board"
+sidebarTitle: "Task Board"
+description: "A Kanban-style board where people and agents organize work — including tasks that run on their own at set times."
+---
+
+The **Task Board** is where work gets organized visually, Kanban-style (To do → Doing → Done). The differentiator: **agents and people share the same board** — and tasks can run **automatically** at the time you set.
+
+<Frame caption="📸 Screenshot to add: the Task Board with columns and cards.">
+  <img src="/images/placeholder.svg" alt="Task Board" />
+</Frame>
+
+## Task types
+
+<CardGroup cols={2}>
+  <Card title="One-off task" icon="square-check">
+    A single job: create, assign, complete.
+  </Card>
+  <Card title="Recurring task" icon="repeat">
+    Runs on its own at the set interval (e.g., every 1 min, daily at 8am).
+  </Card>
+  <Card title="Assigned to an agent" icon="bot">
+    The agent executes when the task moves to "doing".
+  </Card>
+  <Card title="With webhook / trigger" icon="webhook">
+    Fires an external system at the right moment.
+  </Card>
+</CardGroup>
+
+## Create a task
+
+<Steps>
+  <Step title="Open Automation → Task Board" />
+  <Step title="Click new task and describe what needs to be done" />
+  <Step title="(Optional) Set recurrence">
+    Choose the interval: every X minutes/hours, daily, weekly… The task starts running on its own.
+  </Step>
+  <Step title="(Optional) Assign it to an agent">
+    The agent executes automatically when the time comes.
+  </Step>
+</Steps>
+
+## Reliability
+
+iTeam's recurring tasks run **on time, with minimal slack**, and **are not lost** if the system restarts — they resume on their own. You can follow each task's execution history.
+
+<Tip>
+For multi-step routines (not just one task), use [Processes](/en/automation/processes) — they orchestrate an entire flow.
+</Tip>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Processes" icon="git-branch" href="/en/automation/processes">
+    Automate multi-step flows.
+  </Card>
+  <Card title="Agents" icon="bot" href="/en/intelligence/agents">
+    Assign tasks to whoever will execute them.
+  </Card>
+</CardGroup>

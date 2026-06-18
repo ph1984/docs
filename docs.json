@@ -110,57 +110,61 @@
           {
             "group": "Get Started",
             "icon": "rocket",
+            "expanded": true,
             "pages": [
-              "introduction",
-              "quickstart",
-              "core-concepts"
+              "en/introduction",
+              "en/getting-started",
+              "en/concepts"
             ]
           },
           {
-            "group": "Your AI Workforce",
-            "icon": "users",
+            "group": "Chat",
+            "icon": "messages-square",
+            "expanded": true,
             "pages": [
-              "workforce/ai-agents",
-              "workforce/teams",
-              "workforce/goals-and-processes",
-              "workforce/collaboration"
+              "en/chat/chat-with-agents",
+              "en/chat/iteam-assistant",
+              "en/chat/widgets"
             ]
           },
           {
-            "group": "Pulse",
-            "icon": "activity",
+            "group": "Intelligence",
+            "icon": "brain",
+            "expanded": true,
             "pages": [
-              "pulse/overview",
-              "pulse/how-it-works",
-              "pulse/alerts-and-severity",
-              "pulse/configuration"
+              "en/intelligence/agents",
+              "en/intelligence/agent-teams"
             ]
           },
           {
-            "group": "Integrations",
-            "icon": "plug",
+            "group": "Resources",
+            "icon": "boxes",
+            "expanded": true,
             "pages": [
-              "integrations/overview",
-              "integrations/crm-erp",
-              "integrations/api-connections"
+              "en/resources/skills",
+              "en/resources/apis",
+              "en/resources/data-sources",
+              "en/resources/resource-atlas",
+              "en/resources/statistics",
+              "en/resources/usage"
             ]
           },
           {
-            "group": "Security & Control",
+            "group": "Automation",
+            "icon": "workflow",
+            "expanded": true,
+            "pages": [
+              "en/automation/task-board",
+              "en/automation/processes"
+            ]
+          },
+          {
+            "group": "Administration",
             "icon": "shield",
+            "expanded": true,
             "pages": [
-              "security/permissions-and-approvals",
-              "security/audit-logs"
-            ]
-          },
-          {
-            "group": "Use Cases",
-            "icon": "building-2",
-            "pages": [
-              "use-cases/customer-support",
-              "use-cases/sales",
-              "use-cases/marketing",
-              "use-cases/operations"
+              "en/administration/security-and-access",
+              "en/administration/settings"
             ]
           }
         ]
