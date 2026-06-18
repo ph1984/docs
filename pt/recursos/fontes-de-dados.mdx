@@ -1,20 +1,48 @@
 ---
 title: "Fontes de Dados"
 sidebarTitle: "Fontes de Dados"
-description: "Conecte bancos de dados, planilhas e outras fontes para que os agentes analisem seus números reais — e alimentem dashboards e widgets."
+description: "Conecte bancos, planilhas e data warehouses para que os agentes respondam com os seus números reais. Passo a passo de conexão, liberação por agente, teste e troubleshooting."
 ---
 
-**Fontes de Dados** são as origens dos seus números: bancos de dados, planilhas, data warehouses. Conectando-as, seus agentes passam a responder com **dados reais da sua empresa** — e a alimentar [Widgets](/pt/conversar/widgets) e [Estatísticas](/pt/recursos/estatisticas).
+**Fontes de Dados** são as origens dos seus números (bancos de dados, planilhas, data warehouses). Conectá-las é o que transforma respostas genéricas em respostas com **os dados reais da sua empresa** — e o que alimenta [Widgets](/pt/conversar/widgets) e [Estatísticas](/pt/recursos/estatisticas).
 
-<Frame caption="📸 Screenshot a inserir: tela de Fontes de Dados (Recursos → Fontes de Dados).">
+<Frame caption="📸 Screenshot a inserir [/pt/recursos/fontes-de-dados]: lista de Fontes de Dados (Recursos → Fontes de Dados) com o botão de adicionar.">
   <img src="/images/placeholder.svg" alt="Fontes de Dados" />
 </Frame>
 
-## Por que conectar
+## Conceito-chave: conectar ≠ liberar
+
+São **dois passos**:
+1. **Conectar** a fonte na empresa (uma vez).
+2. **Liberar** a fonte para os **agentes** que vão usá-la.
+
+Um agente só enxerga os dados que você liberou para ele. Isso mantém tudo seguro e organizado.
+
+## Conectar uma fonte
+
+<Steps>
+  <Step title="Abra Recursos → Fontes de Dados e clique em adicionar">
+    Escolha o tipo (banco de dados, planilha, etc.).
+  </Step>
+  <Step title="Informe os dados de conexão">
+    Endereço/host, base e credenciais. **As credenciais ficam guardadas com segurança** — você não precisa repeti-las em conversas.
+  </Step>
+  <Step title="Salve e valide a conexão">
+    O iTeam confirma se conseguiu conectar. Se falhar, veja o troubleshooting abaixo.
+  </Step>
+  <Step title="Libere para os agentes">
+    No agente (Inteligência → Agentes → seção Ferramentas/Fontes), marque esta fonte como disponível.
+  </Step>
+  <Step title="Teste no chat">
+    Pergunte algo simples: *"quantas linhas tem a tabela de pedidos?"* — confirma que o agente está enxergando os dados.
+  </Step>
+</Steps>
+
+## Por que vale a pena
 
 <CardGroup cols={2}>
   <Card title="Respostas com dados reais" icon="database">
-    "Qual o faturamento de ontem?" passa a vir da sua base, não de estimativa.
+    "Faturamento de ontem?" passa a vir da sua base, não de estimativa.
   </Card>
   <Card title="Dashboards vivos" icon="chart-line">
     Widgets que se atualizam sozinhos a partir da fonte.
@@ -23,34 +51,38 @@ description: "Conecte bancos de dados, planilhas e outras fontes para que os age
     O agente consulta direto, no momento do pedido.
   </Card>
   <Card title="Seguro" icon="shield-check">
-    Credenciais protegidas; acesso concedido só a quem precisa.
+    Credenciais protegidas; acesso só a quem você liberar.
   </Card>
 </CardGroup>
 
-## Como conectar
+## Dica de ouro: ajude o agente a entender seus dados
 
-<Steps>
-  <Step title="Abra Recursos → Fontes de Dados e adicione uma fonte" />
-  <Step title="Informe os dados de conexão">
-    As credenciais ficam guardadas com segurança.
-  </Step>
-  <Step title="Libere para os agentes que vão usar" />
-  <Step title="Teste com uma pergunta">
-    No chat, peça algo simples ("quantos registros há na tabela X") para confirmar.
-  </Step>
-</Steps>
+Depois de conectar, dedique 2 minutos às **instruções do agente** explicando os termos: "a tabela `pedidos` tem `valor` em centavos", "status `P` = pago". Isso evita interpretações erradas e melhora muito a precisão. O iTeam também vai aprendendo isso com o uso (veja o [Atlas do Recurso](/pt/recursos/atlas-do-recurso)).
 
-<Tip>
-Depois de conectar, peça ao agente um **Widget** com base nesses dados — você ganha um painel pronto em minutos.
-</Tip>
+## Solução de problemas
+
+<AccordionGroup>
+  <Accordion title="A conexão falhou ao salvar">
+    Revise host/porta/credenciais e se o iTeam tem permissão de rede para acessar a fonte. Teste com um usuário de leitura.
+  </Accordion>
+  <Accordion title="Conectou, mas o agente diz que não tem acesso">
+    Faltou **liberar a fonte para o agente**. Faça isso na seção Ferramentas/Fontes do agente.
+  </Accordion>
+  <Accordion title="O agente trouxe números errados">
+    Provavelmente interpretou um campo. Explique os termos nas **instruções** do agente (unidades, status, definições).
+  </Accordion>
+  <Accordion title="Consulta muito lenta / pesada">
+    Peça recortes e períodos menores, e prefira perguntas específicas a "traz tudo".
+  </Accordion>
+</AccordionGroup>
 
 ## Próximos passos
 
 <CardGroup cols={2}>
   <Card title="Widgets" icon="layout-dashboard" href="/pt/conversar/widgets">
-    Transforme seus dados em painéis interativos.
+    Transforme os dados em painéis interativos.
   </Card>
-  <Card title="Atlas do Recurso" icon="book-open" href="/pt/recursos/atlas-do-recurso">
-    Veja tudo o que os agentes conhecem sobre seus dados.
+  <Card title="APIs" icon="plug" href="/pt/recursos/apis">
+    Conecte também serviços e ações externas.
   </Card>
 </CardGroup>

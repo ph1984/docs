@@ -1,64 +1,91 @@
 ---
 title: "Processos"
 sidebarTitle: "Processos"
-description: "Automatize rotinas de várias etapas — relatórios, monitoramentos e fluxos que os agentes executam sozinhos, no horário certo."
+description: "Automatize rotinas de várias etapas que os agentes executam sozinhos. Aprenda a desenhar, agendar, testar e monitorar um processo de ponta a ponta."
 ---
 
-Um **Processo** é uma rotina de várias etapas que os agentes executam de forma orquestrada — sozinhos, no horário definido ou sob demanda. É como documentar um procedimento da empresa e deixar a IA cuidar dele.
+Um **Processo** é uma rotina de **várias etapas** que os agentes executam de forma orquestrada — sozinhos, no horário definido ou sob demanda. É como documentar um procedimento da empresa e deixar a IA tocá-lo.
 
-<Frame caption="📸 Screenshot a inserir: tela de Processos com um fluxo montado.">
+<Frame caption="📸 Screenshot a inserir [/pt/automacao/processos]: tela de Processos com um fluxo de etapas montado.">
   <img src="/images/placeholder.svg" alt="Processos" />
 </Frame>
 
-## Exemplos práticos
+## Quando usar um processo
+
+Use quando o trabalho tem **sequência** e **se repete**: coletar → calcular → formatar → enviar. Se é um passo só, uma [Tarefa](/pt/automacao/quadro-de-tarefas) basta.
 
 <CardGroup cols={2}>
   <Card title="Relatório diário" icon="file-chart-column">
-    Toda manhã: consolida números e envia o resumo.
+    Coleta números → monta o resumo → envia (com aprovação, se quiser).
   </Card>
   <Card title="Monitoramento" icon="activity">
-    De hora em hora: checa indicadores e alerta se algo fugir do normal.
+    De hora em hora: checa indicadores → se passar do limite, alerta.
   </Card>
-  <Card title="Onboarding" icon="user-plus">
-    Novo cliente entra → dispara a sequência de boas-vindas.
+  <Card title="Onboarding de cliente" icon="user-plus">
+    Novo cliente → cria registro → envia boas-vindas → agenda follow-up.
   </Card>
-  <Card title="Fechamento" icon="calendar-check">
-    Fim do mês: junta dados, gera o relatório e distribui.
+  <Card title="Fechamento mensal" icon="calendar-check">
+    Junta dados do mês → gera relatório → distribui para a equipe.
   </Card>
 </CardGroup>
 
-## Como criar um processo
+## Criar um processo
 
 <Steps>
   <Step title="Abra Automação → Processos e clique em criar">
-    Ou use o [Assistente iTeam](/pt/conversar/assistente-iteam): "monte um processo que…".
+    Mais rápido ainda: peça ao [Assistente iTeam](/pt/conversar/assistente-iteam) — *"monte um processo que todo dia às 8h resuma as vendas e me envie"*. Ele desenha as etapas para você.
   </Step>
-  <Step title="Descreva as etapas">
-    Em linguagem normal: o que acontece primeiro, depois, e o resultado esperado.
+  <Step title="Descreva as etapas em ordem">
+    Em linguagem normal, uma etapa por linha:
+    1. Buscar o faturamento de ontem.
+    2. Comparar com a média dos últimos 7 dias.
+    3. Montar um resumo com o número e a variação.
+    4. Enviar o resumo (aguardando aprovação).
   </Step>
   <Step title="Defina quando roda">
-    Por agendamento (diário, semanal) ou sob demanda.
+    **Sob demanda** (você dispara) ou **agendado** (diário/semanal/mensal, com horário e fuso).
   </Step>
-  <Step title="Acompanhe as execuções">
-    Veja o histórico e os resultados de cada rodada.
+  <Step title="Atribua o(s) agente(s)">
+    Um agente para todo o processo, ou um [time](/pt/inteligencia/times-de-agentes) se cada etapa exige uma especialidade.
+  </Step>
+  <Step title="Teste sob demanda antes de agendar">
+    Rode uma vez manualmente, confira o resultado, ajuste as etapas — só então deixe no automático.
   </Step>
 </Steps>
 
-## Tarefa, processo ou time?
+## Etapas que pedem cuidado humano
 
-| Use… | Quando |
-|---|---|
-| [Tarefa](/pt/automacao/quadro-de-tarefas) | É um trabalho único ou uma rotina simples de um passo. |
-| **Processo** | São várias etapas encadeadas que se repetem. |
-| [Time](/pt/inteligencia/times-de-agentes) | Precisa de várias especialidades colaborando. |
+Para ações sensíveis (enviar algo externo, alterar dados críticos), marque a etapa para exigir **aprovação**. O processo prepara a ação e **espera o seu "ok"**. [Como configurar aprovações →](/pt/administracao/seguranca-e-acessos)
+
+## Monitorar
+
+Cada processo guarda o **histórico de execuções**: quando rodou, quais etapas concluíram, o resultado e eventuais falhas. Acompanhe para garantir que a rotina está saudável.
+
+<Frame caption="📸 Screenshot a inserir [/pt/automacao/processos]: histórico de execuções de um processo (etapas + status).">
+  <img src="/images/placeholder.svg" alt="Histórico de processo" />
+</Frame>
+
+## Solução de problemas
+
+<AccordionGroup>
+  <Accordion title="O processo parou numa etapa">
+    Provavelmente aguarda **aprovação** ou faltou um dado/acesso. Veja o histórico para identificar a etapa e o motivo.
+  </Accordion>
+  <Accordion title="O resultado veio diferente do esperado">
+    Refine a descrição das etapas (mais específica) e rode **sob demanda** para validar antes de reativar o agendamento.
+  </Accordion>
+  <Accordion title="Quero pausar temporariamente">
+    Desative o agendamento do processo. Ele para de rodar e pode ser reativado depois.
+  </Accordion>
+</AccordionGroup>
 
 ## Próximos passos
 
 <CardGroup cols={2}>
   <Card title="Quadro de Tarefas" icon="kanban" href="/pt/automacao/quadro-de-tarefas">
-    Para trabalhos pontuais e rotinas simples.
+    Para trabalhos pontuais e rotinas de um passo.
   </Card>
-  <Card title="Segurança & Acessos" icon="shield-check" href="/pt/administracao/seguranca-e-acessos">
-    Defina aprovações para ações sensíveis dos processos.
+  <Card title="Times de Agentes" icon="users" href="/pt/inteligencia/times-de-agentes">
+    Quando cada etapa exige uma especialidade diferente.
   </Card>
 </CardGroup>

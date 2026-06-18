@@ -4,48 +4,85 @@ description: Crie e gerencie sua força de trabalho de IA. Agentes que executam 
 mode: frame
 ---
 
-<div className="flex w-full flex-col gap-8 max-w-5xl mx-auto px-4 md:px-8 lg:px-12 py-10 lg:gap-14 lg:py-16">
-  <div className="flex max-w-[560px] flex-col gap-2 self-center text-center">
-    <h1 className="text-[30px] font-medium leading-9 tracking-tight text-gray-900 dark:text-gray-50">
+<div className="flex w-full flex-col gap-10 max-w-5xl mx-auto px-4 md:px-8 lg:px-12 py-10 lg:py-16">
+
+  <div className="flex max-w-[620px] flex-col gap-3 self-center text-center">
+    <h1 className="text-[32px] font-semibold leading-9 tracking-tight text-gray-900 dark:text-gray-50">
       Manual do iTeam
     </h1>
-    <p className="text-balance text-base leading-relaxed tracking-tight text-gray-600 dark:text-gray-400">
-      Aprenda a usar o iTeam de ponta a ponta — do menu às configurações. Sem jargão, passo a passo.
+    <p className="text-balance text-base leading-relaxed text-gray-600 dark:text-gray-400">
+      Aprenda a usar o iTeam de ponta a ponta — do menu às configurações. Sem jargão, passo a passo, para você fazer tudo sozinho.
     </p>
   </div>
 
-  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-    <Card title="O que é o iTeam" icon="sparkles" href="/pt/introducao">
-      Entenda em 2 minutos o que a plataforma faz e por que é diferente.
-    </Card>
-    <Card title="Primeiros passos" icon="rocket" href="/pt/primeiros-passos">
-      Do login à primeira resposta útil — em 5 minutos.
-    </Card>
-    <Card title="Conversar com agentes" icon="messages-square" href="/pt/conversar/chat-com-agentes">
-      O coração do iTeam: peça e receba, como num chat.
-    </Card>
-    <Card title="Widgets" icon="layout-dashboard" href="/pt/conversar/widgets">
-      Telinhas interativas criadas pelos agentes, sem programar.
-    </Card>
+  {/* NOVO POR AQUI */}
+  <div className="flex flex-col gap-4">
+    <h2 className="font-serif text-xl font-medium text-gray-900 dark:text-gray-50">Comece por aqui</h2>
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <Card title="O que é o iTeam" icon="sparkles" href="/pt/introducao">
+        Em 2 minutos: o que a plataforma faz e por que é diferente.
+      </Card>
+      <Card title="Primeiros passos" icon="rocket" href="/pt/primeiros-passos">
+        Do login à primeira resposta útil — em 5 minutos.
+      </Card>
+      <Card title="Conceitos essenciais" icon="book-open" href="/pt/conceitos">
+        Agente, time, widget, processo e tarefa, sem jargão.
+      </Card>
+    </div>
   </div>
 
   <hr className="border-0 border-t border-border" />
 
+  {/* EXPLORE POR ÁREA (espelha o menu) */}
   <div className="flex flex-col gap-4">
-    <h2 className="font-serif text-xl font-medium leading-normal text-gray-900 dark:text-gray-50">Explore por área</h2>
+    <h2 className="font-serif text-xl font-medium text-gray-900 dark:text-gray-50">Explore por área do app</h2>
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <Card title="Conversar" icon="messages-square" href="/pt/conversar/chat-com-agentes">
+        Chat com Agentes, Assistente iTeam e Widgets.
+      </Card>
       <Card title="Inteligência" icon="brain" href="/pt/inteligencia/agentes">
         Crie agentes e monte times que trabalham como departamentos.
       </Card>
-      <Card title="Automação" icon="workflow" href="/pt/automacao/processos">
+      <Card title="Automação" icon="workflow" href="/pt/automacao/quadro-de-tarefas">
         Tarefas e processos que rodam sozinhos no horário certo.
       </Card>
       <Card title="Recursos" icon="boxes" href="/pt/recursos/fontes-de-dados">
         Skills, APIs, fontes de dados, estatísticas e uso.
       </Card>
-      <Card title="Segurança & Acessos" icon="shield-check" href="/pt/administracao/seguranca-e-acessos">
-        Controle quem vê e faz o quê, com aprovações e registro.
+      <Card title="Administração" icon="shield-check" href="/pt/administracao/seguranca-e-acessos">
+        Quem vê e faz o quê, aprovações e configurações.
+      </Card>
+      <Card title="Widgets" icon="layout-dashboard" href="/pt/conversar/widgets">
+        Telinhas interativas criadas pelos agentes, sem programar.
       </Card>
     </div>
   </div>
+
+  <hr className="border-0 border-t border-border" />
+
+  {/* TAREFAS COMUNS — atalhos diretos */}
+  <div className="flex flex-col gap-4">
+    <h2 className="font-serif text-xl font-medium text-gray-900 dark:text-gray-50">Quero fazer agora</h2>
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <Card title="Criar meu primeiro agente" icon="bot" href="/pt/inteligencia/agentes">
+        Descreva o papel e tenha um agente pronto.
+      </Card>
+      <Card title="Conectar meus dados" icon="database" href="/pt/recursos/fontes-de-dados">
+        Para o agente responder com seus números reais.
+      </Card>
+      <Card title="Criar um dashboard (widget)" icon="chart-pie" href="/pt/conversar/widgets">
+        Peça no chat e ganhe uma tela interativa.
+      </Card>
+      <Card title="Automatizar um relatório" icon="repeat" href="/pt/automacao/processos">
+        Rotinas que rodam sozinhas no horário certo.
+      </Card>
+      <Card title="Convidar minha equipe" icon="user-plus" href="/pt/administracao/seguranca-e-acessos">
+        Dê o acesso certo às pessoas certas.
+      </Card>
+      <Card title="Montar um time de agentes" icon="users" href="/pt/inteligencia/times-de-agentes">
+        Vários agentes colaborando por um objetivo.
+      </Card>
+    </div>
+  </div>
+
 </div>

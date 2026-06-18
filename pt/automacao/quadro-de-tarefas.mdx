@@ -1,52 +1,95 @@
 ---
 title: "Quadro de Tarefas"
 sidebarTitle: "Quadro de Tarefas"
-description: "Um quadro estilo Kanban onde pessoas e agentes organizam o trabalho — incluindo tarefas que rodam sozinhas em horários definidos."
+description: "Organize o trabalho num quadro Kanban onde pessoas e agentes colaboram — incluindo tarefas que rodam sozinhas no horário certo. Aprenda a criar, agendar e acompanhar."
 ---
 
-O **Quadro de Tarefas** é onde o trabalho é organizado visualmente, no estilo Kanban (A fazer → Fazendo → Feito). O diferencial: **agentes e pessoas usam o mesmo quadro** — e tarefas podem rodar **automaticamente** no horário que você definir.
+O **Quadro de Tarefas** organiza o trabalho visualmente (A fazer → Fazendo → Feito). O diferencial: **pessoas e agentes usam o mesmo quadro**, e tarefas podem **rodar automaticamente** no horário que você definir — sem se perder se o sistema reiniciar.
 
-<Frame caption="📸 Screenshot a inserir: o Quadro de Tarefas com colunas e cards.">
+<Frame caption="📸 Screenshot a inserir [/pt/automacao/quadro-de-tarefas]: o quadro com as colunas (Agendadas, A fazer, Fazendo, Feito) e cards.">
   <img src="/images/placeholder.svg" alt="Quadro de Tarefas" />
 </Frame>
 
-## Tipos de tarefa
+## As colunas (lanes)
 
-<CardGroup cols={2}>
-  <Card title="Tarefa pontual" icon="square-check">
-    Um trabalho único: criar, atribuir, concluir.
-  </Card>
-  <Card title="Tarefa recorrente" icon="repeat">
-    Roda sozinha no intervalo definido (ex.: a cada 1 min, todo dia às 8h).
-  </Card>
-  <Card title="Atribuída a um agente" icon="bot">
-    O agente executa quando a tarefa entra em "fazendo".
-  </Card>
-  <Card title="Com webhook / disparo" icon="webhook">
-    Aciona um sistema externo no momento certo.
-  </Card>
-</CardGroup>
+| Coluna | O que significa |
+|---|---|
+| **Agendadas** | Tarefas que vão entrar em ação num horário futuro (recorrentes ou marcadas). |
+| **A fazer** | Prontas para serem executadas (por uma pessoa ou agente). |
+| **Fazendo** | Em execução agora. |
+| **Feito** | Concluídas. As recorrentes geram automaticamente a próxima ocorrência. |
 
 ## Criar uma tarefa
 
 <Steps>
-  <Step title="Abra Automação → Quadro de Tarefas" />
-  <Step title="Clique em nova tarefa e descreva o que precisa ser feito" />
-  <Step title="(Opcional) Defina recorrência">
-    Escolha o intervalo: a cada X minutos/horas, diária, semanal… A tarefa passa a rodar sozinha.
+  <Step title="Abra Automação → Quadro de Tarefas e clique em “Nova tarefa”" />
+  <Step title="Descreva o que deve ser feito">
+    Título curto + descrição clara. Se um agente for executar, escreva como você pediria no chat: *"Gere o resumo de vendas de ontem e poste no card."*
   </Step>
-  <Step title="(Opcional) Atribua a um agente">
-    O agente executa automaticamente quando chegar a hora.
+  <Step title="Escolha o tipo de execução">
+    - **Manual:** alguém move o card e executa.
+    - **Agente:** atribua a um agente — ele executa quando a tarefa entra em ação.
+    - **Webhook/disparo:** aciona um sistema externo (avançado).
+  </Step>
+  <Step title="(Opcional) Defina recorrência" />
+  <Step title="Salve">
+    A tarefa aparece na coluna certa (Agendadas, se for futura/recorrente; senão, A fazer).
   </Step>
 </Steps>
 
-## Confiabilidade
+## Recorrência — fazer rodar sozinha
 
-As tarefas recorrentes do iTeam rodam **no horário certo, com folga mínima**, e **não se perdem** caso o sistema reinicie — elas retomam sozinhas. Você acompanha o histórico de execuções de cada tarefa.
+Ao marcar uma tarefa como recorrente, escolha o intervalo:
 
-<Tip>
-Para rotinas de várias etapas (não só uma tarefa), use os [Processos](/pt/automacao/processos) — eles orquestram um fluxo inteiro.
-</Tip>
+| Tipo | Exemplo de uso |
+|---|---|
+| **A cada X minutos** | Monitoramento quase em tempo real (ex.: a cada 1 min). |
+| **A cada X horas** | Checagens periódicas (ex.: a cada 2h). |
+| **Diária** | Resumo toda manhã às 8h. |
+| **Semanal** | Relatório toda segunda. |
+| **Mensal** | Fechamento no dia 1º. |
+
+Defina também o **horário** e o **fuso** (o fuso vem das [Configurações](/pt/administracao/configuracoes) da empresa). A cada conclusão, a **próxima ocorrência é criada automaticamente**, mantendo a cadência.
+
+<Info>
+**Confiabilidade:** as tarefas recorrentes do iTeam disparam no horário certo, com folga mínima, e **não se perdem** se o servidor reiniciar — elas retomam sozinhas. Uma de "1 em 1 minuto" roda a cada ~1 minuto, de verdade.
+</Info>
+
+## Atribuir a um agente
+
+1. No card, em **Execução**, escolha **Agente** e selecione qual.
+2. Garanta que o agente tem acesso aos dados/ferramentas que a tarefa exige.
+3. Quando a tarefa entra em ação, o agente executa e registra o resultado no card.
+
+<Frame caption="📸 Screenshot a inserir [/pt/automacao/quadro-de-tarefas]: detalhe de um card com recorrência configurada e agente atribuído.">
+  <img src="/images/placeholder.svg" alt="Card de tarefa com recorrência" />
+</Frame>
+
+## Acompanhar execuções
+
+Abra um card recorrente para ver o **histórico de execuções** (quando rodou, sucesso/falha, resultado). Use isso para confirmar que uma rotina está saudável e para investigar falhas.
+
+## Tarefa, processo ou time?
+
+| Use… | Quando |
+|---|---|
+| **Tarefa** | Trabalho único, ou rotina simples de **um passo**. |
+| [Processo](/pt/automacao/processos) | **Várias etapas** encadeadas que se repetem. |
+| [Time](/pt/inteligencia/times-de-agentes) | Precisa de **várias especialidades** colaborando. |
+
+## Solução de problemas
+
+<AccordionGroup>
+  <Accordion title="A tarefa recorrente não rodou no horário">
+    Verifique se ela está **ativa** (não pausada) e se o **fuso** das Configurações está correto. Veja o histórico do card para o último disparo.
+  </Accordion>
+  <Accordion title="O agente atribuído não executou">
+    Confirme que o agente tem **acesso aos dados/ferramentas** necessários e que você tem nível **use** nele. Teste o mesmo pedido no chat.
+  </Accordion>
+  <Accordion title="Quero pausar uma rotina sem apagar">
+    Desative a tarefa (toggle de ativo). Ela para de gerar novas ocorrências e pode ser reativada depois.
+  </Accordion>
+</AccordionGroup>
 
 ## Próximos passos
 
@@ -55,6 +98,6 @@ Para rotinas de várias etapas (não só uma tarefa), use os [Processos](/pt/aut
     Automatize fluxos de várias etapas.
   </Card>
   <Card title="Agentes" icon="bot" href="/pt/inteligencia/agentes">
-    Atribua tarefas a quem vai executá-las.
+    Configure quem vai executar as tarefas.
   </Card>
 </CardGroup>

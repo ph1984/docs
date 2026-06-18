@@ -1,54 +1,84 @@
 ---
 title: "Times de Agentes"
 sidebarTitle: "Times de Agentes"
-description: "Junte vários agentes para trabalharem como um departamento — coordenados, dividindo tarefas e entregando resultados em conjunto."
+description: "Junte agentes para trabalharem como um departamento. Aprenda a montar o time, escolher como eles se coordenam (incluindo o modo Roteiro) e quando usar time em vez de um agente."
 ---
 
-Um **time** é um grupo de agentes que trabalham juntos por um objetivo, como um departamento da sua empresa. Em vez de um agente fazer tudo, cada um contribui com sua especialidade — e o time se coordena.
+Um **time** é um grupo de agentes que trabalham juntos por um objetivo, como um departamento. Em vez de um agente fazer tudo, cada um contribui com sua especialidade — e o time se coordena e entrega um resultado consolidado.
 
-<Frame caption="📸 Screenshot a inserir: tela de Times de Agentes com um time montado.">
+<Frame caption="📸 Screenshot a inserir [/pt/inteligencia/times-de-agentes]: tela de Times com um time montado (membros + modo de coordenação).">
   <img src="/images/placeholder.svg" alt="Times de Agentes" />
 </Frame>
 
-## Quando usar um time (em vez de um agente)
+## Quando usar time (e quando não)
 
-<CardGroup cols={2}>
-  <Card title="Trabalho com várias especialidades" icon="users">
-    Ex.: marketing = pesquisa + conteúdo + performance.
-  </Card>
-  <Card title="Objetivo que exige etapas" icon="list-checks">
-    Várias frentes que precisam se encaixar para um resultado.
-  </Card>
-  <Card title="Espelhar um departamento" icon="building-2">
-    Vendas, Suporte, Dados — cada um com seu time de IA.
-  </Card>
-  <Card title="Revisão entre pares" icon="git-compare">
-    Um agente produz, outro revisa antes de entregar.
-  </Card>
-</CardGroup>
+| Situação | Use |
+|---|---|
+| Uma função só, bem definida | **Um [agente](/pt/inteligencia/agentes)** |
+| Várias especialidades para um resultado | **Time** |
+| Sequência de etapas que se repete | **[Processo](/pt/automacao/processos)** (pode usar um time dentro) |
 
-## Como os times trabalham
-
-O iTeam oferece diferentes **formas de coordenação** entre os agentes do time — desde "um responde por vez" até um **roteiro de etapas** em que você acompanha o progresso e avança quando quiser. O time entrega no fim um resultado consolidado.
+## Montar um time
 
 <Steps>
-  <Step title="Crie o time">
-    Em **Inteligência → Times de Agentes**, clique em **Criar time**.
+  <Step title="Abra Inteligência → Times de Agentes e clique em “Criar time”" />
+  <Step title="Dê nome e objetivo">
+    O objetivo guia a coordenação. Ex.: "Time de Marketing — produzir e avaliar campanhas."
   </Step>
-  <Step title="Escolha os agentes">
-    Adicione os agentes que vão compor o time (você pode reaproveitar os que já tem).
+  <Step title="Adicione os agentes (membros)">
+    Reaproveite agentes que já existem. Prefira **papéis distintos** (ex.: Pesquisa, Conteúdo, Performance).
   </Step>
-  <Step title="Defina como eles se coordenam">
-    Escolha a forma de trabalho (incluindo o modo **Roteiro**, em etapas) conforme o objetivo.
+  <Step title="Escolha como o time se coordena">
+    Veja os modos abaixo.
   </Step>
   <Step title="Converse com o time">
-    Você fala com o time como falaria com um agente — e ele organiza o trabalho internamente.
+    Você fala com o time como com um agente — ele organiza o trabalho internamente e devolve o resultado final.
   </Step>
 </Steps>
 
-<Tip>
-Comece simples: 2 ou 3 agentes com papéis bem distintos rendem mais do que um time grande e confuso.
-</Tip>
+## Modos de coordenação
+
+O iTeam oferece formas diferentes de os agentes trabalharem juntos. Escolha conforme o objetivo:
+
+<CardGroup cols={2}>
+  <Card title="Resposta coordenada" icon="users">
+    O time decide quem responde e combina as contribuições num resultado único.
+  </Card>
+  <Card title="Especialista por assunto" icon="compass">
+    O pedido é roteado para o agente mais adequado do time.
+  </Card>
+  <Card title="Revisão entre pares" icon="git-compare">
+    Um produz, outro revisa antes de entregar.
+  </Card>
+  <Card title="Roteiro (etapas)" icon="list-checks">
+    Um pipeline conversacional: o time avança por **etapas** e você acompanha/aprova o progresso.
+  </Card>
+</CardGroup>
+
+### Modo Roteiro (passo a passo guiado)
+
+No **Roteiro**, o trabalho é dividido em **etapas em sequência**. Você acompanha em qual etapa o time está, **avança** quando quiser (ou volta), e no fim recebe um **resumo executivo** consolidado. Ideal para fluxos que exigem o seu "ok" entre passos — como um atendimento cadenciado ou a montagem de um material em fases.
+
+<Frame caption="📸 Screenshot a inserir [/pt/inteligencia/times-de-agentes]: conversa com um time no modo Roteiro, mostrando a barra de etapas e o botão de avançar.">
+  <img src="/images/placeholder.svg" alt="Time no modo Roteiro" />
+</Frame>
+
+## Boas práticas
+
+<CardGroup cols={2}>
+  <Card title="Comece pequeno" icon="minimize-2">
+    2–3 agentes com papéis bem distintos rendem mais que um time grande e confuso.
+  </Card>
+  <Card title="Objetivo claro" icon="bullseye">
+    Um objetivo nítido melhora a coordenação e o resultado final.
+  </Card>
+  <Card title="Papéis sem sobreposição" icon="layers">
+    Evite dois agentes "iguais"; cada um deve ter uma especialidade.
+  </Card>
+  <Card title="Aprovação onde importa" icon="shield-check">
+    Em fluxos sensíveis, exija seu "ok" entre etapas.
+  </Card>
+</CardGroup>
 
 ## Próximos passos
 

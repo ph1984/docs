@@ -1,52 +1,114 @@
 ---
 title: "Agentes"
 sidebarTitle: "Agentes"
-description: "Crie, configure e gerencie seus funcionários de IA. Cada agente tem um papel, habilidades, acesso a ferramentas e a dados — e você controla tudo."
+description: "Tudo para criar, configurar e manter seus agentes de IA: campo a campo, com exemplos prontos e solução de problemas. Ao fim desta página você cria e ajusta agentes sozinho."
 ---
 
-Um **agente** é um funcionário de IA. Você dá um papel, ele ganha habilidades e acesso às ferramentas certas, e passa a executar trabalho quando você conversa com ele ou quando uma rotina dispara.
+Um **agente** é um funcionário de IA: tem um papel, instruções (a "personalidade" e as regras), habilidades, acesso a ferramentas e dados, e um nível de acesso por pessoa. Esta página ensina a **criar e configurar do zero** — sem depender de ninguém.
 
-<Frame caption="📸 Screenshot a inserir: lista de Agentes (Inteligência → Agentes).">
+<Frame caption="📸 Screenshot a inserir [/pt/inteligencia/agentes]: lista de Agentes (Inteligência → Agentes), com o botão 'Criar agente' destacado.">
   <img src="/images/placeholder.svg" alt="Lista de agentes" />
 </Frame>
 
-## Criar um agente
+## Criar um agente em 3 minutos
 
 <Steps>
-  <Step title="Abra Inteligência → Agentes e clique em Criar agente" />
-  <Step title="Descreva o papel em linguagem normal">
-    > "Analista financeiro que acompanha faturamento diário, explica variações e gera relatórios semanais."
-
-    O iTeam já sugere nome, descrição, habilidades e tom de voz.
+  <Step title="Abra Inteligência → Agentes e clique em “Criar agente”">
+    Você verá duas formas de começar: **descrever em linguagem natural** (recomendado) ou **preencher manualmente**. Comece pela descrição — é mais rápido.
   </Step>
-  <Step title="Ajuste o que quiser e salve">
-    Você pode refinar antes de salvar — ou deixar como está e ajustar depois.
+  <Step title="Descreva o papel com 1–3 frases concretas">
+    Quanto mais específico, melhor o resultado. Compare:
+
+    | ❌ Vago | ✅ Bom |
+    |---|---|
+    | "Agente de vendas" | "Analista de vendas que acompanha o faturamento diário por canal, explica variações acima de 10% e gera um resumo toda segunda." |
+
+    O iTeam já sugere **nome, descrição, tom de voz e habilidades** com base nisso.
+  </Step>
+  <Step title="Revise o rascunho">
+    Ajuste nome e instruções se quiser. Você **não precisa acertar tudo agora** — dá para editar depois a qualquer momento.
+  </Step>
+  <Step title="Salve e teste">
+    Abra o [Chat com Agentes](/pt/conversar/chat-com-agentes), selecione o agente e faça um pedido real (ex.: *"qual foi o faturamento de ontem?"*). Se ele pedir um dado/ferramenta que ainda não tem, volte e configure (próxima seção).
   </Step>
 </Steps>
 
-## O que você configura num agente
+## Configuração campo a campo
+
+Abra um agente e você verá as seções abaixo. Aqui está **o que cada uma faz e como preencher**.
 
 <AccordionGroup>
   <Accordion title="Identidade — nome, papel e ícone" icon="id-card">
-    Como o agente aparece para a sua equipe. Escolha um ícone que ajude a reconhecê-lo rápido.
+    - **Nome:** curto e reconhecível ("Analista Financeiro"). Aparece na lista do chat.
+    - **Papel:** uma frase que resume a função. Ajuda você e a equipe a saber para que serve.
+    - **Ícone:** escolha um ícone que represente a função — facilita achar na lista quando você tiver vários agentes.
   </Accordion>
-  <Accordion title="Instruções — a 'personalidade' e as regras" icon="scroll">
-    Aqui você define como ele deve se comportar: tom, prioridades, o que pode e o que não pode fazer.
+
+  <Accordion title="Instruções — a alma do agente (o que mais importa)" icon="scroll">
+    É aqui que você define **comportamento, prioridades e limites**. Pense como um "manual do cargo". Uma boa instrução costuma ter:
+
+    1. **Quem ele é e o objetivo** — "Você é um analista de vendas. Seu objetivo é dar visibilidade rápida do faturamento."
+    2. **Como agir** — tom (formal/informal), formato preferido ("sempre responda com um número-chave + 1 gráfico").
+    3. **Regras e limites** — "Nunca envie e-mail sem aprovação." / "Considere apenas pedidos pagos."
+    4. **Contexto da empresa** — termos, metas, definições ("FTD = primeiro depósito").
+
+    <Tip>Escreva as instruções como se estivesse treinando um funcionário no primeiro dia. Contexto vale mais que adjetivos.</Tip>
   </Accordion>
+
   <Accordion title="Habilidades (Skills)" icon="puzzle">
-    Capacidades extras que ampliam o que o agente sabe fazer. [Ver Skills →](/pt/recursos/skills)
+    Capacidades extras (buscar na web, gerar relatórios, etc.). Ative **só as que o papel exige** — menos habilidades = respostas mais focadas. [Como funcionam as Skills →](/pt/recursos/skills)
   </Accordion>
+
   <Accordion title="Ferramentas e Fontes de Dados" icon="database">
-    A quais sistemas e dados ele tem acesso. [Ver Fontes de Dados →](/pt/recursos/fontes-de-dados)
+    Define **a quais dados/sistemas** o agente pode chegar. Sem isso, ele responde "no geral"; com isso, responde com **os seus números**.
+    - Conecte a fonte em [Recursos → Fontes de Dados](/pt/recursos/fontes-de-dados) e/ou [APIs](/pt/recursos/apis).
+    - Depois, **libere a fonte para este agente** nesta seção.
+    - Teste com uma pergunta simples ("quantas linhas tem a tabela X?").
   </Accordion>
+
   <Accordion title="Modelo de IA" icon="cpu">
-    Por padrão o iTeam escolhe o melhor modelo para cada pedido. Você pode fixar um se quiser.
+    Por padrão fica em **Automático** — o iTeam escolhe o melhor modelo para cada pedido (rápido para perguntas simples, mais robusto para tarefas complexas). Só fixe um modelo específico se tiver um motivo claro; o automático cobre a maioria dos casos.
   </Accordion>
-  <Accordion title="Acesso (quem pode usar)" icon="lock">
-    Defina quem enxerga e usa este agente. [Ver Segurança & Acessos →](/pt/administracao/seguranca-e-acessos)
+
+  <Accordion title="Acesso — quem pode ver e usar (RBAC)" icon="lock">
+    Define quem na empresa enxerga e usa este agente. Há três níveis:
+
+    | Nível | Pode |
+    |---|---|
+    | **Ver (view)** | Abrir e ver o agente, sem usar. |
+    | **Usar (use)** | Conversar e executar com o agente. |
+    | **Configurar (configure)** | Tudo, inclusive editar e dar acesso a outros. |
+
+    Owner/Admin da empresa têm acesso a tudo automaticamente. Para os demais, conceda explicitamente — ou dê acesso por **projeto** (quem tem o projeto herda o agente). [Detalhes em Segurança & Acessos →](/pt/administracao/seguranca-e-acessos)
+
+    <Info>O acesso ao agente vale também para os **widgets** dele: quem não tem acesso ao agente não vê seus widgets.</Info>
   </Accordion>
-  <Accordion title="Widgets do agente" icon="layout-dashboard">
-    As telas interativas que ele criou. [Ver Widgets →](/pt/conversar/widgets)
+
+  <Accordion title="Widgets do agente e menu" icon="layout-dashboard">
+    Lista as telas interativas que o agente criou e deixa você **montar o menu** (ordenar, agrupar). [Tudo sobre Widgets →](/pt/conversar/widgets)
+  </Accordion>
+</AccordionGroup>
+
+<Frame caption="📸 Screenshot a inserir [/pt/inteligencia/agentes]: tela de edição do agente, mostrando as abas/seções (Identidade, Instruções, Skills, Ferramentas, Acesso).">
+  <img src="/images/placeholder.svg" alt="Edição de agente" />
+</Frame>
+
+## Receitas prontas (copie e adapte)
+
+<AccordionGroup>
+  <Accordion title="Agente analista de dados">
+    **Papel:** "Analista de dados que responde perguntas sobre faturamento, depósitos e clientes a partir do banco da empresa."
+    **Configurar:** conecte a Fonte de Dados; libere para o agente; nas instruções, defina os termos do negócio.
+    **Teste:** "faturamento dos últimos 7 dias por dia, em gráfico".
+  </Accordion>
+  <Accordion title="Agente de relatório recorrente">
+    **Papel:** "Gera e envia o resumo diário de vendas."
+    **Configurar:** crie o agente, depois crie uma [Tarefa recorrente](/pt/automacao/quadro-de-tarefas) ou um [Processo](/pt/automacao/processos) atribuído a ele.
+    **Dica:** deixe o envio externo exigindo [aprovação](/pt/administracao/seguranca-e-acessos) até confiar no resultado.
+  </Accordion>
+  <Accordion title="Agente de suporte">
+    **Papel:** "Responde dúvidas de clientes com base na nossa base de conhecimento, no tom da marca."
+    **Configurar:** ative skills de busca; nas instruções, cole as regras de atendimento.
   </Accordion>
 </AccordionGroup>
 
@@ -54,22 +116,35 @@ Um **agente** é um funcionário de IA. Você dá um papel, ele ganha habilidade
 
 <CardGroup cols={2}>
   <Card title="Um papel claro por agente" icon="bullseye">
-    Agentes focados respondem melhor. Prefira "Analista de Vendas" a "faz tudo".
+    Agentes focados respondem melhor. Prefira vários especialistas a um "faz-tudo".
   </Card>
   <Card title="Dê contexto nas instruções" icon="book">
-    Quanto mais ele souber da sua empresa, mais certeiras as respostas.
+    Termos, metas e definições da empresa = respostas certeiras.
   </Card>
-  <Card title="Menos é mais em ferramentas" icon="filter">
-    Conceda só o acesso necessário — é mais seguro e mais rápido.
+  <Card title="Menor acesso necessário" icon="filter">
+    Conceda só as fontes/skills que o papel exige. Mais seguro e mais rápido.
   </Card>
   <Card title="Evolua com o uso" icon="trending-up">
-    Ajuste as instruções conforme você percebe o que funciona.
+    Viu o agente errar um termo? Ajuste a instrução. Ele melhora a cada ajuste.
   </Card>
 </CardGroup>
 
-<Info>
-O iTeam **aprende com o uso**: o agente lembra o que já foi feito e fica mais preciso ao longo do tempo, sem você precisar repetir contexto.
-</Info>
+## Solução de problemas
+
+<AccordionGroup>
+  <Accordion title="O agente respondeu “não tenho acesso a esses dados”">
+    Falta conectar/liberar a fonte. Vá em [Fontes de Dados](/pt/recursos/fontes-de-dados), conecte, e na seção **Ferramentas e Fontes** do agente, libere-a para ele.
+  </Accordion>
+  <Accordion title="As respostas estão genéricas demais">
+    Enriqueça as **Instruções** com contexto da empresa e peça formato ("responda com número + gráfico"). Conecte uma fonte de dados real.
+  </Accordion>
+  <Accordion title="Uma pessoa não vê o agente">
+    Ela não tem acesso. Dê o nível adequado em **Acesso** (ou via projeto). Veja [Segurança & Acessos](/pt/administracao/seguranca-e-acessos).
+  </Accordion>
+  <Accordion title="O agente ficou “preso” repetindo a mesma ferramenta">
+    Refine a instrução para ser mais específico no objetivo. Em conversas muito longas, comece uma nova conversa para "limpar" o contexto.
+  </Accordion>
+</AccordionGroup>
 
 ## Próximos passos
 

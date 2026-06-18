@@ -1,85 +1,122 @@
 ---
 title: "Widgets"
 sidebarTitle: "Widgets"
-description: "Telinhas interativas — dashboards, formulários, calculadoras — que seus agentes criam a seu pedido, sem você escrever uma linha de código."
+description: "Telinhas interativas criadas pelos agentes. Aprenda a pedir, ajustar, conectar dados, compartilhar com segurança e resolver problemas — tudo sozinho."
 ---
 
-Um **Widget** é uma mini-aplicação visual e interativa criada por um agente: um painel de indicadores, um formulário de cadastro, uma calculadora, uma lista filtrável. Você pede em linguagem normal e ganha uma tela pronta para usar, compartilhar e reutilizar.
+Um **Widget** é uma mini-aplicação visual e interativa criada por um agente: painel de indicadores, formulário, calculadora, lista filtrável. Você pede em linguagem normal e ganha uma tela pronta para usar, compartilhar e reutilizar — sem programar.
 
-<Frame caption="📸 Screenshot a inserir: a página Widgets (faixas por agente, estilo Netflix).">
+<Frame caption="📸 Screenshot a inserir [/pt/conversar/widgets]: a página Widgets (faixas por agente, estilo Netflix) com prévia ao passar o mouse.">
   <img src="/images/placeholder.svg" alt="Página de Widgets" />
 </Frame>
 
-## Como criar um widget
+## 1. Criar um widget (passo a passo)
 
-No **Chat com Agentes**, peça naturalmente:
+<Steps>
+  <Step title="Abra o Chat com Agentes e escolha o agente certo">
+    Use um agente que tenha acesso aos dados que o widget vai mostrar (ex.: o seu analista de dados). Sem dados conectados, o widget fica sem números. [Conectar dados →](/pt/recursos/fontes-de-dados)
+  </Step>
+  <Step title="Peça em linguagem natural, sendo específico">
+    Diga **o que mostrar**, **o período** e **o formato**:
 
-> "Crie um widget com o faturamento dos últimos 30 dias, com total e gráfico por dia."
-
-O agente monta a tela, conecta nos seus dados e abre o widget num painel ao lado. Quer ajustar? Continue conversando:
-
-> "Adiciona um filtro por estado" · "Deixa o gráfico de barras" · "Troca a cor pro verde da marca".
+    > "Crie um widget com o **faturamento dos últimos 30 dias**: um número grande com o total, um **gráfico de barras por dia** e uma **tabela** com as 20 maiores vendas."
+  </Step>
+  <Step title="Acompanhe a criação">
+    O agente monta a tela, conecta nos dados e **abre o widget num painel ao lado**. Você pode redimensionar (arrastando a borda) e maximizar.
+  </Step>
+  <Step title="Refine conversando">
+    Não recriou do zero — ele **ajusta o que existe**:
+    - "Adiciona um filtro por estado."
+    - "Troca para gráfico de linha."
+    - "Coloca a cor verde da marca."
+    - "Inclui um botão para exportar em CSV."
+  </Step>
+</Steps>
 
 <Tip>
-Pedir edições é seguro: o agente **ajusta o widget existente** em vez de recriar do zero. Você não perde o que já estava bom.
+Quanto mais claro o pedido (métrica, período, recorte, formato), menos idas e vindas. "Top 10 produtos por receita no mês, em tabela" rende mais que "mostra vendas".
 </Tip>
 
-## Onde encontrar seus widgets
+## 2. Onde ficam e como abrir
 
-Clique em **Widgets** no menu (logo abaixo de *Assistente iTeam*). Eles ficam organizados **por agente**, como canais — fácil de achar. Os de agentes que você mais usa aparecem primeiro.
+Clique em **Widgets** no menu (logo abaixo de *Assistente iTeam*). A página organiza tudo **por agente**, como canais de streaming:
 
-- **Passe o mouse** sobre um widget para ver uma **prévia ao vivo**.
-- **Clique** para abrir direto no chat do agente, com o widget já aberto.
-- Botão **Prévia** abre uma janela central, grande, para ver com calma.
+- **Mais usados primeiro** — os agentes com quem você mais conversa aparecem no topo.
+- **Passe o mouse** num widget → **prévia ao vivo** (renderiza de verdade, não é imagem).
+- **Clique** → abre direto no chat do agente, **com o widget já aberto**.
+- Botão **Prévia** (ícone de olho) → abre uma **janela central grande** para ver com calma, com um botão "Abrir no chat".
 
-<Frame caption="📸 Screenshot a inserir: prévia de um widget em modal central.">
-  <img src="/images/placeholder.svg" alt="Prévia de widget" />
+<Frame caption="📸 Screenshot a inserir [/pt/conversar/widgets]: o modal central de prévia de um widget (dashboard com KPIs e gráfico).">
+  <img src="/images/placeholder.svg" alt="Prévia de widget em modal" />
 </Frame>
 
-## Tipos de widget
+## 3. Tipos de widget
 
-<CardGroup cols={2}>
-  <Card title="Dashboard" icon="chart-pie">
-    Indicadores (KPIs), gráficos e tabelas com filtro de período. Ideal para acompanhar o negócio.
-  </Card>
-  <Card title="Formulário" icon="clipboard-list">
-    Cadastros e coletas de dados, com validação automática.
-  </Card>
-  <Card title="CRUD / Lista" icon="table">
-    Listas com busca, paginação e ações (criar, editar, excluir).
-  </Card>
-  <Card title="Personalizado" icon="wand-sparkles">
-    Calculadoras, ferramentas internas, o que a sua operação precisar.
-  </Card>
-</CardGroup>
+| Tipo | Para quê | Exemplo de pedido |
+|---|---|---|
+| **Dashboard** | Acompanhar o negócio (KPIs, gráficos, tabela) | "Dashboard de vendas com total, ticket médio e gráfico por dia" |
+| **Formulário** | Coletar/registrar dados | "Formulário de cadastro de fornecedor com nome, CNPJ e categoria" |
+| **CRUD / Lista** | Gerenciar registros (criar, editar, excluir) | "Lista de tarefas com status e botão de concluir" |
+| **Personalizado** | Calculadoras e ferramentas internas | "Calculadora de comissão a partir do valor da venda" |
 
-## Compartilhar com segurança
+## 4. Dados: estático × ao vivo
 
-Cada widget tem um nível de **visibilidade** que você controla:
+- Widgets de dashboard normalmente são **ao vivo**: os números vêm da fonte conectada e **se atualizam sozinhos**.
+- Se o widget veio "sem dados", verifique se o agente tem a **Fonte de Dados** liberada. [Como conectar →](/pt/recursos/fontes-de-dados)
+- Para um dado pesado, peça paginação: "mostra 20 por página com busca".
 
-| Visibilidade | Quem acessa |
-|---|---|
-| **Privado** | Só pessoas com acesso explícito ao agente. |
-| **Empresa** | Qualquer pessoa logada da sua empresa. |
-| **Público** | Qualquer um com o link (com opção de **proteger por senha**). |
+## 5. Compartilhar com segurança
+
+Cada widget tem uma **visibilidade** que você define:
+
+| Visibilidade | Quem acessa | Quando usar |
+|---|---|---|
+| **Privado** | Só quem tem acesso explícito ao agente | Indicadores internos sensíveis |
+| **Empresa** | Qualquer pessoa logada da sua empresa | Painéis internos gerais |
+| **Público** | Qualquer um com o link (com opção de **senha**) | Compartilhar com cliente/parceiro |
+
+<Steps>
+  <Step title="Abra o widget (ou a aba Widgets do agente) e escolha a visibilidade" />
+  <Step title="Se for Público, copie o link gerado">
+    Opcionalmente, defina uma **senha** para proteger o acesso.
+  </Step>
+  <Step title="Envie o link a quem precisa">
+    Em "Empresa", a pessoa precisa estar logada; em "Público", basta o link (e a senha, se houver).
+  </Step>
+</Steps>
 
 <Info>
-Widgets respeitam o mesmo controle de acesso dos agentes: quem não tem acesso ao agente **não vê** os widgets dele. [Entenda o controle de acesso →](/pt/administracao/seguranca-e-acessos)
+Widgets respeitam o acesso do **agente**: quem não pode ver o agente **não vê** os widgets dele. Compartilhamento por link público é a forma de mostrar para fora sem dar acesso ao iTeam.
 </Info>
 
-## Por que isso é um diferencial
+## 6. Editar com precisão (sem quebrar)
 
-- **Sem desenvolvimento.** O que antes era um pedido para a equipe de TI vira uma conversa de 1 minuto.
-- **Sempre vivo.** Os dados do widget se atualizam sozinhos — não é uma imagem estática.
-- **Reutilizável.** Criou uma vez, usa sempre; compartilha com o time por link.
+Para mudar algo, **converse com o agente dono do widget** descrevendo a mudança. O agente faz um ajuste **cirúrgico** no widget existente — ele **nunca apaga e recria** por engano, então você não perde o que já estava certo. Para mudanças grandes, peça uma de cada vez ("primeiro adiciona o filtro; depois muda o gráfico").
+
+## Solução de problemas
+
+<AccordionGroup>
+  <Accordion title="O widget abriu vazio / sem números">
+    O agente provavelmente não tem a fonte de dados liberada, ou o período não tem dados. Conecte/libere a [Fonte de Dados](/pt/recursos/fontes-de-dados) e peça "recarrega" ou ajuste o período.
+  </Accordion>
+  <Accordion title="Pedi uma mudança e ele criou OUTRO widget">
+    Garanta que você está **no chat do agente dono** e que o widget está **aberto no painel** ao pedir a edição — assim o agente edita o certo.
+  </Accordion>
+  <Accordion title="Quero que alguém de fora veja, mas com proteção">
+    Use visibilidade **Público + senha**. Envie o link e a senha por canais separados.
+  </Accordion>
+  <Accordion title="O widget não aparece na página de Widgets">
+    Ele aparece sob o agente que o criou. Se você não vê o agente, é questão de [acesso](/pt/administracao/seguranca-e-acessos).
+  </Accordion>
+</AccordionGroup>
 
 ## Próximos passos
 
 <CardGroup cols={2}>
-  <Card title="Chat com Agentes" icon="messages-square" href="/pt/conversar/chat-com-agentes">
-    De onde nascem os widgets.
-  </Card>
   <Card title="Fontes de Dados" icon="database" href="/pt/recursos/fontes-de-dados">
     Conecte seus dados para alimentar os painéis.
+  </Card>
+  <Card title="Segurança & Acessos" icon="shield-check" href="/pt/administracao/seguranca-e-acessos">
+    Entenda visibilidade e quem vê o quê.
   </Card>
 </CardGroup>

@@ -1,70 +1,108 @@
 ---
 title: "Segurança & Acessos"
 sidebarTitle: "Segurança & Acessos"
-description: "Controle quem vê e faz o quê, exija aprovação humana para ações sensíveis e mantenha tudo registrado. No iTeam, você está sempre no comando."
+description: "Controle quem vê e faz o quê, conceda acessos por pessoa e papel, exija aprovação humana e convide sua equipe. Guia prático e completo."
 ---
 
-Segurança não é um detalhe do iTeam — é a fundação. Aqui você controla **quem acessa o quê**, **o que exige aprovação humana** e acompanha **o registro de tudo**. Sua operação de IA é poderosa **e** sob controle.
+Segurança é a fundação do iTeam. Aqui você controla **quem acessa o quê**, **o que exige aprovação humana**, **convida pessoas** e acompanha o registro de ações. Sua operação fica poderosa **e** sob controle.
 
-<Frame caption="📸 Screenshot a inserir: tela de Segurança & Acessos (papéis e permissões).">
+<Frame caption="📸 Screenshot a inserir [/pt/administracao/seguranca-e-acessos]: tela de Segurança & Acessos (lista de pessoas, papéis e permissões).">
   <img src="/images/placeholder.svg" alt="Segurança e Acessos" />
 </Frame>
 
-## Os três pilares
+## Papéis (a base de tudo)
 
-<CardGroup cols={3}>
-  <Card title="Quem acessa" icon="users-lock">
-    Cada pessoa enxerga só os agentes, dados e telas que pode. Acesso por pessoa e por papel.
-  </Card>
-  <Card title="O que precisa de aprovação" icon="shield-check">
-    Ações sensíveis aguardam o "ok" de um humano antes de acontecer.
-  </Card>
-  <Card title="O que aconteceu" icon="scroll-text">
-    Registro das ações para auditoria e confiança.
-  </Card>
-</CardGroup>
-
-## Papéis e permissões
-
-O iTeam usa **papéis** para simplificar: em vez de configurar pessoa por pessoa, você define o que cada papel pode fazer.
+Em vez de configurar pessoa por pessoa, o iTeam usa **papéis**. Cada pessoa da empresa tem um papel que define o que ela pode fazer:
 
 | Papel | Em geral pode |
 |---|---|
-| **Owner / Admin** | Tudo: configurar, dar acessos, ver tudo. |
-| **Gestor** | Gerenciar agentes e times do seu escopo. |
-| **Membro** | Usar os agentes/recursos que recebeu. |
-| **Visualizador** | Ver, sem alterar. |
+| **Owner** | Tudo, incluindo dados de cobrança e exclusões. É o dono da empresa. |
+| **Admin** | Configurar quase tudo e dar acessos. |
+| **Gestor (Manager)** | Gerenciar agentes/times do seu escopo. |
+| **Membro (Member)** | Usar os recursos que recebeu. |
+| **Visualizador (Viewer)** | Ver, sem alterar. |
 
 <Info>
-O acesso a um **agente** se estende aos recursos dele: quem não pode ver o agente, **não vê os widgets** nem os dados dele. Proteção consistente de ponta a ponta.
+Owner e Admin enxergam **tudo** da empresa por padrão. Os demais começam **restritos** e recebem acesso conforme a necessidade — o princípio do **menor privilégio**.
 </Info>
 
-## Aprovações humanas
+## Acesso por recurso (granular)
 
-Para ações que exigem cautela (enviar algo externo, alterar dados críticos), você pode exigir **aprovação humana**. O agente prepara a ação e **espera o seu sinal** — autonomia com freio de mão.
+Além do papel, você concede acesso a **recursos específicos**:
+
+- **Agentes:** níveis **Ver / Usar / Configurar** (veja [Agentes → Acesso](/pt/inteligencia/agentes)).
+- **Times, Processos, Canais:** acesso por item, para quem não é Owner/Admin.
+- **Por projeto:** se um recurso pertence a um projeto, quem tem o projeto **herda** o acesso — uma forma prática de organizar por área/cliente.
+
+## Convidar uma pessoa
 
 <Steps>
-  <Step title="Defina quais ações exigem aprovação" />
-  <Step title="O agente pausa e notifica quando chega numa dessas ações" />
-  <Step title="Você aprova ou recusa — e fica registrado" />
+  <Step title="Abra Segurança & Acessos e clique em convidar/adicionar pessoa" />
+  <Step title="Informe o e-mail e escolha o papel">
+    Comece pelo papel mais restrito que ainda permita o trabalho dela.
+  </Step>
+  <Step title="Conceda os acessos específicos">
+    Quais agentes/times/projetos ela pode usar. Para Membro/Visualizador, isso é essencial — sem acesso, ela não vê os recursos.
+  </Step>
+  <Step title="Envie o convite">
+    A pessoa recebe o acesso e passa a ver apenas o que você liberou.
+  </Step>
 </Steps>
 
-## Boas práticas de segurança
+## Aprovações humanas (autonomia com freio)
+
+Para ações sensíveis, você pode exigir que um humano aprove **antes** de acontecer. O agente prepara a ação e **espera**.
+
+<Steps>
+  <Step title="Defina quais ações exigem aprovação">
+    Ex.: enviar e-mail externo, alterar dados críticos, executar algo irreversível.
+  </Step>
+  <Step title="O agente pausa e notifica ao chegar numa dessas ações" />
+  <Step title="Você revisa e aprova ou recusa">
+    A decisão fica **registrada** (quem, quando, o quê).
+  </Step>
+</Steps>
+
+<Tip>
+Padrão recomendado: **comece exigindo aprovação** para tudo que sai da empresa (e-mails, mensagens, alterações externas). Conforme ganha confiança no agente, relaxe pontualmente.
+</Tip>
+
+## O que você NUNCA deve fazer
+
+<Warning>
+Nunca cole **senhas, chaves de API ou tokens** dentro de uma conversa com o agente. Cadastre credenciais no lugar seguro: [Recursos → APIs](/pt/recursos/apis). Conversas podem ser registradas; credenciais ali ficam expostas.
+</Warning>
+
+## Boas práticas
 
 <CardGroup cols={2}>
   <Card title="Menor privilégio" icon="key">
-    Conceda só o acesso necessário a cada pessoa e agente.
+    Conceda só o necessário. É mais seguro e mais simples de auditar.
   </Card>
-  <Card title="Aprovação no que é sensível" icon="hand">
-    Deixe ações irreversíveis sempre sob revisão humana.
+  <Card title="Aprovação no sensível" icon="hand">
+    Ações irreversíveis ou externas sempre sob revisão humana.
   </Card>
-  <Card title="Credenciais no lugar certo" icon="lock">
-    Cadastre chaves em [APIs](/pt/recursos/apis) — nunca em conversas.
+  <Card title="Revise periodicamente" icon="refresh-cw">
+    Remova acessos de quem saiu ou mudou de função.
   </Card>
-  <Card title="Revise acessos periodicamente" icon="refresh-cw">
-    Remova acessos de quem não precisa mais.
+  <Card title="Use projetos para organizar" icon="folder">
+    Agrupe recursos por área/cliente e conceda acesso ao projeto inteiro.
   </Card>
 </CardGroup>
+
+## Solução de problemas
+
+<AccordionGroup>
+  <Accordion title="Convidei alguém mas a pessoa não vê nenhum agente">
+    Papel restrito **sem acesso a recursos**. Conceda acesso aos agentes/times/projetos específicos que ela deve usar.
+  </Accordion>
+  <Accordion title="Um agente fez algo que eu não queria que fizesse sozinho">
+    Adicione esse tipo de ação à lista que **exige aprovação**. A partir daí ele pausa e espera o seu "ok".
+  </Accordion>
+  <Accordion title="Preciso bloquear alguém imediatamente">
+    Remova/suspenda a pessoa em Segurança & Acessos. O acesso é revogado.
+  </Accordion>
+</AccordionGroup>
 
 ## Próximos passos
 
