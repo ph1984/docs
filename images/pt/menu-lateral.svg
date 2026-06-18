@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 580" font-family="Inter, ui-sans-serif, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7c5cfc"/><stop offset="1" stop-color="#9b82fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="580" rx="14" fill="#0f0f18"/>
+  <rect x="1" y="1" width="278" height="578" rx="13" fill="none" stroke="#23233a"/>
+
+  <!-- logo -->
+  <circle cx="30" cy="34" r="13" fill="url(#acc)"/>
+  <rect x="24" y="29" width="12" height="10" rx="2" fill="#0f0f18"/>
+  <text x="52" y="39" fill="#ffffff" font-size="16" font-weight="700">iTeam</text>
+
+  <!-- company switcher -->
+  <rect x="14" y="58" width="252" height="34" rx="9" fill="#16162400" stroke="#23233a"/>
+  <text x="30" y="80" fill="#cfcfe0" font-size="12.5">Apostou</text>
+  <text x="250" y="80" fill="#6b6b85" font-size="12" text-anchor="end">▾</text>
+
+  <!-- destaque: Chat / Assistente / Widgets -->
+  <g>
+    <text x="20" y="116" fill="#cfcfe0" font-size="12.5" font-weight="600">Chat com Agentes</text>
+    <text x="20" y="146" fill="#cfcfe0" font-size="12.5" font-weight="600">Assistente iTeam</text>
+    <!-- widgets selecionado -->
+    <rect x="10" y="160" width="260" height="30" rx="9" fill="rgba(124,92,252,0.14)"/>
+    <rect x="10" y="166" width="3" height="18" rx="2" fill="#7c5cfc"/>
+    <text x="20" y="180" fill="#b9a8ff" font-size="12.5" font-weight="700">Widgets</text>
+  </g>
+
+  <line x1="16" y1="204" x2="264" y2="204" stroke="#20203400"/>
+
+  <!-- grupos -->
+  <text x="20" y="232" fill="#8b8ba0" font-size="11.5" font-weight="700" letter-spacing="0.5">INTELIGÊNCIA</text>
+  <text x="34" y="256" fill="#bcbccf" font-size="12.5">Agentes</text>
+  <text x="34" y="278" fill="#bcbccf" font-size="12.5">Times de Agentes</text>
+
+  <text x="20" y="312" fill="#8b8ba0" font-size="11.5" font-weight="700" letter-spacing="0.5">AUTOMAÇÃO</text>
+  <text x="34" y="336" fill="#bcbccf" font-size="12.5">Quadro de Tarefas</text>
+  <text x="34" y="358" fill="#bcbccf" font-size="12.5">Processos</text>
+
+  <text x="20" y="392" fill="#8b8ba0" font-size="11.5" font-weight="700" letter-spacing="0.5">RECURSOS  ▾</text>
+  <text x="34" y="416" fill="#7a7a92" font-size="12.5">Skills · APIs · Fontes</text>
+  <text x="34" y="438" fill="#7a7a92" font-size="12.5">Atlas · Estatísticas · Uso</text>
+
+  <line x1="16" y1="470" x2="264" y2="470" stroke="#23233a"/>
+  <text x="20" y="496" fill="#bcbccf" font-size="12.5">Segurança &amp; Acessos</text>
+  <text x="20" y="518" fill="#bcbccf" font-size="12.5">Configurações</text>
+
+  <!-- user -->
+  <circle cx="30" cy="550" r="12" fill="url(#acc)"/>
+  <text x="30" y="554" fill="#fff" font-size="11" text-anchor="middle" font-weight="700">P</text>
+  <text x="50" y="548" fill="#e0e0ec" font-size="12" font-weight="600">Pedro Antunes</text>
+  <text x="50" y="562" fill="#6b6b85" font-size="10.5">pedro@empresa.com</text>
+</svg>

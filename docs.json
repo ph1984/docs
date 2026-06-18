@@ -2,11 +2,11 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "almond",
   "name": "iTeam",
-  "description": "Build and manage your AI workforce. Deploy teams of AI agents that execute real business operations around the clock.",
+  "description": "Manual do iTeam — crie e gerencie sua força de trabalho de IA. Agentes que executam operações reais do seu negócio, com segurança, 24 horas por dia.",
   "colors": {
-    "primary": "#41ca70",
-    "light": "#cccccc",
-    "dark": "#347c54"
+    "primary": "#7c5cfc",
+    "light": "#9b82fc",
+    "dark": "#5a3fd6"
   },
   "favicon": "https://media.brand.dev/e03294f6-0b5e-4074-ada6-8c284c64c285.png",
   "icons": {
@@ -22,12 +22,12 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Home",
+          "anchor": "Início",
           "icon": "house",
           "href": "/"
         },
         {
-          "anchor": "iTeam Website",
+          "anchor": "Site do iTeam",
           "icon": "globe",
           "href": "https://iteam.works"
         }
@@ -36,12 +36,35 @@
     "directory": "card",
     "tabs": [
       {
-        "tab": "Documentation",
+        "tab": "Documentação",
+        "groups": [
+          {
+            "group": "Começando",
+            "icon": "rocket",
+            "expanded": true,
+            "pages": [
+              "pt/introducao",
+              "pt/primeiros-passos",
+              "pt/conceitos"
+            ]
+          },
+          {
+            "group": "Conversar",
+            "icon": "messages-square",
+            "expanded": true,
+            "pages": [
+              "pt/conversar/chat-com-agentes",
+              "pt/conversar/widgets"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "English",
         "groups": [
           {
             "group": "Get Started",
             "icon": "rocket",
-            "expanded": true,
             "pages": [
               "introduction",
               "quickstart",
@@ -51,7 +74,6 @@
           {
             "group": "Your AI Workforce",
             "icon": "users",
-            "expanded": true,
             "pages": [
               "workforce/ai-agents",
               "workforce/teams",
@@ -62,7 +84,6 @@
           {
             "group": "Pulse",
             "icon": "activity",
-            "expanded": true,
             "pages": [
               "pulse/overview",
               "pulse/how-it-works",
@@ -73,7 +94,6 @@
           {
             "group": "Integrations",
             "icon": "plug",
-            "expanded": true,
             "pages": [
               "integrations/overview",
               "integrations/crm-erp",
@@ -83,21 +103,14 @@
           {
             "group": "Security & Control",
             "icon": "shield",
-            "expanded": true,
             "pages": [
               "security/permissions-and-approvals",
               "security/audit-logs"
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Use Cases",
-        "groups": [
+          },
           {
-            "group": "By Department",
+            "group": "Use Cases",
             "icon": "building-2",
-            "expanded": true,
             "pages": [
               "use-cases/customer-support",
               "use-cases/sales",
@@ -117,8 +130,8 @@
     "links": [],
     "primary": {
       "type": "button",
-      "label": "Get Started",
-      "href": "https://iteam.works"
+      "label": "Acessar o iTeam",
+      "href": "https://app.iteam.works"
     }
   },
   "footer": {
