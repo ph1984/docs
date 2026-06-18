@@ -14,7 +14,7 @@
 
   <!-- company switcher -->
   <rect x="14" y="58" width="252" height="34" rx="9" fill="#16162400" stroke="#23233a"/>
-  <text x="30" y="80" fill="#cfcfe0" font-size="12.5">Apostou</text>
+  <text x="30" y="80" fill="#cfcfe0" font-size="12.5">SuaEmpresa</text>
   <text x="250" y="80" fill="#6b6b85" font-size="12" text-anchor="end">▾</text>
 
   <!-- destaque: Chat / Assistente / Widgets -->

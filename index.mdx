@@ -1,134 +1,51 @@
 ---
-title: iTeam Documentation
-description: Build and manage your AI workforce. Deploy teams of AI agents that execute real business operations around the clock.
+title: Manual do iTeam
+description: Crie e gerencie sua força de trabalho de IA. Agentes que executam operações reais do seu negócio, com segurança, 24 horas por dia.
 mode: frame
 ---
 
-<div data-product-guide-index className="flex w-full flex-col gap-8 max-w-5xl mx-auto px-4 md:px-8 lg:px-12 py-10 lg:gap-14 lg:py-16">
-  <div className="flex max-w-[540px] flex-col gap-2 self-center text-center">
+<div className="flex w-full flex-col gap-8 max-w-5xl mx-auto px-4 md:px-8 lg:px-12 py-10 lg:gap-14 lg:py-16">
+  <div className="flex max-w-[560px] flex-col gap-2 self-center text-center">
     <h1 className="text-[30px] font-medium leading-9 tracking-tight text-gray-900 dark:text-gray-50">
-      iTeam Documentation
+      Manual do iTeam
     </h1>
     <p className="text-balance text-base leading-relaxed tracking-tight text-gray-600 dark:text-gray-400">
-      Build your AI workforce — create agents, assemble teams, and let them execute your business operations 24/7.
+      Aprenda a usar o iTeam de ponta a ponta — do menu às configurações. Sem jargão, passo a passo.
     </p>
   </div>
 
   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-    <Card
-      title={<span className="product-guide-feature-card-title">Your AI Workforce</span>}
-      icon="users"
-      href="/workforce/ai-agents"
-      className="product-guide-feature-card"
-      size={64}
-    >
-      <span className="product-guide-feature-card-description">Create AI agents, build teams, and assign real goals to run your operations.</span>
+    <Card title="O que é o iTeam" icon="sparkles" href="/pt/introducao">
+      Entenda em 2 minutos o que a plataforma faz e por que é diferente.
     </Card>
-
-    <a
-      href="/pulse/overview"
-      className="rounded-2xl flex flex-col gap-4 border bg-gray-50 p-4 outline-none shadow-sm shadow-gray-950/5 transition hover:border-primary hover:shadow-md dark:bg-gray-950 dark:shadow-black/20 dark:hover:border-primary"
-    >
-      <Icon icon="activity" color="rgb(var(--primary))" size={18} className="shrink-0" />
-      <div className="flex flex-col gap-1">
-        <span className="font-serif text-base font-medium text-gray-900 dark:text-gray-50">Pulse</span>
-        <span className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-          24/7 autonomous monitoring that detects anomalies and opportunities in real time.
-        </span>
-      </div>
-    </a>
-    <a
-      href="/integrations/overview"
-      className="rounded-2xl flex flex-col gap-4 border bg-gray-50 p-4 outline-none shadow-sm shadow-gray-950/5 transition hover:border-primary hover:shadow-md dark:bg-gray-950 dark:shadow-black/20 dark:hover:border-primary"
-    >
-      <Icon icon="plug" color="rgb(var(--primary))" size={18} className="shrink-0" />
-      <div className="flex flex-col gap-1">
-        <span className="font-serif text-base font-medium text-gray-900 dark:text-gray-50">Integrations</span>
-        <span className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-          Connect your CRM, ERP, databases, and APIs so agents have access to your data.
-        </span>
-      </div>
-    </a>
+    <Card title="Primeiros passos" icon="rocket" href="/pt/primeiros-passos">
+      Do login à primeira resposta útil — em 5 minutos.
+    </Card>
+    <Card title="Conversar com agentes" icon="messages-square" href="/pt/conversar/chat-com-agentes">
+      O coração do iTeam: peça e receba, como num chat.
+    </Card>
+    <Card title="Widgets" icon="layout-dashboard" href="/pt/conversar/widgets">
+      Telinhas interativas criadas pelos agentes, sem programar.
+    </Card>
   </div>
 
   <hr className="border-0 border-t border-border" />
 
   <div className="flex flex-col gap-4">
-    <h2 className="font-serif text-xl font-medium leading-normal text-gray-900 dark:text-gray-50">Common tasks</h2>
-
+    <h2 className="font-serif text-xl font-medium leading-normal text-gray-900 dark:text-gray-50">Explore por área</h2>
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-      <a
-        href="/quickstart"
-        className="rounded-2xl flex flex-col gap-4 border bg-gray-50 p-4 outline-none shadow-sm shadow-gray-950/5 transition hover:border-primary hover:shadow-md dark:bg-gray-950 dark:shadow-black/20 dark:hover:border-primary"
-      >
-        <Icon icon="rocket" color="rgb(var(--primary))" size={18} className="shrink-0" />
-        <div className="flex flex-col gap-1">
-          <span className="font-serif text-base font-medium text-gray-900 dark:text-gray-50">Create your first agent</span>
-          <span className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-            Follow the quickstart to build and deploy your first AI agent in minutes.
-          </span>
-        </div>
-      </a>
-      <a
-        href="/workforce/teams"
-        className="rounded-2xl flex flex-col gap-4 border bg-gray-50 p-4 outline-none shadow-sm shadow-gray-950/5 transition hover:border-primary hover:shadow-md dark:bg-gray-950 dark:shadow-black/20 dark:hover:border-primary"
-      >
-        <Icon icon="network" color="rgb(var(--primary))" size={18} className="shrink-0" />
-        <div className="flex flex-col gap-1">
-          <span className="font-serif text-base font-medium text-gray-900 dark:text-gray-50">Build a team</span>
-          <span className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-            Group agents into specialized teams that mirror your department structure.
-          </span>
-        </div>
-      </a>
-      <a
-        href="/pulse/configuration"
-        className="rounded-2xl flex flex-col gap-4 border bg-gray-50 p-4 outline-none shadow-sm shadow-gray-950/5 transition hover:border-primary hover:shadow-md dark:bg-gray-950 dark:shadow-black/20 dark:hover:border-primary"
-      >
-        <Icon icon="sliders-horizontal" color="rgb(var(--primary))" size={18} className="shrink-0" />
-        <div className="flex flex-col gap-1">
-          <span className="font-serif text-base font-medium text-gray-900 dark:text-gray-50">Configure Pulse</span>
-          <span className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-            Set monitoring intervals, quiet hours, and autonomy levels for each Pulse agent.
-          </span>
-        </div>
-      </a>
-      <a
-        href="/security/permissions-and-approvals"
-        className="rounded-2xl flex flex-col gap-4 border bg-gray-50 p-4 outline-none shadow-sm shadow-gray-950/5 transition hover:border-primary hover:shadow-md dark:bg-gray-950 dark:shadow-black/20 dark:hover:border-primary"
-      >
-        <Icon icon="shield-check" color="rgb(var(--primary))" size={18} className="shrink-0" />
-        <div className="flex flex-col gap-1">
-          <span className="font-serif text-base font-medium text-gray-900 dark:text-gray-50">Set up approvals</span>
-          <span className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-            Control which actions agents take autonomously and which require human sign-off.
-          </span>
-        </div>
-      </a>
-      <a
-        href="/integrations/crm-erp"
-        className="rounded-2xl flex flex-col gap-4 border bg-gray-50 p-4 outline-none shadow-sm shadow-gray-950/5 transition hover:border-primary hover:shadow-md dark:bg-gray-950 dark:shadow-black/20 dark:hover:border-primary"
-      >
-        <Icon icon="building-2" color="rgb(var(--primary))" size={18} className="shrink-0" />
-        <div className="flex flex-col gap-1">
-          <span className="font-serif text-base font-medium text-gray-900 dark:text-gray-50">Connect your CRM</span>
-          <span className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-            Give your agents real-time access to customer data through native CRM connectors.
-          </span>
-        </div>
-      </a>
-      <a
-        href="/use-cases/customer-support"
-        className="rounded-2xl flex flex-col gap-4 border bg-gray-50 p-4 outline-none shadow-sm shadow-gray-950/5 transition hover:border-primary hover:shadow-md dark:bg-gray-950 dark:shadow-black/20 dark:hover:border-primary"
-      >
-        <Icon icon="headset" color="rgb(var(--primary))" size={18} className="shrink-0" />
-        <div className="flex flex-col gap-1">
-          <span className="font-serif text-base font-medium text-gray-900 dark:text-gray-50">Automate support</span>
-          <span className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-            Deploy L1 support agents that resolve tickets end-to-end without human intervention.
-          </span>
-        </div>
-      </a>
+      <Card title="Inteligência" icon="brain" href="/pt/inteligencia/agentes">
+        Crie agentes e monte times que trabalham como departamentos.
+      </Card>
+      <Card title="Automação" icon="workflow" href="/pt/automacao/processos">
+        Tarefas e processos que rodam sozinhos no horário certo.
+      </Card>
+      <Card title="Recursos" icon="boxes" href="/pt/recursos/fontes-de-dados">
+        Skills, APIs, fontes de dados, estatísticas e uso.
+      </Card>
+      <Card title="Segurança & Acessos" icon="shield-check" href="/pt/administracao/seguranca-e-acessos">
+        Controle quem vê e faz o quê, com aprovações e registro.
+      </Card>
     </div>
   </div>
 </div>

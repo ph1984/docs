@@ -1,0 +1,60 @@
+---
+title: "Quadro de Tarefas"
+sidebarTitle: "Quadro de Tarefas"
+description: "Um quadro estilo Kanban onde pessoas e agentes organizam o trabalho — incluindo tarefas que rodam sozinhas em horários definidos."
+---
+
+O **Quadro de Tarefas** é onde o trabalho é organizado visualmente, no estilo Kanban (A fazer → Fazendo → Feito). O diferencial: **agentes e pessoas usam o mesmo quadro** — e tarefas podem rodar **automaticamente** no horário que você definir.
+
+<Frame caption="📸 Screenshot a inserir: o Quadro de Tarefas com colunas e cards.">
+  <img src="/images/placeholder.svg" alt="Quadro de Tarefas" />
+</Frame>
+
+## Tipos de tarefa
+
+<CardGroup cols={2}>
+  <Card title="Tarefa pontual" icon="square-check">
+    Um trabalho único: criar, atribuir, concluir.
+  </Card>
+  <Card title="Tarefa recorrente" icon="repeat">
+    Roda sozinha no intervalo definido (ex.: a cada 1 min, todo dia às 8h).
+  </Card>
+  <Card title="Atribuída a um agente" icon="bot">
+    O agente executa quando a tarefa entra em "fazendo".
+  </Card>
+  <Card title="Com webhook / disparo" icon="webhook">
+    Aciona um sistema externo no momento certo.
+  </Card>
+</CardGroup>
+
+## Criar uma tarefa
+
+<Steps>
+  <Step title="Abra Automação → Quadro de Tarefas" />
+  <Step title="Clique em nova tarefa e descreva o que precisa ser feito" />
+  <Step title="(Opcional) Defina recorrência">
+    Escolha o intervalo: a cada X minutos/horas, diária, semanal… A tarefa passa a rodar sozinha.
+  </Step>
+  <Step title="(Opcional) Atribua a um agente">
+    O agente executa automaticamente quando chegar a hora.
+  </Step>
+</Steps>
+
+## Confiabilidade
+
+As tarefas recorrentes do iTeam rodam **no horário certo, com folga mínima**, e **não se perdem** caso o sistema reinicie — elas retomam sozinhas. Você acompanha o histórico de execuções de cada tarefa.
+
+<Tip>
+Para rotinas de várias etapas (não só uma tarefa), use os [Processos](/pt/automacao/processos) — eles orquestram um fluxo inteiro.
+</Tip>
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Processos" icon="git-branch" href="/pt/automacao/processos">
+    Automatize fluxos de várias etapas.
+  </Card>
+  <Card title="Agentes" icon="bot" href="/pt/inteligencia/agentes">
+    Atribua tarefas a quem vai executá-las.
+  </Card>
+</CardGroup>
