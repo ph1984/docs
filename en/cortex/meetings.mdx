@@ -1,0 +1,147 @@
+---
+title: "Meetings"
+sidebarTitle: "Meetings"
+description: "Meetings by area with a smart Minutes page: transcripts and documents become an executive summary, decisions and action items — actions flow into the Cortex after human approval, and the area's agents gain the meeting context. By the end of this page you can run Meetings on your own."
+---
+
+**Meetings** is your company's calendar inside the Cortex. Each meeting has its own page — the **Minutes** (Ata) — where you attach the transcript/documents and iTeam produces an **executive summary, decisions and action items**. Actions become **Cortex Actions** (after your approval), tied to area objectives, and everything becomes **searchable by the area's agents**. It's your organizational memory: six months later, the agent still knows *what was decided and why*.
+
+<Frame caption="📸 Screenshot to insert [/en/cortex/meetings]: Cortex → Meetings, Week view with meetings colored by area and the 'New meeting' button.">
+  <img src="/images/placeholder.svg" alt="Meetings calendar" />
+</Frame>
+
+<Info>
+Meetings lives under **Cortex → Meetings** in the sidebar. You only see meetings for the **areas you belong to** (or all of them, if you're an admin/owner).
+</Info>
+
+## How it works, in one sentence
+
+A meeting happens → you upload the **transcript/documents** → the **Minutes** summarize, extract **decisions** and **actions** → you **approve the actions** (they land in Cortex Actions on the meeting's day) → the **area's agents** answer with that context, and **watchers** get the Minutes by email.
+
+## The calendar
+
+Just like a calendar you already know, with **Day, Week, Month, Quarter and Year** views and an hourly grid in the day/week views.
+
+<Steps>
+  <Step title="Pick a view and navigate">
+    Switch between **Day / Week / Month / Quarter / Year** in the top-right. Use the arrows to move and **Today** to jump back. Each meeting shows its area's color.
+  </Step>
+  <Step title="Filter by area">
+    The **All areas** selector narrows the calendar to one area — and opens the **Area context** panel (see below).
+  </Step>
+  <Step title="Search across meetings">
+    The search bar is **semantic**: ask *"what did we decide about pricing?"* and it finds the passage in the right transcript/minutes, **most recent first** (older ones are flagged as "may be outdated").
+  </Step>
+</Steps>
+
+### Create a meeting
+
+Click **New meeting**. Set the title, **date, time and duration**, pick **one or more areas** (agents in those areas get automatic access) and, optionally, the Meet/Zoom link.
+
+<AccordionGroup>
+  <Accordion title="Repeat (recurrence) — in plain language" icon="repeat">
+    Toggle **Repeat** and choose, with no technical syntax: **Daily / Weekly / Monthly**, "every N", the **weekdays** (weekly) or the **day of month** (monthly). A summary line confirms what you built (e.g. *"Every week (Mon, Wed) at 10:00"*). iTeam materializes upcoming occurrences on the calendar automatically.
+  </Accordion>
+  <Accordion title="Automatic Minutes" icon="clock">
+    Choose to generate the Minutes **automatically X hours after it ends** (1, 2, 4, 12, 24h) or keep it **manual only**. Once the Minutes are ready — and **only then** — the summary is emailed to watchers.
+  </Accordion>
+</AccordionGroup>
+
+### Sync with Google Calendar
+
+The **Google Calendar** button imports the **next 14 days** of your Google calendar (title, time, attendees as watchers, Meet link). Re-importing **updates** existing events without duplicating. If Google isn't connected yet, iTeam tells you where to connect. The rest of Meetings works fine without it — sync is optional.
+
+## The meeting page (the Minutes)
+
+Click a meeting to open the **Minutes**. This is where everything happens.
+
+<Frame caption="📸 Screenshot to insert [/en/cortex/meetings]: Minutes page — documents, executive summary, decisions, and the 'Detected actions' list with the 'Approve → Cortex' button.">
+  <img src="/images/placeholder.svg" alt="Minutes page" />
+</Frame>
+
+<Steps>
+  <Step title="Attach transcripts and documents">
+    Drag in **transcripts, slide decks, PDFs, DOCX** (or paste the transcript directly). iTeam **auto-categorizes** (transcript / slides / document) — and you can fix the category in one click. Every document is **indexed** (searchable by you and by the area's agents).
+  </Step>
+  <Step title="Generate the summary (or let it auto-run)">
+    Click **Generate summary**. The AI produces the **executive summary**, the **decisions** list and the **detected actions**. With automatic Minutes on, this happens on its own after the meeting.
+  </Step>
+  <Step title="Edit the Minutes if needed">
+    The summary and decisions are **editable** — click the pencil, adjust the text (one decision per line) and save. Your correction also updates what the agents see.
+  </Step>
+</Steps>
+
+### Meeting actions → Cortex Actions (with human approval)
+
+This is the core. The **detected actions** do **not** become tasks automatically — they go through **you**:
+
+<Steps>
+  <Step title="Review each action">
+    Adjust the text, **tie it to an area objective** (optional) and choose the **date** (defaults to the meeting day).
+  </Step>
+  <Step title="Select what to approve">
+    Check the actions you want to move forward — there's a shortcut to **select/deselect all**. Dismiss the ones that don't fit (they leave the list; you can restore them later).
+  </Step>
+  <Step title="Approve → Cortex">
+    Click **Approve → Cortex**. Approved actions appear in the **Actions** calendar (Cortex → Actions) **on the meeting's day**, with a clickable **"from meeting"** badge back to the Minutes. Editing the action here also updates the Cortex version; dismissing it removes it there.
+  </Step>
+</Steps>
+
+<Tip>
+Unlike ordinary transcription tools, the action doesn't die as plain text: it becomes a trackable **Cortex Action** tied to an objective, with an owner and a due date — and enters the follow-up loop (including impact verdicts).
+</Tip>
+
+### Watchers and email
+
+In **Configure**, set the **watchers** (by company member or free email). They receive the **executive summary by email** — always **after** the Minutes are ready, with a preview, a link and the document list.
+
+## Intelligence only iTeam has
+
+<AccordionGroup>
+  <Accordion title="Since the last meeting" icon="history">
+    For recurring meetings, the Minutes open with the **previous meeting's scoreboard**: how many actions were **done / open / overdue** and the **impact verdict** of those that matured (📈 positive / 📉 negative). Your follow-up agenda, ready — with data, not just text.
+  </Accordion>
+  <Accordion title="Institutional why" icon="help-circle">
+    Ask an area agent *"why did we cut the legacy project?"* and it answers citing the **source meeting, date and passage**. The Minutes themselves are indexed, so decisions stay searchable forever.
+  </Accordion>
+  <Accordion title="Area context" icon="compass">
+    Filtering an area in the calendar opens a panel with **recent decisions** (with meeting and date), **open/overdue actions**, the **objectives** and an **Alignment radar**: objectives with **no movement for 30+ days** and actions with **no objective attached**. The area's agents use this same context to answer broad analyses.
+  </Accordion>
+  <Accordion title="Automatic nudges and agenda" icon="bell">
+    **Overdue** actions trigger **one** email reminder to the owner (no repeated nagging). And before a recurring meeting, watchers receive an **agenda**: last meeting's decisions + open actions.
+  </Accordion>
+  <Accordion title="Cross-area misalignment alert" icon="triangle-alert">
+    If a new decision **contradicts** another area's decision (e.g. one area freezes hiring while another decides to hire), the Minutes show an **alert** and the organizer is notified. You decide whether it's a real conflict.
+  </Accordion>
+</AccordionGroup>
+
+## The area's agents
+
+Every agent that belongs to an area **sees that area's meetings** and uses them **on its own** when the question calls for it — history, decisions, the "why", pending items or an overview. This happens **on demand** (it doesn't weigh on every reply) and is **cached** so it never slows things down. Remove the agent from the area → it loses access immediately.
+
+<Info>
+On the Minutes page, the **"Agents with knowledge of this meeting"** strip shows exactly which agents have access — proof the area is well connected.
+</Info>
+
+## Privacy and access
+
+- Each meeting belongs to **one or more areas**. Only **members of those areas**, the **organizer/watchers** and **admins/owners** can open the Minutes — everyone else gets a **restricted access** screen.
+- Attached documents enter the company **Knowledge** with the area's visibility; removing a document revokes the agents' access instantly.
+
+## Audio recording (optional)
+
+If enabled by your administrator, you can upload the meeting's **audio recording** and iTeam **transcribes** it (up to 25 MB per file), attaching the text as a transcript. It's **off by default** — the recommended path is pasting the transcript that Meet/Granola/Fireflies already produce.
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Do I need a bot joining the call?" icon="bot">
+    No. Meetings works with what you **upload afterward** (transcript/audio/docs). A live in-call bot is a future step.
+  </Accordion>
+  <Accordion title="Where does an approved action show up?" icon="check">
+    In **Cortex → Actions**, on the **meeting's day**, with the origin badge. You keep editing it there normally.
+  </Accordion>
+  <Accordion title="Can a meeting belong to more than one area?" icon="layers">
+    Yes. Just select multiple areas when creating or in **Configure** — agents from all of them get access.
+  </Accordion>
+</AccordionGroup>

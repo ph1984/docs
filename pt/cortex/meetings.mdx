@@ -1,0 +1,151 @@
+---
+title: "Meetings"
+sidebarTitle: "Meetings"
+description: "Reuniões por área com Ata inteligente: transcrições e documentos viram resumo executivo, decisões e ações — as ações vão para o Cortex com aprovação humana, e os agentes da área passam a ter o contexto das reuniões. Ao fim desta página você opera Meetings do zero."
+---
+
+**Meetings** é a agenda da empresa dentro do Cortex. Cada reunião tem uma página própria — a **Ata** — onde você anexa a transcrição/os documentos e o iTeam gera **resumo executivo, decisões e ações**. As ações viram **Ações do Cortex** (depois da sua aprovação), atreladas a objetivos da área, e tudo fica **pesquisável pelos agentes** daquela área. É a memória organizacional: seis meses depois, o agente ainda sabe *o que foi decidido e por quê*.
+
+<Frame caption="📸 Screenshot a inserir [/pt/cortex/meetings]: Cortex → Meetings, calendário na visão Semana com reuniões por área e o botão 'Nova reunião'.">
+  <img src="/images/placeholder.svg" alt="Calendário do Meetings" />
+</Frame>
+
+<Info>
+Meetings fica em **Cortex → Meetings** na barra lateral. Só aparecem as reuniões das **áreas de que você participa** (ou todas, se você for admin/dono).
+</Info>
+
+## Como funciona, em uma frase
+
+Reunião acontece → você sobe a **transcrição/os docs** → a **Ata** resume, extrai **decisões** e **ações** → você **aprova as ações** (elas entram nas Ações do Cortex no dia da reunião) → os **agentes da área** passam a responder com esse contexto, e os **watchers** recebem a Ata por e-mail.
+
+## O calendário
+
+Igual a uma agenda que você já conhece, com visões de **Dia, Semana, Mês, Trimestre e Ano** e uma grade de horário nas visões de dia e semana.
+
+<Steps>
+  <Step title="Escolha a visão e navegue">
+    Alterne entre **Dia / Semana / Mês / Trimestre / Ano** no canto superior direito. Use as setas para navegar e **Hoje** para voltar. Cada reunião aparece com a cor da sua área.
+  </Step>
+  <Step title="Filtre por área">
+    O seletor **Todas as áreas** limita o calendário a uma área específica — e abre o painel **Contexto da área** (veja adiante).
+  </Step>
+  <Step title="Busque nas reuniões">
+    A barra de busca é **semântica**: pergunte *"o que decidimos sobre pricing?"* e ela encontra o trecho na transcrição/ata certa, com as **mais recentes primeiro** (as antigas vêm sinalizadas como "pode estar desatualizada").
+  </Step>
+</Steps>
+
+### Criar uma reunião
+
+Clique em **Nova reunião**. Preencha título, **data, horário e duração**, escolha **uma ou mais áreas** (os agentes dessas áreas ganham acesso automático) e, se quiser, o link do Meet/Zoom.
+
+<AccordionGroup>
+  <Accordion title="Repetir (recorrência) — em linguagem de gente" icon="repeat">
+    Marque **Repetir** e escolha, sem decorar nada técnico: **Diária / Semanal / Mensal**, "a cada N", os **dias da semana** (na semanal) ou o **dia do mês** (na mensal). Uma frase-resumo confirma o que você montou (ex.: *"Toda semana (seg, qua) às 10:00"*). O iTeam materializa as próximas ocorrências no calendário automaticamente.
+  </Accordion>
+  <Accordion title="Ata automática" icon="clock">
+    Escolha gerar a Ata **automaticamente X horas após o término** (1, 2, 4, 12, 24h) ou deixe **só manual**. Quando a Ata fica pronta — e **só então** — o resumo é enviado por e-mail aos watchers.
+  </Accordion>
+</AccordionGroup>
+
+### Sincronizar com o Google Agenda
+
+O botão **Google Agenda** importa os eventos dos **próximos 14 dias** da sua agenda do Google (título, horário, participantes como watchers e link do Meet). Reimportar **atualiza** os eventos existentes sem duplicar. Se você ainda não conectou o Google, o iTeam avisa e indica onde conectar.
+
+<Note>
+A sincronização usa a conexão do **Google Calendar** (via integrações). Sem conexão, o resto do Meetings continua funcionando normalmente — o sync é opcional.
+</Note>
+
+## A página da reunião (a Ata)
+
+Clique numa reunião para abrir a **Ata**. É onde tudo acontece.
+
+<Frame caption="📸 Screenshot a inserir [/pt/cortex/meetings]: página da Ata — documentos, resumo executivo, decisões e a lista de 'Ações detectadas' com o botão 'Aprovar → Cortex'.">
+  <img src="/images/placeholder.svg" alt="Página da Ata" />
+</Frame>
+
+<Steps>
+  <Step title="Anexe transcrições e documentos">
+    Arraste **transcrições, apresentações, PDFs, DOCX** (ou cole a transcrição direto). O iTeam **categoriza automaticamente** (transcrição / apresentação / documento) — e você pode corrigir a categoria num clique. Todo documento é **indexado** (fica pesquisável por você e pelos agentes da área).
+  </Step>
+  <Step title="Gere o resumo (ou espere o automático)">
+    Clique em **Gerar resumo**. A IA produz o **resumo executivo**, a lista de **decisões** e as **ações detectadas**. Se você configurou a Ata automática, isso acontece sozinho após a reunião.
+  </Step>
+  <Step title="Edite a Ata se precisar">
+    O resumo e as decisões são **editáveis** — clique no lápis, ajuste o texto (uma decisão por linha) e salve. A correção também atualiza o que os agentes enxergam.
+  </Step>
+</Steps>
+
+### Ações da reunião → Ações do Cortex (com aprovação humana)
+
+Esta é a peça central. As **ações detectadas** na Ata **não** viram tarefas automaticamente — elas passam por **você**:
+
+<Steps>
+  <Step title="Revise cada ação">
+    Ajuste o texto, **atrele a um objetivo** da área (opcional) e escolha a **data** (por padrão, o dia da reunião).
+  </Step>
+  <Step title="Selecione o que aprovar">
+    Marque as ações que quer levar adiante — há um atalho para **marcar/desmarcar todas**. Descarte as que não fazem sentido (some da lista; dá para restaurar depois).
+  </Step>
+  <Step title="Aprovar → Cortex">
+    Clique em **Aprovar → Cortex**. As ações aprovadas aparecem no calendário de **Ações** (Cortex → Ações) **no dia da reunião**, com um selo **"origem: reunião"** clicável de volta para a Ata. Editar a ação aqui também atualiza a versão no Cortex; descartá-la a remove de lá.
+  </Step>
+</Steps>
+
+<Tip>
+Diferente de ferramentas de transcrição comuns, aqui a ação não morre num texto: ela vira uma **Ação do Cortex** rastreável, atrelada a um objetivo, com dono e prazo — e entra no ciclo de acompanhamento (inclusive no veredito de impacto).
+</Tip>
+
+### Watchers e e-mail
+
+Em **Configurar**, defina os **watchers** (por membro da empresa ou e-mail avulso). Eles recebem o **resumo executivo por e-mail** — sempre **depois** de a Ata ficar pronta, com prévia, link e a lista de documentos.
+
+## Inteligência que só o iTeam tem
+
+<AccordionGroup>
+  <Accordion title="Desde a última reunião" icon="history">
+    Em reuniões recorrentes, a Ata abre com o **placar da anterior**: quantas ações foram **feitas / abertas / atrasadas** e o **veredito de impacto** das que já maturaram (📈 positivo / 📉 negativo). É a pauta de acompanhamento pronta — com dados, não só texto.
+  </Accordion>
+  <Accordion title="Por quê institucional" icon="help-circle">
+    Pergunte a um agente da área *"por que decidimos cortar o projeto legado?"* e ele responde citando a **reunião de origem, a data e o trecho**. A própria Ata é indexada, então as decisões ficam pesquisáveis para sempre.
+  </Accordion>
+  <Accordion title="Contexto da área" icon="compass">
+    Ao filtrar uma área no calendário, abre um painel com **decisões recentes** (com reunião e data), **ações abertas/atrasadas**, os **objetivos** e um **Radar de Alinhamento**: objetivos **sem movimento há 30+ dias** e ações **sem objetivo atrelado**. Os agentes da área usam esse mesmo contexto para responder análises amplas.
+  </Accordion>
+  <Accordion title="Cobrança e pauta automáticas" icon="bell">
+    Ações **vencidas** geram **um** aviso por e-mail ao responsável (sem insistência repetida). E, antes de uma reunião recorrente, os watchers recebem uma **pauta**: decisões da última + ações em aberto.
+  </Accordion>
+  <Accordion title="Alerta de desalinhamento entre áreas" icon="triangle-alert">
+    Se uma decisão nova **contradiz** uma decisão de outra área (ex.: uma área congela contratações e outra decide contratar), a Ata mostra um **alerta** e o organizador é avisado. Quem decide se é conflito real são vocês.
+  </Accordion>
+</AccordionGroup>
+
+## Os agentes da área
+
+Todo agente que pertence a uma área **enxerga as reuniões daquela área** e as usa **por conta própria** quando a pergunta pede — histórico, decisões, o "porquê", pendências ou um panorama. Isso acontece **sob demanda** (não pesa em toda resposta) e é **cacheado** para não atrasar. Tirou o agente da área → ele perde o acesso na hora.
+
+<Info>
+Na página da Ata, a faixa **"Agentes com conhecimento desta reunião"** mostra exatamente quais agentes têm acesso — a prova de que a área está bem conectada.
+</Info>
+
+## Privacidade e acesso
+
+- Cada reunião pertence a **uma ou mais áreas**. Só **membros dessas áreas**, o **organizador/watchers** e **admins/donos** abrem a Ata — os demais recebem uma tela de **acesso restrito**.
+- Os documentos anexados entram no **Conhecimento** da empresa com a visibilidade da área; remover um documento tira o acesso dos agentes na hora.
+
+## Gravação em áudio (opcional)
+
+Se ativado pelo administrador, você pode subir a **gravação de áudio** da reunião e o iTeam a **transcreve** (até 25 MB por arquivo), anexando o texto como transcrição. Por padrão vem **desligado** — o caminho recomendado é colar a transcrição que o Meet/Granola/Fireflies já geram.
+
+## Perguntas frequentes
+
+<AccordionGroup>
+  <Accordion title="Preciso de um robô entrando na call?" icon="bot">
+    Não. O Meetings trabalha com o que você **sobe depois** (transcrição/áudio/docs). O robô que entra na call ao vivo é um passo futuro.
+  </Accordion>
+  <Accordion title="A ação aprovada aparece onde?" icon="check">
+    Em **Cortex → Ações**, no **dia da reunião**, com o selo de origem. Você continua editando por lá normalmente.
+  </Accordion>
+  <Accordion title="Uma reunião pode ser de mais de uma área?" icon="layers">
+    Sim. Basta marcar várias áreas ao criar ou em **Configurar** — os agentes de todas elas ganham acesso.
+  </Accordion>
+</AccordionGroup>
