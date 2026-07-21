@@ -1,0 +1,57 @@
+---
+title: "Aprendizados"
+sidebarTitle: "Aprendizados"
+description: "A memória do que já tentamos: para cada problema, a ação que resolveu, piorou ou não mudou. A base cresce sozinha conforme as ações são avaliadas, é pesquisável em linguagem natural e sinaliza quando a mesma ação teve desfechos opostos."
+---
+
+**Aprendizados** é a memória viva da empresa sobre **o que funciona**. Toda vez que uma [Ação](/pt/cortex/acoes) é avaliada com um veredito conclusivo, o Cortex **destila** uma lição no formato:
+
+> **Para o problema _X_, fazer _Y_ → resolveu / piorou / não mudou.**
+
+Assim, da próxima vez que o mesmo problema aparecer, ninguém precisa "reinventar a roda" nem repetir um erro já cometido. Os agentes também consultam essa base para agir melhor.
+
+<Frame caption="📸 Screenshot a inserir [/pt/cortex/aprendizados]: página Aprendizados com uma lista de cartões 'Problema → Ação → Desfecho', a barra de busca semântica no topo e o botão de atualizar a base.">
+  <img src="/images/placeholder.svg" alt="Base de aprendizados" />
+</Frame>
+
+## Como funciona, em uma frase
+
+Você avalia ações em [Ações](/pt/cortex/acoes) → cada veredito conclusivo (positivo/negativo/neutro) vira um **aprendizado** *problema → ação → desfecho* → a base fica **pesquisável** e alimenta as decisões futuras (suas e dos agentes).
+
+## Anatomia de um aprendizado
+
+<AccordionGroup>
+  <Accordion title="Problema" icon="circle-exclamation">
+    A situação concreta que a ação tentou resolver, escrita de forma **genérica e reutilizável** — sem nomes próprios nem números absolutos. Ex.: *"taxa de entrega de mensagens abaixo da meta"*, *"custo de infraestrutura acima do orçado"*.
+  </Accordion>
+  <Accordion title="Ação" icon="wrench">
+    O que foi feito, resumido de forma canônica. Ex.: *"migrar workload para instâncias spot"*, *"trocar o provedor de SMS"*.
+  </Accordion>
+  <Accordion title="Desfecho" icon="flag-checkered">
+    O resultado observado nos dados: **resolveu** (a ação melhorou o KPI), **piorou** ou **não mudou**. Vem do veredito da análise de impacto.
+  </Accordion>
+</AccordionGroup>
+
+## Busca semântica (não precisa acertar a palavra)
+
+A barra de busca entende **significado**, não só a palavra exata. Descreva o problema do seu jeito — *"taxa de entrega caindo"*, *"custo de infra alto"* — e o Cortex encontra os aprendizados relacionados, mesmo que estejam escritos com outras palavras.
+
+<Tip>
+Se não achar de primeira, **descreva o problema de outro jeito**. A busca é por sentido; reformular ajuda mais do que insistir na mesma frase.
+</Tip>
+
+## Desfechos em conflito
+
+Às vezes a **mesma ação** teve desfechos **opostos** para o mesmo problema em momentos diferentes (funcionou uma vez, não funcionou em outra). O Cortex **sinaliza** esse conflito em vez de esconder — é um sinal valioso: aquela solução depende do contexto, e vale investigar *quando* ela funciona.
+
+## Atualizar a base a partir do histórico
+
+O botão de **atualizar** (backfill) varre as ações **já avaliadas** e destila aprendizados que ainda não estavam na base. Útil logo depois de você avaliar um lote grande de ações, ou para "puxar" lições de ações antigas.
+
+## Gerenciar aprendizados
+
+Você pode **arquivar** um aprendizado que não faz mais sentido ou **excluí-lo** (ação definitiva). A base é sempre **da empresa** — os aprendizados de uma empresa nunca vazam para outra.
+
+<Info>
+Vereditos **"cedo demais"** e **"não avaliável"** **não** geram aprendizado — o sinal ainda é fraco. Só desfechos conclusivos entram na base, para mantê-la confiável.
+</Info>

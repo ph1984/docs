@@ -1,0 +1,77 @@
+---
+title: "Actions"
+sidebarTitle: "Actions"
+description: "The calendar of human actions — what people did (decisions, changes) tied to the objectives. Click 'Analyze impact' and the AI investigates the data to see whether it improved, worsened or didn't change the KPI, in real time. Actions coming from meetings land here automatically."
+---
+
+**Actions** is the calendar of what the **humans** did to move the objectives: raise a price, switch a supplier, change a creative, renegotiate a contract. Each action is tied to an area (and, where it makes sense, to an objective/KPI). The big value: with one click, the AI **assesses the impact** of each action in the data — and tells you whether it **improved, worsened or didn't change** things.
+
+<Frame caption="📸 Screenshot to insert [/en/cortex/actions]: Actions page in Week view, with actions spread across the days by area and the 'Analyze impact of actions' button at the top.">
+  <img src="/images/placeholder.svg" alt="Actions calendar" />
+</Frame>
+
+## How it works, in one sentence
+
+A human action is recorded (by you or coming from a meeting) → you click **Analyze impact** → the AI investigates the data around the action's date, compares the KPI before/after and assigns a **verdict** with a justification → this feeds the [Learnings](/en/cortex/learnings).
+
+## The calendar
+
+Just like a calendar, with **Week, Month, Quarter and Year** views and navigation via arrows + **Today**. Actions appear colored by **area**, grouped by day. A per-area summary shows how many actions are positive, negative, neutral, and so on.
+
+### Where actions come from
+
+<CardGroup cols={2}>
+  <Card title="Created by you" icon="plus">
+    Click **New action**: describe what was done, the date, the area and (optionally) the objective/KPI it's meant to move.
+  </Card>
+  <Card title="Coming from meetings" icon="calendar-days">
+    Actions decided in a [meeting (Meetings)](/en/cortex/meetings) land here automatically after your approval, on the meeting's day.
+  </Card>
+</CardGroup>
+
+## Analyze impact — the part that makes the difference
+
+This is the heart of the screen. There are two ways to trigger it:
+
+<Steps>
+  <Step title="A specific action">
+    Click an action to open the details panel and use **Analyze impact of this action**.
+  </Step>
+  <Step title="In bulk (the whole period)">
+    The **Analyze impact of actions** button opens a confirmation and assesses all the actions in the selected **period/areas** at once.
+  </Step>
+</Steps>
+
+### Asynchronous and in real time
+
+The analysis **doesn't freeze the screen**. As soon as you trigger it, the action shows an **"Analyzing…"** state and the AI works in the background — investigating the data, comparing the KPI before and after the action's date. **The result appears on its own, in seconds**, without you having to reload. When it's ready, the card shows the **verdict** and, on opening it, the **justification** with numbers.
+
+<Info>
+Actions coming from **meetings** (or at company level, with no owning agent) are analyzed by the native **Cortex** — the company's management agent. You don't need to configure anything: clicking "Analyze impact" just works.
+</Info>
+
+### The verdicts
+
+<AccordionGroup>
+  <Accordion title="Positive / Negative / Neutral" icon="scale-balanced">
+    There's evidence that the action **improved** (positive), **worsened** (negative) or **didn't change** (neutral) the KPI. These three generate a [Learning](/en/cortex/learnings).
+  </Accordion>
+  <Accordion title="Too early" icon="hourglass-start">
+    *"too_early"*: the KPI is measurable, but not enough time has passed yet (or there's no post-action measurement) to assess it. E.g. a renegotiation made today doesn't yet show in CAC.
+  </Accordion>
+  <Accordion title="Cannot assess" icon="ban">
+    *"cannot_assess"*: there's no measurable KPI or available data to judge it. A sign that a data source still needs connecting or a KPI needs tying to the action.
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+The AI is **conservative**: it only marks positive/negative when there's real evidence in the data. When in doubt, it prefers "too early" over inventing an effect. This keeps the learnings trustworthy.
+</Tip>
+
+## Create, edit and delete actions
+
+Besides **New action**, you edit or delete from the action's details panel. Every action can be linked to an **agent → objective → KPI** so the analysis knows exactly which number to look at.
+
+## Permissions
+
+Analyzing the actions of an **agent** requires configuration permission on that agent; analyzing the actions of the **whole company** (general bulk run) requires owner/admin.

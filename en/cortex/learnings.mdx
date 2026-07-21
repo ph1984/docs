@@ -1,0 +1,57 @@
+---
+title: "Learnings"
+sidebarTitle: "Learnings"
+description: "The memory of what we've already tried: for each problem, the action that fixed it, made it worse or changed nothing. The base grows on its own as actions are assessed, is searchable in natural language and flags when the same action had opposite outcomes."
+---
+
+**Learnings** is the company's living memory of **what works**. Every time an [Action](/en/cortex/actions) is assessed with a conclusive verdict, Cortex **distills** a lesson in the format:
+
+> **For problem _X_, doing _Y_ → fixed it / made it worse / changed nothing.**
+
+That way, the next time the same problem shows up, no one has to "reinvent the wheel" or repeat a mistake already made. The agents also consult this base to act better.
+
+<Frame caption="📸 Screenshot to insert [/en/cortex/learnings]: Learnings page with a list of 'Problem → Action → Outcome' cards, the semantic search bar at the top and the button to refresh the base.">
+  <img src="/images/placeholder.svg" alt="Learnings base" />
+</Frame>
+
+## How it works, in one sentence
+
+You assess actions in [Actions](/en/cortex/actions) → each conclusive verdict (positive/negative/neutral) becomes a **learning** *problem → action → outcome* → the base becomes **searchable** and feeds future decisions (yours and the agents').
+
+## Anatomy of a learning
+
+<AccordionGroup>
+  <Accordion title="Problem" icon="circle-exclamation">
+    The concrete situation the action tried to solve, written in a **generic, reusable** way — no proper names or absolute numbers. E.g. *"message delivery rate below target"*, *"infrastructure cost over budget"*.
+  </Accordion>
+  <Accordion title="Action" icon="wrench">
+    What was done, summarized in a canonical way. E.g. *"migrate the workload to spot instances"*, *"switch the SMS provider"*.
+  </Accordion>
+  <Accordion title="Outcome" icon="flag-checkered">
+    The result observed in the data: **fixed it** (the action improved the KPI), **made it worse** or **changed nothing**. It comes from the impact analysis verdict.
+  </Accordion>
+</AccordionGroup>
+
+## Semantic search (no need to hit the exact word)
+
+The search bar understands **meaning**, not just the exact word. Describe the problem your own way — *"delivery rate dropping"*, *"infra cost high"* — and Cortex finds the related learnings, even if they're written with other words.
+
+<Tip>
+If you don't find it right away, **describe the problem another way**. The search is by meaning; rephrasing helps more than insisting on the same wording.
+</Tip>
+
+## Conflicting outcomes
+
+Sometimes the **same action** had **opposite** outcomes for the same problem at different times (it worked once, didn't work another time). Cortex **flags** this conflict rather than hiding it — it's a valuable signal: that solution depends on context, and it's worth investigating *when* it works.
+
+## Refresh the base from history
+
+The **refresh** (backfill) button sweeps the **already-assessed** actions and distills learnings that weren't in the base yet. Handy right after you assess a large batch of actions, or to "pull" lessons from old actions.
+
+## Manage learnings
+
+You can **archive** a learning that no longer makes sense or **delete** it (a permanent action). The base is always **the company's** — one company's learnings never leak into another.
+
+<Info>
+**"Too early"** and **"cannot assess"** verdicts **don't** generate a learning — the signal is still weak. Only conclusive outcomes enter the base, to keep it trustworthy.
+</Info>

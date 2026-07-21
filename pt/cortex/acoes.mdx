@@ -1,0 +1,77 @@
+---
+title: "Ações"
+sidebarTitle: "Ações"
+description: "O calendário das ações humanas — o que as pessoas fizeram (decisões, mudanças) atrelado aos objetivos. Clique em 'Analisar impacto' e a IA investiga nos dados se aquilo melhorou, piorou ou não mudou o KPI, em tempo real. Ações vindas de reuniões entram aqui automaticamente."
+---
+
+**Ações** é o calendário do que os **humanos** fizeram para mover os objetivos: subir um preço, trocar um fornecedor, mudar um criativo, renegociar um contrato. Cada ação fica atrelada a uma área (e, quando faz sentido, a um objetivo/KPI). O grande valor: com um clique, a IA **avalia o impacto** de cada ação nos dados — e diz se **melhorou, piorou ou não mudou**.
+
+<Frame caption="📸 Screenshot a inserir [/pt/cortex/acoes]: página Ações na visão Semana, com ações distribuídas nos dias por área e o botão 'Analisar impacto das ações' no topo.">
+  <img src="/images/placeholder.svg" alt="Calendário de ações" />
+</Frame>
+
+## Como funciona, em uma frase
+
+Uma ação humana é registrada (por você ou vinda de uma reunião) → você clica em **Analisar impacto** → a IA investiga os dados em torno da data da ação, compara o KPI antes/depois e atribui um **veredito** com justificativa → isso alimenta os [Aprendizados](/pt/cortex/aprendizados).
+
+## O calendário
+
+Igual a uma agenda, com visões de **Semana, Mês, Trimestre e Ano** e navegação por setas + **Hoje**. As ações aparecem coloridas pela **área**, agrupadas por dia. Um resumo por área mostra quantas ações são positivas, negativas, neutras, etc.
+
+### De onde vêm as ações
+
+<CardGroup cols={2}>
+  <Card title="Criadas por você" icon="plus">
+    Clique em **Nova ação**: descreva o que foi feito, a data, a área e (opcional) o objetivo/KPI que ela pretende mover.
+  </Card>
+  <Card title="Vindas de reuniões" icon="calendar-days">
+    As ações decididas numa [reunião (Meetings)](/pt/cortex/meetings) entram aqui automaticamente após sua aprovação, no dia da reunião.
+  </Card>
+</CardGroup>
+
+## Analisar impacto — a parte que faz a diferença
+
+Este é o coração da tela. Há dois jeitos de disparar:
+
+<Steps>
+  <Step title="Uma ação específica">
+    Clique numa ação para abrir o painel de detalhes e use **Analisar impacto desta ação**.
+  </Step>
+  <Step title="Em lote (o período todo)">
+    O botão **Analisar impacto das ações** abre uma confirmação e avalia todas as ações do **período/áreas** selecionados de uma vez.
+  </Step>
+</Steps>
+
+### Assíncrono e em tempo real
+
+A análise **não trava a tela**. Assim que você dispara, a ação mostra um **"Analisando…"** e a IA trabalha em segundo plano — investigando os dados, comparando o KPI antes e depois da data da ação. **O resultado aparece sozinho, em segundos**, sem você precisar recarregar. Quando pronto, o card mostra o **veredito** e, ao abrir, a **justificativa** com números.
+
+<Info>
+Ações vindas de **reuniões** (ou de nível empresa, sem um agente dono) são analisadas pelo **Cortex** nativo — o agente de gestão da empresa. Você não precisa configurar nada: clicar em "Analisar impacto" já funciona.
+</Info>
+
+### Os vereditos
+
+<AccordionGroup>
+  <Accordion title="Positivo / Negativo / Neutro" icon="scale-balanced">
+    Há evidência de que a ação **melhorou** (positive), **piorou** (negative) ou **não mudou** (neutral) o KPI. Estes três geram [Aprendizado](/pt/cortex/aprendizados).
+  </Accordion>
+  <Accordion title="Cedo demais" icon="hourglass-start">
+    *"too_early"*: o KPI é medível, mas ainda não passou tempo suficiente (ou não há medição pós-ação) para avaliar. Ex.: uma renegociação feita hoje ainda não reflete no CAC.
+  </Accordion>
+  <Accordion title="Não avaliável" icon="ban">
+    *"cannot_assess"*: não há KPI mensurável nem dado disponível para julgar. Sinal de que falta conectar uma fonte de dados ou atrelar um KPI à ação.
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+A IA é **conservadora**: só marca positivo/negativo quando há evidência real nos dados. Se estiver na dúvida, prefere "cedo demais" a inventar um efeito. Isso mantém os aprendizados confiáveis.
+</Tip>
+
+## Criar, editar e excluir ações
+
+Além de **Nova ação**, você edita ou exclui pelo painel de detalhes da ação. Toda ação pode ser ligada a um **agente → objetivo → KPI** para que a análise saiba exatamente qual número olhar.
+
+## Alçada
+
+Analisar ações de um **agente** exige permissão de configuração naquele agente; analisar as ações de **toda a empresa** (lote geral) exige dono/admin.

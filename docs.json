@@ -76,7 +76,13 @@
             "icon": "target",
             "expanded": true,
             "pages": [
-              "pt/cortex/meetings"
+              "pt/cortex/visao-geral",
+              "pt/cortex/objetivos",
+              "pt/cortex/acoes",
+              "pt/cortex/meetings",
+              "pt/cortex/resultados",
+              "pt/cortex/aprendizados",
+              "pt/cortex/conhecimento"
             ]
           },
           {
@@ -149,7 +155,13 @@
             "icon": "target",
             "expanded": true,
             "pages": [
-              "en/cortex/meetings"
+              "en/cortex/overview",
+              "en/cortex/objectives",
+              "en/cortex/actions",
+              "en/cortex/meetings",
+              "en/cortex/results",
+              "en/cortex/learnings",
+              "en/cortex/knowledge"
             ]
           },
           {

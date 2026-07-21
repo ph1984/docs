@@ -1,0 +1,100 @@
+---
+title: "Objectives and KPIs"
+sidebarTitle: "Objectives"
+description: "Set where the company is going (Objectives), how it's measured (KPIs) and cascade it down to every agent with the 'Derives from' chain. See the objective tree, run the AI analysis and track current value × target. By the end of this page you build your goal structure from scratch."
+---
+
+**Objectives** is where you declare **what the company wants to achieve** and **how it's measured**. Each objective has one or more **KPIs** (indicators) — a number, a % or a $ amount that tells you whether you're getting there. It's the foundation of all of Cortex: the objectives are injected into the agents' context, and everything (actions, results, learnings) hangs off of them.
+
+<Frame caption="📸 Screenshot to insert [/en/cortex/objectives]: Objectives page on the 'Tree' tab, showing the company objective at the top and the agents' objectives deriving from it, with the 'Create objective' and 'Ask Cortex' buttons.">
+  <img src="/images/placeholder.svg" alt="Objective tree" />
+</Frame>
+
+## How it works, in one sentence
+
+You create a **company objective** with **KPIs** → cascade it into **agent objectives** that **derive** from it (the agent's KPI tied to the company KPI) → the AI **measures** the KPIs and shows **current × target × trend** → you track it in the **tree** and on the other Cortex screens.
+
+## The three tabs
+
+At the top of the page there are three views of the same information:
+
+<CardGroup cols={3}>
+  <Card title="Tree" icon="sitemap">
+    The visual map: company at the top, agents deriving below. See the cascade at a glance.
+  </Card>
+  <Card title="Actions" icon="calendar-check">
+    A shortcut to the [Actions](/en/cortex/actions) calendar tied to these objectives.
+  </Card>
+  <Card title="Results" icon="chart-line">
+    A shortcut to the evolution of the KPIs in [Results](/en/cortex/results).
+  </Card>
+</CardGroup>
+
+## Create an objective
+
+Click **Create objective** and choose the level:
+
+<Tabs>
+  <Tab title="Company objective">
+    The "top-level" objective. Give it a clear title (*"Grow revenue 30% this year"*) and add **KPIs** — what to measure and the **target** (e.g. KPI *"Monthly revenue"*, target *$1,000,000*).
+  </Tab>
+  <Tab title="Agent objective">
+    Choose the **agent** and, mandatorily, **which company objective it derives from** (the **"Derives from"** field). Then add the agent's KPI and **tie it to a company KPI** — that's what makes progress at the edge add up at the top.
+  </Tab>
+</Tabs>
+
+<Info>
+**Focus tip:** keep **up to 5 objectives** and **1 to 5 KPIs** per objective, ideally measurable ones (number, % or $). Fewer and better lets the AI focus on what matters — too many KPIs dilute everything.
+</Info>
+
+### The cascade ("Derives from") explained with an analogy
+
+Think of a tree. The **trunk** is the company objective (*"grow revenue"*). The **branches** are the agents' objectives (*"reduce churn"*, *"raise average ticket"*). Each branch **derives** from the trunk and its KPI **feeds** a trunk KPI. When the agent moves its number, the company number moves along with it — automatically, with no one recalculating by hand.
+
+<Warning>
+If the agent's objective **doesn't** derive from a company objective (or the KPI isn't tied), the cascade "doesn't close": the effort at the edge doesn't show up at the top. iTeam warns you when this happens and suggests fixing it.
+</Warning>
+
+## What the AI can measure (and what's still to connect)
+
+Each KPI shows a **measurement** badge:
+
+<AccordionGroup>
+  <Accordion title="Measurement confirmed" icon="circle-check">
+    The agent can measure this KPI with the connected resources (a spreadsheet, a database, an integration). The current value is genuinely calculated.
+  </Accordion>
+  <Accordion title="Not measurable yet" icon="circle-xmark">
+    The data source still needs connecting. iTeam tells you **what** to connect (e.g. *"connect Google Analytics"* or *"point to the sales spreadsheet"*). Meanwhile, the KPI exists but has no real number.
+  </Accordion>
+  <Accordion title="Not verified yet" icon="circle-question">
+    The measurement check hasn't run for this KPI yet. Run the objective analysis (below) so the agent can verify.
+  </Accordion>
+</AccordionGroup>
+
+## Run the analysis (the AI works the objective)
+
+Objectives aren't static. You can ask the AI to **work** an objective:
+
+<Steps>
+  <Step title="Run the company objective">
+    Triggers the **cascade**: every strategic agent tied to the objective is called on. You choose to **measure the KPIs**, **reformulate the hypotheses** (what might be blocking the goal), or both.
+  </Step>
+  <Step title="Follow along live">
+    The run happens asynchronously and you watch the progress unfold — the tree lights up as each agent responds.
+  </Step>
+  <Step title="Read the report">
+    At the end, a report brings together the objective, the evidence, the numbers and a synthesis. It also goes out by email and gets its own link.
+  </Step>
+</Steps>
+
+<Info>
+**Automatic measurement:** besides running it manually, the KPIs are measured **periodically** (weekly by default) by a global schedule. That way the numbers don't grow stale. See the history in [Results](/en/cortex/results).
+</Info>
+
+## Fix a wrong number
+
+If a KPI shows a value you know is wrong, use the **"wrong number"** feedback — the agent records the hint and adjusts how it measures next time (it comes to better understand which column/table to use).
+
+## Permissions
+
+Viewing the tree is open to anyone with access to the area. **Configuring** (creating/editing an objective) and **running** require permission: owner/admin for **company** objectives; whoever "configures" the agent, for that **agent's** objectives. Buttons you can't use appear disabled — nothing breaks.

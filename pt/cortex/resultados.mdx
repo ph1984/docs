@@ -1,0 +1,48 @@
+---
+title: "Resultados"
+sidebarTitle: "Resultados"
+description: "A reunião de resultados da empresa, sempre atualizada: a evolução de cada KPI ao longo do tempo, valor atual × meta, quem mede e filtro por área. As medições rodam automaticamente (semanalmente por padrão), então os números nunca envelhecem."
+---
+
+**Resultados** é onde a evolução dos KPIs aparece ao longo do tempo — a "reunião de resultados" da empresa, só que viva e sempre atualizada. Em vez de alguém montar um slide toda semana, o Cortex **mede sozinho** e guarda o histórico. Você abre e vê para onde cada indicador está indo.
+
+<Frame caption="📸 Screenshot a inserir [/pt/cortex/resultados]: página Resultados com os KPIs da empresa no topo, cada um com valor atual, meta e um gráfico de evolução no período; filtro por área ao lado.">
+  <img src="/images/placeholder.svg" alt="Resultados — evolução dos KPIs" />
+</Frame>
+
+## Como funciona, em uma frase
+
+O Cortex **mede** cada KPI de tempos em tempos (usando os dados conectados) → guarda cada medição com data → aqui você vê a **série no tempo** (atual × meta × tendência), da **empresa** primeiro e depois por **agente/área**.
+
+## O que você vê
+
+<AccordionGroup>
+  <Accordion title="Empresa primeiro, depois a ponta" icon="building">
+    Os KPIs da **empresa** aparecem no topo (o resultado que interessa à diretoria). Abaixo, os KPIs dos **agentes** que alimentam cada um deles — a mesma cascata dos [Objetivos](/pt/cortex/objetivos), agora em números ao longo do tempo.
+  </Accordion>
+  <Accordion title="Atual × meta × tendência" icon="chart-line">
+    Cada KPI mostra o **valor mais recente**, a **meta** e o **gráfico de evolução** no período escolhido. De relance você sabe se está subindo, estável ou caindo — e se a meta está perto.
+  </Accordion>
+  <Accordion title="Quem mede" icon="user-check">
+    Cada KPI indica **qual agente** é responsável por medi-lo. Assim fica claro de onde vem o número (e a quem perguntar se algo parecer estranho).
+  </Accordion>
+  <Accordion title="Filtro por área" icon="filter">
+    Foque numa área específica para ver só os KPIs dela — útil em reuniões de time.
+  </Accordion>
+</AccordionGroup>
+
+## Medição automática (os números não envelhecem)
+
+O Cortex tem um **agendamento global** que mede os KPIs de tempos em tempos — **semanalmente por padrão**. Cada rodada fica registrada num **log de medições**, então você tem o histórico completo: quando foi medido, qual valor deu.
+
+<Info>
+Você não precisa esperar o agendamento: pode **rodar a medição na hora** a partir de [Objetivos](/pt/cortex/objetivos) (rodar o objetivo → medir KPIs). O novo ponto aparece aqui em Resultados logo depois.
+</Info>
+
+## Como ler junto com as Ações
+
+A força do Cortex está em cruzar as duas telas: em **Resultados** você vê o **KPI subir ou cair**; em [Ações](/pt/cortex/acoes) você vê **o que os humanos fizeram** naquele período e o **impacto** avaliado. Juntos, respondem *"o número mudou por causa de quê?"* — que é exatamente o que vira [Aprendizado](/pt/cortex/aprendizados).
+
+## Alçada
+
+Você vê os resultados das **áreas de que participa** (dono/admin veem tudo). Rodar medições segue a mesma regra de configuração dos [Objetivos](/pt/cortex/objetivos).

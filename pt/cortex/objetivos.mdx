@@ -1,0 +1,100 @@
+---
+title: "Objetivos e KPIs"
+sidebarTitle: "Objetivos"
+description: "Defina para onde a empresa vai (Objetivos), como isso é medido (KPIs) e desdobre até cada agente com a cascata 'Deriva de'. Veja a árvore de objetivos, rode a análise da IA e acompanhe valor atual × meta. Ao fim desta página você monta sua estrutura de metas do zero."
+---
+
+**Objetivos** é onde você declara **o que a empresa quer alcançar** e **como isso é medido**. Cada objetivo tem um ou mais **KPIs** (indicadores) — um número, uma % ou um valor em R$ que diz se você está chegando lá. É a base de todo o Cortex: os objetivos são injetados no contexto dos agentes, e tudo (ações, resultados, aprendizados) se pendura neles.
+
+<Frame caption="📸 Screenshot a inserir [/pt/cortex/objetivos]: página Objetivos na aba 'Árvore', mostrando o objetivo da empresa no topo e os objetivos dos agentes derivando dele, com o botão 'Criar objetivo' e 'Perguntar ao Cortex'.">
+  <img src="/images/placeholder.svg" alt="Árvore de objetivos" />
+</Frame>
+
+## Como funciona, em uma frase
+
+Você cria um **objetivo da empresa** com **KPIs** → desdobra em **objetivos de agente** que **derivam** dele (KPI do agente atrelado ao KPI da empresa) → a IA **mede** os KPIs e mostra **atual × meta × tendência** → você acompanha na **árvore** e nas outras telas do Cortex.
+
+## As três abas
+
+No topo da página há três visões da mesma informação:
+
+<CardGroup cols={3}>
+  <Card title="Árvore" icon="sitemap">
+    O mapa visual: empresa no topo, agentes derivando. Enxerga a cascata de relance.
+  </Card>
+  <Card title="Ações" icon="calendar-check">
+    Atalho para o calendário de [Ações](/pt/cortex/acoes) ligadas a esses objetivos.
+  </Card>
+  <Card title="Resultados" icon="chart-line">
+    Atalho para a evolução dos KPIs em [Resultados](/pt/cortex/resultados).
+  </Card>
+</CardGroup>
+
+## Criar um objetivo
+
+Clique em **Criar objetivo** e escolha o nível:
+
+<Tabs>
+  <Tab title="Objetivo da empresa">
+    O objetivo "de topo". Dê um título claro (*"Crescer receita 30% no ano"*) e adicione **KPIs** — o que medir e a **meta** (ex.: KPI *"Receita mensal"*, meta *R$ 1.000.000*).
+  </Tab>
+  <Tab title="Objetivo de um agente">
+    Escolha o **agente** e, obrigatoriamente, **de qual objetivo da empresa ele deriva** (campo **"Deriva de"**). Depois adicione o KPI do agente e **atrele-o a um KPI da empresa** — é isso que faz o progresso da ponta somar no topo.
+  </Tab>
+</Tabs>
+
+<Info>
+**Dica de foco:** mantenha **até 5 objetivos** e **de 1 a 5 KPIs** por objetivo, de preferência mensuráveis (número, % ou R$). Menos e melhor faz a IA focar no que importa — muitos KPIs diluem tudo.
+</Info>
+
+### A cascata ("Deriva de") explicada com uma analogia
+
+Pense numa árvore. O **tronco** é o objetivo da empresa (*"crescer receita"*). Os **galhos** são os objetivos dos agentes (*"reduzir churn"*, *"aumentar ticket médio"*). Cada galho **deriva** do tronco e seu KPI **alimenta** um KPI do tronco. Quando o agente move o número dele, o número da empresa se move junto — automaticamente, sem ninguém recalcular à mão.
+
+<Warning>
+Se o objetivo do agente **não** deriva de um da empresa (ou o KPI não está atrelado), a cascata "não fecha": o esforço da ponta não aparece no topo. O iTeam avisa quando isso acontece e sugere corrigir.
+</Warning>
+
+## O que a IA sabe medir (e o que falta conectar)
+
+Cada KPI mostra um selo de **medição**:
+
+<AccordionGroup>
+  <Accordion title="Medição confirmada" icon="circle-check">
+    O agente consegue medir esse KPI com os recursos conectados (uma planilha, um banco de dados, uma integração). O valor atual é calculado de verdade.
+  </Accordion>
+  <Accordion title="Não medível ainda" icon="circle-xmark">
+    Falta conectar a fonte de dados. O iTeam diz **o que** conectar (ex.: *"ligar o Google Analytics"* ou *"apontar a planilha de vendas"*). Enquanto isso, o KPI existe mas fica sem número real.
+  </Accordion>
+  <Accordion title="Ainda não verificado" icon="circle-question">
+    A checagem de medição ainda não rodou para esse KPI. Rode a análise do objetivo (abaixo) para o agente verificar.
+  </Accordion>
+</AccordionGroup>
+
+## Rodar a análise (a IA trabalha o objetivo)
+
+Objetivos não são estáticos. Você pode pedir para a IA **trabalhar** um objetivo:
+
+<Steps>
+  <Step title="Rodar o objetivo da empresa">
+    Dispara a **cascata**: cada agente estratégico ligado ao objetivo é acionado. Você escolhe **medir os KPIs**, **reformular as hipóteses** (o que pode estar impedindo a meta), ou ambos.
+  </Step>
+  <Step title="Acompanhar ao vivo">
+    A execução roda de forma assíncrona e você vê o progresso acontecer — a árvore acende conforme cada agente responde.
+  </Step>
+  <Step title="Ler o relatório">
+    Ao final, um relatório reúne o objetivo, as evidências, os números e uma síntese. Também vai por e-mail e fica com link próprio.
+  </Step>
+</Steps>
+
+<Info>
+**Medição automática:** além de rodar manualmente, os KPIs são medidos **de tempos em tempos** (por padrão, semanalmente) por um agendamento global. Assim os números não envelhecem. Veja o histórico em [Resultados](/pt/cortex/resultados).
+</Info>
+
+## Corrigir um número errado
+
+Se um KPI mostrar um valor que você sabe estar errado, use o feedback de **"número errado"** — o agente registra a dica e ajusta como mede na próxima vez (ele passa a entender melhor qual coluna/tabela usar).
+
+## Alçada
+
+Ver a árvore é liberado para quem tem acesso à área. **Configurar** (criar/editar objetivo) e **rodar** exigem permissão: dono/admin para objetivos da **empresa**; quem "configura" o agente, para os objetivos **daquele agente**. Botões que você não pode usar aparecem desabilitados — nada quebra.
