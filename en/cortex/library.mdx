@@ -1,0 +1,77 @@
+---
+title: "Library"
+sidebarTitle: "Library"
+description: "Cortex's shared collection: published deliverables (canvas, documents, minutes) and, automatically, the knowledge documents marked as company/area. No extra publish step for Knowledge. Area-based RBAC, provenance of who published, and search by the agents."
+---
+
+The **Library** is the company's **shared collection** inside Cortex — the place where deliverables become an asset that anyone (and any agent) can find and reuse. Instead of good materials getting lost in old conversations, they're gathered here, with authorship and a link, ready for reuse.
+
+<Frame caption="📸 Screenshot to insert [/en/cortex/library]: Library page with the published items (canvas, documents, minutes) and the company/area knowledge documents listed together.">
+  <img src="/images/placeholder.svg" alt="Cortex Library" />
+</Frame>
+
+## What appears in the Library
+
+<CardGroup cols={2}>
+  <Card title="Published deliverables" icon="file-check">
+    Materials someone **published** to the Library: a canvas, a document, meeting minutes. These are the deliverables worth keeping and reusing.
+  </Card>
+  <Card title="Company/area knowledge" icon="file-lines">
+    **Automatically**, the [Knowledge](/en/cortex/knowledge) documents marked with **Company** or **Area** visibility appear here — with no extra publish step.
+  </Card>
+</CardGroup>
+
+<Info>
+**No publishing twice:** when you upload a document in Knowledge with **Company** or **Area** visibility, it **already** starts appearing in the Library. You don't need to "publish it again" — the Library gathers the collection automatically.
+</Info>
+
+## Publish a deliverable
+
+For deliverables (canvas, documents, minutes) that **didn't** come from Knowledge, there's a step to **publish** to the Library:
+
+<Steps>
+  <Step title="Open the deliverable you want to share">
+    A canvas, a document or minutes worth turning into a collection item.
+  </Step>
+  <Step title="Publish to the Library">
+    The deliverable starts appearing for people (and agents) with access, along with the **provenance**: who published it, which agent took part, and a **link** to the item.
+  </Step>
+  <Step title="Retract whenever you want">
+    If a material has gone stale, **retract** it from the Library. It stops appearing and stops being found by the agents.
+  </Step>
+</Steps>
+
+<Tip>
+The **provenance** ("published by John, agent Jane") plus the **link** make it clear where each material came from — great for trust and for citing the source.
+</Tip>
+
+## How the agents use the Library
+
+The collection doesn't sit idle: the **agents discover the Library's items through search**. When someone asks something related, the agent finds the published material and uses it in the answer — citing the author and the link. It's the same search-by-meaning mechanism as Knowledge.
+
+<Info>
+Under the hood, the Library **reuses the Knowledge index** (library-type items). In practice, everything in the Library is searchable by the agents the same way as Knowledge documents.
+</Info>
+
+## Area-based permissions (RBAC)
+
+The Library respects access by **area**, like the rest of Cortex:
+
+- **Company** items — all members see them.
+- **Area** items — only those who belong to that area (owner/admin see everything).
+- The agents **never** bring, in an answer, a Library item the asking person couldn't see.
+
+<Warning>
+Area privacy also applies to search: an item restricted to an area is **not** considered when the person asking isn't from that area. It's not just "hiding it on screen" — it's guaranteed in the search mechanism.
+</Warning>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Knowledge" icon="file-lines" href="/en/cortex/knowledge">
+    Upload documents — the company/area ones appear in the Library on their own.
+  </Card>
+  <Card title="Cortex — Overview" icon="target" href="/en/cortex/overview">
+    Understand the full management cycle.
+  </Card>
+</CardGroup>

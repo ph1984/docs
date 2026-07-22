@@ -104,6 +104,30 @@ Nunca cole **senhas, chaves de API ou tokens** dentro de uma conversa com o agen
   </Accordion>
 </AccordionGroup>
 
+## Acesso de agente por área (trava por área)
+
+Alguns agentes lidam com assuntos sensíveis de uma **área específica** (ex.: Financeiro, Jurídico, RH). Para esses, existe a trava **"Somente a área pode acessar"**: quando ligada, **apenas as pessoas daquela área** podem acessar e configurar o agente — mesmo que tivessem acesso por outra via.
+
+<Steps>
+  <Step title="Defina a área do agente">
+    A trava só funciona se o agente tiver uma **área** definida. Sem área, não há como restringir por área.
+  </Step>
+  <Step title="Ative “Somente a área pode acessar”">
+    No agente, ligue a trava. A partir daí, o acesso fica **restrito às pessoas da área** — e essa restrição **prevalece sobre outras permissões** (acessos individuais ou por projeto não furam a trava).
+  </Step>
+  <Step title="Owner e Admin continuam vendo">
+    Dono e administradores da empresa **continuam** enxergando e configurando o agente. A trava fecha a porta para os demais, não para a administração.
+  </Step>
+</Steps>
+
+<Info>
+Pense na trava como um "só para a área": ela **sobrepõe** os outros acessos daquele agente. Quem não é da área não entra — nem para usar, nem para configurar — exceto Owner/Admin.
+</Info>
+
+<Warning>
+Se você ativar a trava sem o agente ter uma **área** definida, ela não tem efeito. Defina a área primeiro; só então a restrição passa a valer.
+</Warning>
+
 ## Próximos passos
 
 <CardGroup cols={2}>

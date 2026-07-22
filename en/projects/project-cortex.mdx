@@ -1,0 +1,139 @@
+---
+title: "Project Cortex"
+sidebarTitle: "Project Cortex"
+description: "Every project has its own Cortex — Objectives, Actions, Results, Learnings, Meetings, Knowledge and Library — 100% isolated from the company. On this page you learn to set project objectives, upload exclusive knowledge and run the AI analysis without ever mixing with the company Cortex."
+---
+
+**Project Cortex** is the management brain **of a single project**. It mirrors the [company Cortex](/en/cortex/overview) exactly — the same screens, the same way of working — but everything that lives here is **exclusive to the project**. A project's objectives, knowledge, actions, results and learnings **never** mix with the company's or with other projects'.
+
+<Frame caption="📸 Screenshot to insert [/en/projects/project-cortex]: Cortex tab inside a project, showing the sub-tabs (Objectives, Actions, Results, Learnings, Meetings, Knowledge, Library) and the project's objective tree.">
+  <img src="/images/placeholder.svg" alt="Cortex inside a project" />
+</Frame>
+
+<Info>
+**The golden rule:** everything inside Project Cortex belongs to the project. The **project's agents** see this content; agents from outside **don't**. It's the same Cortex you already know, only inside your own "world".
+</Info>
+
+## The Project Cortex sub-tabs
+
+<CardGroup cols={2}>
+  <Card title="Objectives" icon="bullseye">
+    What the project wants to achieve, with KPIs and the visual tree.
+  </Card>
+  <Card title="Actions" icon="calendar-check">
+    What people did in the project — and the impact assessed by the AI.
+  </Card>
+  <Card title="Results / Measurements" icon="chart-line">
+    The evolution of the project's KPIs, measured by the project agent.
+  </Card>
+  <Card title="Learnings" icon="graduation-cap">
+    The project's memory: problem → action → outcome.
+  </Card>
+  <Card title="Meetings" icon="calendar">
+    The project's meetings, minutes and agendas, tied to actions.
+  </Card>
+  <Card title="Knowledge" icon="file-lines">
+    Documents and PDFs exclusive to the project, searchable by its agents.
+  </Card>
+  <Card title="Library" icon="book-open">
+    The collection of deliverables published inside the project.
+  </Card>
+</CardGroup>
+
+## Project objectives
+
+Just like the company Cortex, you declare **what the project wants to achieve** and **how it's measured**.
+
+<Steps>
+  <Step title="Create the project objective">
+    Give it a clear title (*"Deliver the client's pilot in 90 days"*) and add **KPIs** — number, % or $ — with the target.
+  </Step>
+  <Step title="See the objective tree">
+    The visual tree (React Flow) shows the project objective at the top and the **project agents'** objectives deriving from it — the same cascade as the company Cortex, only inside the project.
+  </Step>
+  <Step title="Run the analysis">
+    Click **Run** to have the AI work the objective: **generate hypotheses** (what might be blocking the goal), assess the **impact**, compute the **confidence** and **measure the KPIs**. You follow along live, and the tree lights up as each agent responds.
+  </Step>
+</Steps>
+
+<Info>
+**Confidence and impact:** when you run it, each hypothesis gets an estimate of **impact** (how much it moves the KPI) and of **confidence** (how much the AI believes it based on the evidence). This helps you prioritize where to act first.
+</Info>
+
+### "Derives from" — link (or not) to a company objective
+
+The project objective can be **fully independent** or, if you wish, **derive from a company objective**.
+
+<Tabs>
+  <Tab title="Independent (default)">
+    The objective lives only inside the project. Nothing rolls up to the company Cortex. This is the default behavior — the project is a closed world.
+  </Tab>
+  <Tab title="Derives from a company objective (optional)">
+    If it makes sense, use the **"Derives from"** field to tie the project objective to a company objective. Then the project's progress **adds up** at the company's top. It's **opt-in**: it only happens when you consciously choose it.
+  </Tab>
+</Tabs>
+
+<Warning>
+Without choosing **"Derives from"**, the project objective **doesn't** appear in the company Cortex — and that's by design. The link is always your decision, never automatic.
+</Warning>
+
+## Project actions
+
+Record what people did **in the project** (a decision, a change of course, a test). The AI investigates the project's data to see whether it **improved, worsened or didn't change** the KPI — exactly like the company Actions, but restricted to the project.
+
+## Results / Measurements
+
+Here you track the **evolution of the project's KPIs** over time. Measurements are done by the **project agent**, using the project's own data sources — the numbers don't come from the company, they come from the project.
+
+<Tip>
+Ask the project agent to **measure** a KPI when you want an up-to-date number right away, instead of waiting for the periodic measurement.
+</Tip>
+
+## Project learnings
+
+Every assessed action becomes a **Learning** in the format *problem → action → outcome* — only in the **project's** memory. The next time the same problem shows up in that project, its agents remember what's already been tried.
+
+## Project meetings
+
+The project's meetings live here: calendar, **minutes** (editable, generated automatically a few hours later), pre-meeting **agenda** and the ability to turn meeting decisions into project Cortex **Actions** — the same flow as [Meetings](/en/cortex/meetings), restricted to the project.
+
+## Project knowledge
+
+Upload **PDFs and documents exclusive to the project**. iTeam indexes the content by meaning and the **project's agents** start answering based on it.
+
+<Steps>
+  <Step title="Upload a file or write the text">
+    Upload a PDF/document (iTeam extracts the text) or write directly in the built-in editor. Give it a clear title and description.
+  </Step>
+  <Step title="The content is indexed">
+    On saving, the document becomes something the AI searches by meaning. Large documents take a few moments to become 100% searchable.
+  </Step>
+  <Step title="The project's agents use it automatically">
+    When someone asks a project agent something, it **searches the project's knowledge** and answers citing what it found.
+  </Step>
+</Steps>
+
+<Warning>
+The project's knowledge is **exclusive to the project**. Agents outside the project don't see it, and the company's knowledge isn't mixed in here unless you explicitly opt for it.
+</Warning>
+
+## Project library
+
+The **project Library** is the collection of deliverables (canvas, documents, minutes) published inside the project, plus the project's knowledge documents. It's isolated: it shows only **that** project's collection. Learn more about the concept in [Library](/en/cortex/library).
+
+## Isolation — the core guarantee
+
+<Info>
+Repeating, because it matters most: **everything in Project Cortex is exclusive to the project**. A project's objectives, knowledge, actions, results, learnings, meetings and library **never** appear in the company Cortex or in other projects. The only possible bridge is the objectives' **"Derives from"**, and even then only when you choose it.
+</Info>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Project Agents" icon="bot" href="/en/projects/project-agents">
+    Who sees the project's knowledge and objectives.
+  </Card>
+  <Card title="Company Cortex" icon="target" href="/en/cortex/overview">
+    Compare with Cortex at the company level.
+  </Card>
+</CardGroup>

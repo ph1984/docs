@@ -59,6 +59,7 @@
             "pages": [
               "pt/conversar/chat-com-agentes",
               "pt/conversar/assistente-iteam",
+              "pt/conversar/assistente-pessoal",
               "pt/conversar/widgets"
             ]
           },
@@ -82,7 +83,18 @@
               "pt/cortex/meetings",
               "pt/cortex/resultados",
               "pt/cortex/aprendizados",
-              "pt/cortex/conhecimento"
+              "pt/cortex/conhecimento",
+              "pt/cortex/biblioteca"
+            ]
+          },
+          {
+            "group": "Projetos",
+            "icon": "folder-kanban",
+            "expanded": true,
+            "pages": [
+              "pt/projetos/visao-geral",
+              "pt/projetos/cortex-do-projeto",
+              "pt/projetos/agentes-do-projeto"
             ]
           },
           {
@@ -138,6 +150,7 @@
             "pages": [
               "en/chat/chat-with-agents",
               "en/chat/iteam-assistant",
+              "en/chat/personal-assistant",
               "en/chat/widgets"
             ]
           },
@@ -161,7 +174,18 @@
               "en/cortex/meetings",
               "en/cortex/results",
               "en/cortex/learnings",
-              "en/cortex/knowledge"
+              "en/cortex/knowledge",
+              "en/cortex/library"
+            ]
+          },
+          {
+            "group": "Projects",
+            "icon": "folder-kanban",
+            "expanded": true,
+            "pages": [
+              "en/projects/overview",
+              "en/projects/project-cortex",
+              "en/projects/project-agents"
             ]
           },
           {

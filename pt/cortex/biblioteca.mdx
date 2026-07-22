@@ -1,0 +1,77 @@
+---
+title: "Biblioteca"
+sidebarTitle: "Biblioteca"
+description: "O acervo compartilhado do Cortex: entregas publicadas (canvas, documentos, atas) e, automaticamente, os documentos de conhecimento marcados como empresa/área. Sem passo extra de publicação para o Conhecimento. RBAC por área, proveniência de quem publicou e busca pelos agentes."
+---
+
+A **Biblioteca** é o **acervo compartilhado** da empresa dentro do Cortex — o lugar onde as entregas viram patrimônio que qualquer pessoa (e qualquer agente) pode encontrar e reaproveitar. Em vez de bons materiais se perderem em conversas antigas, eles ficam reunidos, com autoria e link, prontos para reuso.
+
+<Frame caption="📸 Screenshot a inserir [/pt/cortex/biblioteca]: página Biblioteca com os itens publicados (canvas, documentos, atas) e os documentos de conhecimento da empresa/área listados juntos.">
+  <img src="/images/placeholder.svg" alt="Biblioteca do Cortex" />
+</Frame>
+
+## O que aparece na Biblioteca
+
+<CardGroup cols={2}>
+  <Card title="Entregas publicadas" icon="file-check">
+    Materiais que alguém **publicou** na Biblioteca: um canvas, um documento, uma ata de reunião. São as entregas que valem a pena guardar e reusar.
+  </Card>
+  <Card title="Conhecimento da empresa/área" icon="file-lines">
+    **Automaticamente**, os documentos do [Conhecimento](/pt/cortex/conhecimento) marcados como visibilidade **Empresa** ou **Área** aparecem aqui — sem nenhum passo extra de publicação.
+  </Card>
+</CardGroup>
+
+<Info>
+**Sem publicar duas vezes:** ao subir um documento no Conhecimento com visibilidade **Empresa** ou **Área**, ele **já** passa a aparecer na Biblioteca. Você não precisa "publicar de novo" — a Biblioteca reúne o acervo automaticamente.
+</Info>
+
+## Publicar uma entrega
+
+Para as entregas (canvas, documentos, atas) que **não** vieram do Conhecimento, há o passo de **publicar** na Biblioteca:
+
+<Steps>
+  <Step title="Abra a entrega que quer compartilhar">
+    Um canvas, um documento ou uma ata que valha a pena virar acervo.
+  </Step>
+  <Step title="Publique na Biblioteca">
+    A entrega passa a aparecer para as pessoas (e agentes) com acesso, junto com a **proveniência**: quem publicou, qual agente participou e um **link** para o item.
+  </Step>
+  <Step title="Retire quando quiser">
+    Se um material ficou desatualizado, **retire** da Biblioteca. Ele deixa de aparecer e de ser encontrado pelos agentes.
+  </Step>
+</Steps>
+
+<Tip>
+A **proveniência** ("publicado por Fulano, agente Ciclano") mais o **link** deixam claro de onde veio cada material — ótimo para confiar e citar a fonte.
+</Tip>
+
+## Como os agentes usam a Biblioteca
+
+O acervo não fica parado: os **agentes descobrem os itens da Biblioteca por busca**. Quando alguém pergunta algo relacionado, o agente encontra o material publicado e o usa na resposta — citando o autor e o link. É o mesmo mecanismo de busca por significado do Conhecimento.
+
+<Info>
+Por baixo, a Biblioteca **reaproveita o índice do Conhecimento** (itens do tipo biblioteca). Na prática, tudo o que está na Biblioteca é pesquisável pelos agentes da mesma forma que os documentos de Conhecimento.
+</Info>
+
+## Alçada por área (RBAC)
+
+A Biblioteca respeita o acesso por **área**, igual ao resto do Cortex:
+
+- Itens de **empresa** — todos os membros veem.
+- Itens de **área** — só quem participa daquela área (dono/admin veem tudo).
+- Os agentes **nunca** trazem, na resposta, um item de Biblioteca que a pessoa que perguntou não poderia ver.
+
+<Warning>
+A privacidade por área vale também para a busca: um item restrito a uma área **não** é considerado quando quem pergunta não é daquela área. Não é só "esconder na tela" — é garantido no mecanismo de busca.
+</Warning>
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Conhecimento" icon="file-lines" href="/pt/cortex/conhecimento">
+    Suba documentos — os de empresa/área aparecem na Biblioteca sozinhos.
+  </Card>
+  <Card title="Cortex — Visão geral" icon="target" href="/pt/cortex/visao-geral">
+    Entenda o ciclo completo de gestão.
+  </Card>
+</CardGroup>

@@ -66,6 +66,30 @@ For actions that require caution (sending something external, changing critical 
   </Card>
 </CardGroup>
 
+## Agent access by area (area lock)
+
+Some agents deal with sensitive matters of a **specific area** (e.g. Finance, Legal, HR). For those, there's the **"Only the area can access"** lock: when turned on, **only the people of that area** can access and configure the agent — even if they had access through another path.
+
+<Steps>
+  <Step title="Set the agent's area">
+    The lock only works if the agent has an **area** set. Without an area, there's no way to restrict by area.
+  </Step>
+  <Step title="Turn on “Only the area can access”">
+    On the agent, enable the lock. From then on, access is **restricted to the people of the area** — and this restriction **overrides other permissions** (individual or per-project access doesn't bypass the lock).
+  </Step>
+  <Step title="Owner and Admin still see it">
+    The company's owner and administrators **still** see and configure the agent. The lock closes the door for everyone else, not for administration.
+  </Step>
+</Steps>
+
+<Info>
+Think of the lock as an "area-only" gate: it **overrides** the agent's other access settings. Anyone not from the area can't get in — neither to use nor to configure — except Owner/Admin.
+</Info>
+
+<Warning>
+If you turn on the lock without the agent having an **area** set, it has no effect. Set the area first; only then does the restriction take hold.
+</Warning>
+
 ## Next steps
 
 <CardGroup cols={2}>

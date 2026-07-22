@@ -1,0 +1,75 @@
+---
+title: "Project Agents"
+sidebarTitle: "Project Agents"
+description: "How agent access works inside a project: the project agent and the agents added to it can see the project's knowledge, objectives and data — those outside cannot. Isolation explained simply."
+---
+
+Inside a project, agents only see **what belongs to the project**. This page explains, in simple terms, **who accesses what**: the project agent and the agents you add to it have access to the project's context; agents that are **outside** the project don't — even if they're powerful elsewhere in the company.
+
+<Frame caption="📸 Screenshot to insert [/en/projects/project-agents]: a project's agents/teams panel, showing the agents that are part of it.">
+  <img src="/images/placeholder.svg" alt="A project's agents" />
+</Frame>
+
+## The project agent
+
+Every project can have a **project agent** — the specialist for that context. It's the one that **measures the KPIs**, answers in the project chat and works the objectives, always with access to the knowledge and data of **that** project.
+
+<Info>
+The project agent only sees the project's world. It doesn't pull knowledge from the company or from other projects — unless you've explicitly linked something (for example, an objective with **"Derives from"**).
+</Info>
+
+## Who sees the project's context
+
+<CardGroup cols={2}>
+  <Card title="Agents INSIDE the project" icon="circle-check">
+    The project agent and the agents/teams you **added** to the project can access the project's **knowledge**, **objectives**, **actions**, **results** and **data**.
+  </Card>
+  <Card title="Agents OUTSIDE the project" icon="circle-xmark">
+    Any agent that is **not** part of the project **doesn't** see any of it. For it, the project's content simply doesn't exist.
+  </Card>
+</CardGroup>
+
+## How to add an agent to the project
+
+<Steps>
+  <Step title="Open the project's agents panel">
+    In the project, use the **agents and teams** panel on the right.
+  </Step>
+  <Step title="Add the agent or team">
+    Choose from the agents/teams you have access to. From then on, it becomes part of the project and sees its context.
+  </Step>
+  <Step title="Use it inside the project">
+    Click the agent to open the chat already in the project's context. It answers based on the project's knowledge and objectives.
+  </Step>
+</Steps>
+
+## Isolation, explained simply
+
+Think of each project as a **closed room**. Inside the room are that project's documents, goals and data. Only those **in the room** (the project agent and the agents you put there) see what's inside. Those outside see nothing — and an agent that's in two different rooms **never** carries content from one to the other.
+
+<Warning>
+Isolation isn't just "hiding it on screen". Knowledge search and KPI measurement are **scoped to the project** in the mechanism itself: an agent from outside can't bring, in an answer, content from a project it isn't part of.
+</Warning>
+
+## Isolation between projects
+
+The same agent can take part in **several projects**. In each one, it only sees **that** project's context. It never crosses information — what it learned or read in Project A doesn't leak into Project B.
+
+## People's permissions
+
+Agent access goes hand in hand with **people's** permissions:
+
+- Whoever has access to the **project** sees the project's agents and content (respecting the access to each agent).
+- Company **Owner/Admin** see the projects according to the company's access rules.
+- Granting someone access to the project is a practical way to release, all at once, the resources tied to it. See [Security & Access](/en/administration/security-and-access).
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Project Cortex" icon="target" href="/en/projects/project-cortex">
+    The knowledge and objectives the project's agents see.
+  </Card>
+  <Card title="Security & Access" icon="shield" href="/en/administration/security-and-access">
+    Control who accesses what in the company and in projects.
+  </Card>
+</CardGroup>
