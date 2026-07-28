@@ -1,0 +1,307 @@
+---
+title: "Pipes"
+sidebarTitle: "Pipes"
+description: "Os processos da sua área com fases, aprovadores, prazos e regras — rodando de forma previsível, sem depender de IA. Aprenda a desenhar, operar, medir e integrar um Pipe de ponta a ponta."
+---
+
+Um **Pipe** é um processo da empresa que acontece de verdade: alguém abre uma solicitação, ela passa por fases, gente preenche e aprova, e no fim algo fica pronto. Compra, férias, reembolso, contratação, análise jurídica — tudo que hoje vive em planilha, e-mail e grupo de WhatsApp.
+
+Cada solicitação é um **item** que atravessa o quadro. Você desenha o caminho uma vez; o iTeam garante que todo mundo passe por ele.
+
+<Frame caption="📸 Screenshot a inserir [/pt/automacao/pipes]: quadro de um Pipe com fases coloridas e itens.">
+  <img src="/images/placeholder.svg" alt="Quadro de um Pipe" />
+</Frame>
+
+<Note>
+**Pipes e [Processos](/pt/automacao/processos) são coisas diferentes.** Um **Processo** é uma rotina que os **agentes** executam sozinhos (coletar → calcular → enviar). Um **Pipe** é o fluxo de trabalho que **pessoas** percorrem, com aprovação e prazo — e onde o agente é opcional.
+</Note>
+
+## O que garante que o Pipe é previsível
+
+O motor do Pipe é **determinístico**: regras, rotas, cálculos e validações são resolvidos por um interpretador de expressões da própria plataforma. **Não há IA no caminho do item.** Um processo de compras não pode dar um resultado hoje e outro amanhã.
+
+A IA entra em exatamente dois lugares, e só se você quiser:
+
+<CardGroup cols={2}>
+  <Card title="Desenhar o processo" icon="wand-sparkles">
+    Descreva em conversa, suba o documento da política ou a **foto do fluxograma** — o iTeam devolve o desenho para você revisar.
+  </Card>
+  <Card title="Executar uma fase de julgamento" icon="bot">
+    Quando a fase é "analisar e classificar", um agente pode ser o executor dela.
+  </Card>
+</CardGroup>
+
+---
+
+## Criar um Pipe
+
+<Steps>
+  <Step title="Abra Automação → Pipes e escolha por onde começar">
+    - **Modelo pronto** — compras, férias, reembolso, contratação, jurídico.
+    - **Do zero** — no construtor visual.
+    - **Pelo que você já tem** — conversa, documento (política, procedimento) ou **imagem do fluxograma**.
+  </Step>
+  <Step title="Monte o formulário de abertura">
+    O que a pessoa preenche para começar. Marque o que é **obrigatório** — item incompleto não entra.
+  </Step>
+  <Step title="Crie as fases na ordem do trabalho">
+    Cada fase tem nome, cor, os campos que se preenchem ali, e para onde o item vai depois. Dê nome de **etapa de trabalho** ("Aguardando nota fiscal"), não de status genérico ("Em andamento 2").
+  </Step>
+  <Step title="Diga quem aprova, onde">
+    Escolha as pessoas e o modo: **todos assinam** ou **qualquer um resolve**.
+  </Step>
+  <Step title="Defina o prazo (se o processo promete um)">
+    Veja [Prazo do item](#prazo-do-item) abaixo. Processo que não promete prazo fica sem prazo — e nada é cobrado.
+  </Step>
+  <Step title="Confira na Prévia e publique">
+    A **Prévia** roda com dado real ao lado do desenho. Só depois de publicar o Pipe começa a receber itens.
+  </Step>
+</Steps>
+
+<Tip>
+Comece com **menos fases do que você acha que precisa**. É muito mais fácil acrescentar uma fase depois de ver onde os itens travam do que convencer a equipe a preencher seis formulários.
+</Tip>
+
+---
+
+## Os campos
+
+<CardGroup cols={2}>
+  <Card title="Básicos" icon="pen-line">
+    Texto, texto longo, número, dinheiro, data, sim/não, escolha, múltipla escolha, arquivo, pessoa.
+  </Card>
+  <Card title="Fórmula" icon="calculator">
+    Calcula sozinho a partir dos outros campos (total = quantidade × preço). Ninguém digita, ninguém erra.
+  </Card>
+  <Card title="Tabela auxiliar" icon="table">
+    Uma lista que você mantém no próprio Pipe (centros de custo, fornecedores homologados) e que vira as opções do campo.
+  </Card>
+  <Card title="Checklist" icon="list-checks">
+    Lista de conferência que **bloqueia a saída** da fase enquanto não estiver completa.
+  </Card>
+  <Card title="CPF / CNPJ" icon="id-card">
+    Validação de verdade (dígito verificador), recusada **na abertura** — onde quem digitou pode corrigir.
+  </Card>
+  <Card title="Conexão com outro Pipe" icon="link">
+    Abre o item no outro processo já preenchido e amarra os dois lados. A trilha de ambos registra a ligação.
+  </Card>
+  <Card title="Aceite / assinatura" icon="file-signature">
+    Registra quem aceitou, quando, de qual IP e **o texto exato** que foi aceito. Não dá para assinar duas vezes.
+  </Card>
+  <Card title="Visível se…" icon="eye">
+    O campo só aparece quando a condição acontece ("motivo do cancelamento" só se status = cancelado).
+  </Card>
+</CardGroup>
+
+---
+
+## Regras e rotas
+
+- **Regra de saída** — a condição para o item poder deixar a fase: *"não sai daqui sem nota fiscal"*, *"valor acima de 10 mil exige segunda aprovação"*. Escreva a mensagem que a pessoa vai ler; ela precisa saber o que fazer.
+- **Rota condicional** — para onde o item vai: *"se valor > 50.000 → Diretoria, senão → Compras"*.
+- **Prazo da fase (SLA)** — quantas horas o item pode ficar ali. Estourar **marca atraso** no cartão e alimenta os gargalos.
+- **Expiração** — o que fazer quando o item apodrece: avisar, desviar para outra fase ou encerrar.
+
+<Warning>
+**SLA da fase e prazo do item são perguntas diferentes.** O SLA pergunta "este item está parado demais nesta etapa?". O prazo pergunta "vamos entregar no dia que prometemos?". Um item pode furar o prazo sem nunca ficar parado — passou rápido por seis fases, mas foram seis.
+</Warning>
+
+---
+
+## Prazo do item
+
+O prazo é a **promessa feita a quem pediu**: *"isto fica pronto até tal dia"*.
+
+<Steps>
+  <Step title="Escolha de onde vem o prazo">
+    - **Por horas** — vence tantas horas depois de o item ser aberto (48h, 5 dias úteis viram 120h…).
+    - **Por um campo de data** do formulário (ex.: "data da viagem", "data da assembleia"). Quando o campo está preenchido, ele **manda** sobre as horas — o prazo é do mundo real, não uma conta.
+  </Step>
+  <Step title="Diga com quanta antecedência avisar">
+    Ex.: 24h antes. Ao vencer, o aviso é automático.
+  </Step>
+</Steps>
+
+O que acontece dali em diante:
+
+- **No quadro** — o cartão mostra *"vence em 2d"*, e em **vermelho** *"venceu há 2d"*.
+- **No item** — a data aparece e é **editável**: prazo é compromisso, e compromisso se renegocia. Remarcar à mão vence o cálculo automático e fica na trilha do item.
+- **Filtros** — Atrasados · Vencem hoje · Nos 7 dias · **Sem prazo**.
+- **Cobrança** — um aviso antes de vencer e um no vencimento, no sininho, para o responsável, quem abriu e quem cuida do processo. Cada aviso sai **uma vez**.
+- **Relatório e painel** — colunas de prazo e as métricas *fora do prazo* e *% entregue no prazo*.
+- **Automação e webhook** — gatilhos *o prazo do item está chegando* e *o prazo do item venceu*.
+
+<Tip>
+Filtrar por **"Sem prazo"** de vez em quando vale a pena: num processo que promete data, o item que ficou sem prazo é justamente o que ninguém percebe.
+</Tip>
+
+---
+
+## Operar o dia a dia
+
+### O quadro
+Arraste o item entre as fases. Se faltar campo ou a regra barrar, o iTeam explica o que falta em vez de mover em silêncio. Você pode agrupar os itens **dentro da coluna** por um campo (por fornecedor, por tipo) e escolher quais campos aparecem no cartão.
+
+### Minhas tarefas
+A caixa de entrada de quem decide: tudo que espera **você**, de todos os Pipes, com filtro, contexto do item e o **quadro como visão padrão**. Aprove ou reprove dali mesmo.
+
+**Aprovar com comentário**: use a **setinha** ao lado do botão Aprovar. O comentário fica **visível** para todos — igual ao da reprovação.
+
+<Frame caption="📸 Screenshot a inserir [/pt/automacao/pipes]: Minhas tarefas em modo quadro, com a setinha de aprovar com comentário aberta.">
+  <img src="/images/placeholder.svg" alt="Minhas tarefas" />
+</Frame>
+
+### O item
+Abre com os campos da fase atual, **os anexos na frente** (quem decide precisa do documento, não de outra aba), as decisões que já aconteceram nas fases anteriores — com quem decidiu, quando e o comentário — e a trilha completa do que mudou.
+
+### Portal público
+Gere um **link** para fornecedor ou cliente abrir item sem ter conta no iTeam, com validade configurável. O item entra no seu quadro como qualquer outro, marcado como vindo do link público.
+
+---
+
+## Fases que não são humanas
+
+<CardGroup cols={2}>
+  <Card title="Agente" icon="bot">
+    Um agente da empresa executa a fase. Ele roda com a alçada de quem desenhou o processo — nunca mais que isso.
+  </Card>
+  <Card title="Endpoint" icon="plug">
+    A fase chama um sistema externo com token. Os **segredos ficam criptografados** e o iTeam bloqueia chamada para a rede interna.
+  </Card>
+  <Card title="Callback" icon="webhook">
+    O item só sai da fase quando o sistema de fora confirma — com token por fase, assinatura e proteção contra confirmação repetida.
+  </Card>
+  <Card title="Código" icon="code">
+    A fase roda um [Code](/pt/recursos/skills) da plataforma.
+  </Card>
+</CardGroup>
+
+---
+
+## Automações do Pipe
+
+"Quando **X**, faça **Y**" — sem programar.
+
+**Gatilhos**: item aberto · campo muda · entra numa fase · sai de uma fase · alguém aprova · alguém reprova · prazo da fase estoura · item expira · **prazo do item está chegando** · **prazo do item venceu**.
+
+**Ações**: mover para outra fase · preencher campos · comentar · avisar pessoas (sininho) · mandar e-mail · **abrir item em outro Pipe** · chamar um endpoint · definir responsável.
+
+Cada execução fica registrada (o que disparou, o que fez, se falhou) e existe um **freio anti-loop** para automação que se alimenta sozinha. Em **Pipes → Automações** você vê tudo que está ligado na empresa — automação espalhada por dez processos vira mistério.
+
+---
+
+## Medir: painel, métricas e relatório
+
+### Painel — você monta
+
+Escolha **o que medir**, **como quebrar** e **que gráfico** — o número sai pronto, sem escrever consulta nenhuma.
+
+<Steps>
+  <Step title="Comece pelo painel recomendado">
+    O botão **"Montar painel recomendado"** lê o desenho do **seu** processo e monta de 8 a 14 gráficos que fazem sentido. Se o processo não promete prazo, ele não sugere gráfico de prazo; se não tem fase de aprovação, não sugere fila de aprovação.
+  </Step>
+  <Step title="Ajuste o que quiser">
+    Em **Arrumar painel**: arraste pelo punho para mudar a ordem (os vizinhos abrem espaço), escolha a largura em **1, 2 ou 3 colunas**, puxe a alça de baixo para mudar a altura, e duplique um gráfico quando quiser variar só um detalhe. Salve — o arranjo passa a valer para todos que enxergam o Pipe.
+  </Step>
+</Steps>
+
+**O que dá para medir**
+
+| Grupo | Métricas |
+| --- | --- |
+| Volume | quantidade de itens, concluídos, cancelados, atrasados no SLA, **fora do prazo** |
+| Qualidade | **% concluído**, **% reprovado**, **% entregue no prazo**, **itens que voltaram** (retrabalho) |
+| Tempo | tempo na fase (mediana), lead time, **tempo até decidir a aprovação**, **idade dos itens abertos** |
+| Números do formulário | soma, média, **mediana**, **maior valor**, **quantos valores diferentes** de um campo |
+
+**Como quebrar**
+
+Por fase · responsável · quem abriu · situação · área · um campo de escolha · dia · semana · mês · **trimestre** · **dia da semana** · **origem** (formulário, link público, API, e-mail, chat, automação) · **situação do prazo** · **aprovador pendente** · **faixa de valor** de um campo · ou sem quebra (número único).
+
+<Note>
+**Por aprovador pendente**, um item que espera duas pessoas aparece nas **duas filas** — é o que a pergunta "em quem está parado?" realmente quer saber.
+
+**Por faixa de valor**, as faixas são criadas automaticamente em potências de 10 (0 · 1–10 · 10–100 · 100–1k…), porque faixa fixa em reais não serve para um processo que recebe compra de R$ 180 e de R$ 450 mil.
+</Note>
+
+**Como ler o número**
+
+- **Meta** — defina o alvo e o KPI fica verde ou vermelho. Marque **"menor é melhor"** quando o alvo é tempo, atraso ou custo.
+- **Comparar com o período anterior** — o KPI mostra a variação em % contra a janela anterior de mesmo tamanho.
+- **Recortar** — o mesmo gráfico só de uma parte dos itens: *"só do fornecedor Acme"*, *"só acima de R$ 3 mil"*, *"só onde o centro de custo está vazio"*.
+- **Ordem** — do maior para o menor, pelo nome, ou na ordem do processo/tempo.
+- **Acumulado** — em série de tempo, mostra *"quanto já entrou no mês"*.
+
+**Formatos**: número grande · barras · **barras deitadas** (para nome de pessoa e de fornecedor, que não cabem em pé) · linha · área · pizza · calendário · tabela · **funil por fase**, com a conversão de cada etapa.
+
+<Frame caption="📸 Screenshot a inserir [/pt/automacao/pipes]: painel do Pipe com funil por fase, KPI com meta e KPI comparando com o período anterior.">
+  <img src="/images/placeholder.svg" alt="Painel do Pipe" />
+</Frame>
+
+<Tip>
+O **funil por fase** é a resposta para *"onde eu perco?"*. Cada barra mostra quantos chegaram até ali e a conversão contra a primeira fase.
+</Tip>
+
+### Métricas e gargalos
+A aba **Métricas** traz o tempo entre fases de um item específico e a estatística do Pipe todo (mediana, p90) — e aponta **onde os itens travam**.
+
+### Relatório
+Grade com filtros que você salva, cruzando **vários Pipes**, exportando **CSV que abre certo no Excel brasileiro**. Traz colunas prontas: situação, solicitante, responsável, área, horas na fase, atraso no SLA, **prazo do item** e **fora do prazo**.
+
+---
+
+## Integrar
+
+- **API pública do Pipe** — chave por processo, com **escopo restrito**: uma chave que só abre item não move item. Dá para abrir, consultar, mover e comentar; e existe uma rota de **contrato** que documenta os campos e as fases para quem vai integrar.
+- **Webhooks de saída** — o iTeam avisa seu sistema quando algo muda (item aberto, mudou de fase, aprovado, reprovado, concluído, expirou, **prazo venceu**), com assinatura para você conferir a origem.
+- **Revogar** — a chave é mostrada **uma vez**; guarde-a. Revogar corta o acesso na hora, sem afetar as outras.
+
+---
+
+## Quem pode o quê
+
+**Usar** e **desenhar** são coisas diferentes.
+
+| Ação | Quem |
+| --- | --- |
+| Ver o quadro e abrir item | Conforme o acesso do Pipe: toda a empresa, só a área dona, ou uma lista de pessoas |
+| Aprovar | Só quem está na lista de aprovadores da fase — nem o dono do processo passa por cima |
+| Mudar fases, regras, aprovadores | Papel com permissão **e** (criou o Pipe · está na lista de editores · é gestor da área dona) |
+| Excluir o Pipe | Owner e admin |
+
+Aprovador e responsável de fase **sempre** enxergam o item em que foram nomeados, mesmo fora da lista de acesso — não faria sentido nomear alguém que não consegue abrir o que precisa decidir.
+
+[Como funcionam papéis e alçadas →](/pt/administracao/seguranca-e-acessos)
+
+---
+
+## Os agentes atendem o Pipe
+
+Anexe **agentes** ou **times** a um Pipe (na configuração do Pipe ou na aba **Pipes** do agente) e eles passam a responder sobre ele no chat: como o processo funciona, quantos itens estão em cada fase, o que está travado, onde está o gargalo, o que espera você.
+
+Sem anexo explícito, **agente nenhum vê nada de Pipe**. E o agente só enxerga o que quem o anexou já enxergava.
+
+---
+
+## Solução de problemas
+
+<AccordionGroup>
+  <Accordion title="O item não sai da fase e não entendo por quê">
+    Abra o item: o iTeam mostra o que falta — campo obrigatório vazio, checklist incompleto, regra de saída não satisfeita ou aprovação pendente. Se for regra, o texto que aparece é o que você escreveu ao criá-la; se estiver vago, melhore a mensagem.
+  </Accordion>
+  <Accordion title="Um campo de tabela aparece sem opções">
+    A tabela auxiliar precisa ter linhas. Abra a aba **Tabelas** do Pipe e cadastre-as.
+  </Accordion>
+  <Accordion title="Ninguém está sendo cobrado dos prazos">
+    Confira se o processo **define** prazo (por horas ou por campo de data) e se você preencheu *avisar com quantas horas de antecedência*. Sem prazo definido, nada é cobrado — de propósito.
+  </Accordion>
+  <Accordion title="O painel mostra zero em tudo">
+    Verifique a **situação** e o **período** do gráfico: um gráfico de concluídos com situação "em andamento" dá zero, e um período de 7 dias num processo que recebe itens por mês também.
+  </Accordion>
+  <Accordion title="Métricas de prazo dão zero">
+    Métricas de prazo só contam itens que **têm** prazo. Se o processo passou a prometer prazo agora, os itens antigos continuam sem — o prazo nasce com o item.
+  </Accordion>
+  <Accordion title="A chave da API foi perdida">
+    Não é possível ver uma chave de novo — ela aparece só na criação. Revogue a antiga e crie outra.
+  </Accordion>
+</AccordionGroup>

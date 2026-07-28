@@ -1,0 +1,307 @@
+---
+title: "Pipes"
+sidebarTitle: "Pipes"
+description: "Your team's real workflows — phases, approvers, due dates and rules — running predictably, with no AI in the path. Design, run, measure and integrate a Pipe end to end."
+---
+
+A **Pipe** is a workflow that actually happens in your company: someone opens a request, it moves through phases, people fill in and approve, and something gets done at the end. Purchasing, time off, expense reports, hiring, legal review — everything that today lives in a spreadsheet, an email thread and a chat group.
+
+Each request is an **item** crossing the board. You design the path once; iTeam makes sure everyone follows it.
+
+<Frame caption="📸 Screenshot to add [/en/automation/pipes]: a Pipe board with colored phases and items.">
+  <img src="/images/placeholder.svg" alt="Pipe board" />
+</Frame>
+
+<Note>
+**Pipes and [Processes](/en/automation/processes) are different things.** A **Process** is a routine that **agents** run on their own (collect → compute → send). A **Pipe** is the workflow **people** go through, with approval and due dates — where the agent is optional.
+</Note>
+
+## What makes a Pipe predictable
+
+The Pipe engine is **deterministic**: rules, routes, formulas and validations are resolved by the platform's own expression interpreter. **There is no AI in the item's path.** A purchasing process cannot return one answer today and another tomorrow.
+
+AI shows up in exactly two places, and only if you want it:
+
+<CardGroup cols={2}>
+  <Card title="Designing the process" icon="wand-sparkles">
+    Describe it in a conversation, upload the policy document, or upload a **photo of the flowchart** — iTeam hands back a draft for you to review.
+  </Card>
+  <Card title="Running a judgment phase" icon="bot">
+    When the phase is "review and classify", an agent can be its executor.
+  </Card>
+</CardGroup>
+
+---
+
+## Create a Pipe
+
+<Steps>
+  <Step title="Open Automation → Pipes and pick a starting point">
+    - **Template** — purchasing, time off, expenses, hiring, legal.
+    - **From scratch** — in the visual builder.
+    - **From what you already have** — a conversation, a document (policy, procedure) or a **flowchart image**.
+  </Step>
+  <Step title="Build the intake form">
+    What the requester fills in to start. Mark what is **required** — an incomplete item never enters.
+  </Step>
+  <Step title="Create the phases in work order">
+    Each phase has a name, a color, the fields filled in there, and where the item goes next. Name them after **work steps** ("Waiting for invoice"), not generic statuses ("In progress 2").
+  </Step>
+  <Step title="Say who approves, and where">
+    Pick the people and the mode: **everyone signs** or **anyone can decide**.
+  </Step>
+  <Step title="Set the due date (if the process promises one)">
+    See [Item due date](#item-due-date) below. A process that promises nothing gets no due date — and nothing is chased.
+  </Step>
+  <Step title="Check the Preview and publish">
+    The **Preview** runs on real data next to the design. The Pipe only starts receiving items once published.
+  </Step>
+</Steps>
+
+<Tip>
+Start with **fewer phases than you think you need**. It is far easier to add a phase after seeing where items get stuck than to convince a team to fill in six forms.
+</Tip>
+
+---
+
+## The fields
+
+<CardGroup cols={2}>
+  <Card title="Basics" icon="pen-line">
+    Text, long text, number, currency, date, yes/no, single choice, multiple choice, file, person.
+  </Card>
+  <Card title="Formula" icon="calculator">
+    Computes itself from the other fields (total = quantity × price). Nobody types it, nobody gets it wrong.
+  </Card>
+  <Card title="Lookup table" icon="table">
+    A list you maintain inside the Pipe (cost centers, approved vendors) that becomes the field's options.
+  </Card>
+  <Card title="Checklist" icon="list-checks">
+    A verification list that **blocks the exit** of the phase until it is complete.
+  </Card>
+  <Card title="Tax ID (CPF / CNPJ)" icon="id-card">
+    Real validation (check digits), rejected **at intake** — where the person who typed it can fix it.
+  </Card>
+  <Card title="Link to another Pipe" icon="link">
+    Opens the item in the other process pre-filled and ties both sides together. Both audit trails record the link.
+  </Card>
+  <Card title="Acceptance / signature" icon="file-signature">
+    Records who accepted, when, from which IP and **the exact text** they accepted. Signing twice is not possible.
+  </Card>
+  <Card title="Visible if…" icon="eye">
+    The field only appears when the condition holds ("cancellation reason" only if status = cancelled).
+  </Card>
+</CardGroup>
+
+---
+
+## Rules and routes
+
+- **Exit rule** — the condition for an item to leave the phase: *"can't leave without the invoice"*, *"above 10k requires a second approval"*. Write the message people will read; they need to know what to do.
+- **Conditional route** — where the item goes: *"if amount > 50,000 → Executive, else → Purchasing"*.
+- **Phase SLA** — how many hours an item may sit there. Blowing it **flags the card** as late and feeds the bottleneck view.
+- **Expiry** — what to do when an item rots: notify, divert to another phase, or close it.
+
+<Warning>
+**Phase SLA and item due date answer different questions.** The SLA asks "is this item sitting in this step for too long?". The due date asks "will we deliver on the day we promised?". An item can miss its due date without ever sitting still — it went through six phases quickly, but there were six.
+</Warning>
+
+---
+
+## Item due date
+
+The due date is the **promise made to whoever asked**: *"this will be ready by that day"*.
+
+<Steps>
+  <Step title="Choose where the due date comes from">
+    - **By hours** — due so many hours after the item is opened.
+    - **By a date field** in the form (e.g. "travel date", "hearing date"). When that field is filled in, it **wins** over the hours — the deadline belongs to the real world, not to arithmetic.
+  </Step>
+  <Step title="Say how early to warn">
+    E.g. 24h ahead. On the due date itself, the notice is automatic.
+  </Step>
+</Steps>
+
+From then on:
+
+- **On the board** — the card shows *"due in 2d"*, and in **red** *"2d overdue"*.
+- **On the item** — the date is shown and **editable**: a due date is a commitment, and commitments get renegotiated. Setting it by hand beats the automatic calculation and is recorded in the audit trail.
+- **Filters** — Overdue · Due today · Next 7 days · **No due date**.
+- **Chasing** — one notice before it is due and one on the due date, in the bell, to the assignee, the requester and the process owner. Each notice fires **once**.
+- **Report and dashboard** — due date columns plus the *overdue* and *% delivered on time* metrics.
+- **Automation and webhooks** — triggers *item due date approaching* and *item due date passed*.
+
+<Tip>
+Filtering by **"No due date"** now and then pays off: in a process that promises a date, the item that ended up with no due date is exactly the one nobody notices.
+</Tip>
+
+---
+
+## Day-to-day
+
+### The board
+Drag the item between phases. If a field is missing or a rule blocks it, iTeam explains what is missing instead of moving it silently. You can group items **inside a column** by a field (by vendor, by type) and choose which fields show on the card.
+
+### My tasks
+The inbox for whoever decides: everything waiting on **you**, across every Pipe, with filters, item context, and the **board as the default view**. Approve or reject right there.
+
+**Approve with a comment**: use the **caret** next to the Approve button. The comment is **visible** to everyone — same as a rejection.
+
+<Frame caption="📸 Screenshot to add [/en/automation/pipes]: My tasks in board mode with the approve-with-comment caret open.">
+  <img src="/images/placeholder.svg" alt="My tasks" />
+</Frame>
+
+### The item
+Opens with the current phase's fields, **attachments up front** (whoever decides needs the document, not another tab), the decisions already taken in previous phases — who decided, when, and the comment — and the full audit trail.
+
+### Public portal
+Generate a **link** so a vendor or client can open an item without an iTeam account, with a configurable expiry. The item lands on your board like any other, tagged as coming from the public link.
+
+---
+
+## Phases that are not human
+
+<CardGroup cols={2}>
+  <Card title="Agent" icon="bot">
+    An agent runs the phase — with the permissions of whoever designed the process, never more.
+  </Card>
+  <Card title="Endpoint" icon="plug">
+    The phase calls an external system with a token. **Secrets are encrypted** and calls to the internal network are blocked.
+  </Card>
+  <Card title="Callback" icon="webhook">
+    The item only leaves the phase when the outside system confirms — with a per-phase token, a signature, and protection against repeated confirmations.
+  </Card>
+  <Card title="Code" icon="code">
+    The phase runs a platform [Code](/en/resources/skills).
+  </Card>
+</CardGroup>
+
+---
+
+## Pipe automations
+
+"When **X**, do **Y**" — no programming.
+
+**Triggers**: item opened · a field changes · enters a phase · leaves a phase · someone approves · someone rejects · phase SLA blown · item expired · **item due date approaching** · **item due date passed**.
+
+**Actions**: move to another phase · fill fields · comment · notify people (bell) · send email · **open an item in another Pipe** · call an endpoint · set the assignee.
+
+Every run is logged (what fired it, what it did, whether it failed) and there is an **anti-loop brake** for automations that feed themselves. **Pipes → Automations** shows everything switched on across the company — automation scattered across ten processes becomes a mystery.
+
+---
+
+## Measure: dashboard, metrics and report
+
+### Dashboard — you build it
+
+Pick **what to measure**, **how to break it down** and **which chart** — the number comes out ready, with no query to write.
+
+<Steps>
+  <Step title="Start from the recommended dashboard">
+    The **"Build recommended dashboard"** button reads **your** process design and assembles 8 to 14 charts that make sense. No due date in the process? No due-date chart. No approval phase? No approval queue.
+  </Step>
+  <Step title="Adjust whatever you want">
+    In **Arrange dashboard**: drag by the handle to reorder (neighbours make room), pick a width of **1, 2 or 3 columns**, pull the bottom handle to change the height, and duplicate a chart when you only want to vary one detail. Save — the arrangement applies to everyone who can see the Pipe.
+  </Step>
+</Steps>
+
+**What you can measure**
+
+| Group | Metrics |
+| --- | --- |
+| Volume | item count, completed, cancelled, late on SLA, **overdue** |
+| Quality | **% completed**, **% rejected**, **% delivered on time**, **items sent back** (rework) |
+| Time | time in phase (median), lead time, **time to decide an approval**, **age of open items** |
+| Form numbers | sum, average, **median**, **maximum**, **distinct values** of a field |
+
+**How to break it down**
+
+By phase · assignee · requester · status · area · a choice field · day · week · month · **quarter** · **day of week** · **source** (form, public link, API, email, chat, automation) · **due-date status** · **pending approver** · **value band** of a field · or no breakdown (single number).
+
+<Note>
+**By pending approver**, an item waiting on two people shows up in **both queues** — which is what "who is it stuck on?" actually means.
+
+**By value band**, bands are created automatically in powers of ten (0 · 1–10 · 10–100 · 100–1k…), because a fixed band in currency is useless for a process that receives both a $30 purchase and a $90,000 one.
+</Note>
+
+**How to read the number**
+
+- **Target** — set it and the KPI turns green or red. Tick **"lower is better"** when the target is time, lateness or cost.
+- **Compare with the previous period** — the KPI shows the % change against the previous window of the same length.
+- **Slice** — the same chart for part of the items only: *"vendor Acme only"*, *"above $3k only"*, *"where cost center is empty"*.
+- **Order** — highest first, by name, or in process/time order.
+- **Cumulative** — on a time series, shows *"how much has come in this month"*.
+
+**Formats**: big number · bars · **horizontal bars** (for people and vendor names, which don't fit upright) · line · area · pie · calendar · table · **phase funnel**, with the conversion of each step.
+
+<Frame caption="📸 Screenshot to add [/en/automation/pipes]: Pipe dashboard with a phase funnel, a KPI with a target and a KPI comparing to the previous period.">
+  <img src="/images/placeholder.svg" alt="Pipe dashboard" />
+</Frame>
+
+<Tip>
+The **phase funnel** answers *"where am I losing them?"*. Each bar shows how many reached that step and the conversion against the first phase.
+</Tip>
+
+### Metrics and bottlenecks
+The **Metrics** tab shows the time between phases for a specific item and the statistics for the whole Pipe (median, p90) — and points out **where items get stuck**.
+
+### Report
+A grid with filters you can save, spanning **several Pipes**, exporting **CSV that opens correctly in Excel**. Ready-made columns: status, requester, assignee, area, hours in phase, SLA lateness, **item due date** and **overdue**.
+
+---
+
+## Integrate
+
+- **Pipe public API** — a key per process, with a **restricted scope**: a key that only opens items cannot move them. You can open, query, move and comment; there is also a **contract** route documenting the fields and phases for whoever integrates.
+- **Outbound webhooks** — iTeam notifies your system when something changes (item opened, phase changed, approved, rejected, completed, expired, **due date passed**), signed so you can verify the origin.
+- **Revoking** — the key is shown **once**; store it. Revoking cuts access immediately without affecting the others.
+
+---
+
+## Who can do what
+
+**Using** and **designing** are different things.
+
+| Action | Who |
+| --- | --- |
+| See the board and open items | Per the Pipe's access: whole company, owning area only, or an explicit list |
+| Approve | Only people on the phase's approver list — not even the process owner overrides it |
+| Change phases, rules, approvers | A role with permission **and** (created the Pipe · is in the editors list · manages the owning area) |
+| Delete the Pipe | Owner and admin |
+
+Approvers and phase assignees **always** see the item they were named on, even outside the access list — naming someone who cannot open what they must decide would make no sense.
+
+[How roles and permissions work →](/en/administration/security-and-access)
+
+---
+
+## Agents serve the Pipe
+
+Attach **agents** or **teams** to a Pipe (in the Pipe settings or in the agent's **Pipes** tab) and they start answering about it in chat: how the process works, how many items are in each phase, what is stuck, where the bottleneck is, what is waiting on you.
+
+Without an explicit attachment, **no agent sees anything about Pipes**. And the agent only sees what whoever attached it could already see.
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="The item won't leave the phase and I can't tell why">
+    Open the item: iTeam shows what is missing — an empty required field, an incomplete checklist, an unsatisfied exit rule, or a pending approval. If it is a rule, the text shown is the one you wrote when creating it; if it reads vague, improve the message.
+  </Accordion>
+  <Accordion title="A lookup field shows no options">
+    The lookup table needs rows. Open the Pipe's **Tables** tab and add them.
+  </Accordion>
+  <Accordion title="Nobody is being chased about due dates">
+    Check that the process actually **defines** a due date (by hours or by a date field) and that you filled in how many hours ahead to warn. With no due date defined, nothing is chased — on purpose.
+  </Accordion>
+  <Accordion title="The dashboard shows zero everywhere">
+    Check the chart's **status** and **period**: a completed-items chart with status "in progress" returns zero, and so does a 7-day window on a process that receives items monthly.
+  </Accordion>
+  <Accordion title="Due-date metrics return zero">
+    Due-date metrics only count items that **have** one. If the process started promising due dates now, older items still have none — the due date is born with the item.
+  </Accordion>
+  <Accordion title="The API key was lost">
+    A key cannot be shown again — it appears only at creation. Revoke the old one and create another.
+  </Accordion>
+</AccordionGroup>

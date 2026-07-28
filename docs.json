@@ -116,6 +116,7 @@
             "expanded": true,
             "pages": [
               "pt/automacao/quadro-de-tarefas",
+              "pt/automacao/pipes",
               "pt/automacao/processos"
             ]
           },
@@ -207,6 +208,7 @@
             "expanded": true,
             "pages": [
               "en/automation/task-board",
+              "en/automation/pipes",
               "en/automation/processes"
             ]
           },
