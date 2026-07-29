@@ -1,12 +1,12 @@
 ---
 title: "Quadro de Tarefas"
 sidebarTitle: "Quadro de Tarefas"
-description: "Organize o trabalho num quadro Kanban onde pessoas e agentes colaboram — incluindo tarefas que rodam sozinhas no horário certo. Aprenda a criar, agendar e acompanhar."
+description: "Um quadro onde pessoas e agentes trabalham juntos: tarefas atribuídas a pessoas com aceite e prazo, sub-tarefas com progresso automático, roadmap, views salvas, painel de métricas e histórico auditável de tudo."
 ---
 
-O **Quadro de Tarefas** organiza o trabalho visualmente (A fazer → Fazendo → Feito). O diferencial: **pessoas e agentes usam o mesmo quadro**, e tarefas podem **rodar automaticamente** no horário que você definir — sem se perder se o sistema reiniciar.
+O **Quadro de Tarefas** organiza o trabalho visualmente (A fazer → Fazendo → Feito). O diferencial: **pessoas e agentes usam o mesmo quadro**. Tarefas de IA **rodam sozinhas** no horário certo; tarefas de **pessoas** têm aceite, prazo, checklist de ações e conclusão com evidências — e **tudo fica registrado** num histórico auditável.
 
-<Frame caption="📸 Screenshot a inserir [/pt/automacao/quadro-de-tarefas]: o quadro com as colunas (Agendadas, A fazer, Fazendo, Feito) e cards.">
+<Frame caption="📸 Screenshot a inserir [/pt/automacao/quadro-de-tarefas]: o quadro com as colunas, cards de pessoa (borda azul, avatar), de IA (borda roxa) e de API (borda laranja).">
   <img src="/images/placeholder.svg" alt="Quadro de Tarefas" />
 </Frame>
 
@@ -14,28 +14,101 @@ O **Quadro de Tarefas** organiza o trabalho visualmente (A fazer → Fazendo →
 
 | Coluna | O que significa |
 |---|---|
-| **Agendadas** | Tarefas que vão entrar em ação num horário futuro (recorrentes ou marcadas). |
-| **A fazer** | Prontas para serem executadas (por uma pessoa ou agente). |
-| **Fazendo** | Em execução agora. |
-| **Feito** | Concluídas. As recorrentes geram automaticamente a próxima ocorrência. |
+| **Backlog** | Ideias e pendências ainda sem dono ou momento. |
+| **Agendadas** | Tarefas que entram em ação num horário futuro (recorrentes ou marcadas). |
+| **A fazer** | Prontas para execução (por uma pessoa ou agente). |
+| **Executando** | Em execução agora. |
+| **Para Aprovar** | Esperando uma decisão humana — aprovação de execução ou **aceite** de uma tarefa atribuída. |
+| **Concluído** | Terminadas. As recorrentes geram automaticamente a próxima ocorrência. |
+
+## Cada tipo de tarefa tem a própria cara
+
+Bata o olho no quadro e saiba quem toca o quê:
+
+- **👤 Pessoa** — borda azul e avatar com as iniciais de quem recebeu.
+- **🤖 IA** — borda roxa, executada por um agente ou time.
+- **🌐 API** — borda laranja, chama um sistema externo (webhook).
 
 ## Criar uma tarefa
 
 <Steps>
   <Step title="Abra Automação → Quadro de Tarefas e clique em “Nova tarefa”" />
-  <Step title="Descreva o que deve ser feito">
-    Título curto + descrição clara. Se um agente for executar, escreva como você pediria no chat: *"Gere o resumo de vendas de ontem e poste no card."*
+  <Step title="Escreva a descrição — com formatação de verdade">
+    O campo de descrição é um **editor rico estilo documento**: negrito, títulos, listas, links — e **colar de fora mantém o estilo**. Use e abuse: uma descrição boa é o que a pessoa (ou o agente) vai ler para trabalhar.
   </Step>
-  <Step title="Escolha o tipo de execução">
-    - **Manual:** alguém move o card e executa.
-    - **Agente:** atribua a um agente — ele executa quando a tarefa entra em ação.
-    - **Webhook/disparo:** aciona um sistema externo (avançado).
+  <Step title="Escolha quem executa">
+    - **Agente / Time:** a IA executa quando a tarefa entra em ação.
+    - **Pessoa:** digite o nome — o **autocomplete** lista os membros da empresa. A pessoa recebe um pedido de **aceite**.
+    - **Webhook/API:** aciona um sistema externo (avançado).
   </Step>
-  <Step title="(Opcional) Defina recorrência" />
-  <Step title="Salve">
-    A tarefa aparece na coluna certa (Agendadas, se for futura/recorrente; senão, A fazer).
+  <Step title="(Para pessoas) Defina o “Fazer até”">
+    O prazo de entrega aparece no card, fica **vermelho quando estoura** e âmbar quando falta pouco — e alimenta os filtros “Expirando” e “Atrasadas”.
+  </Step>
+  <Step title="(Opcional) Recorrência, visibilidade, iniciativa e sub-tarefa">
+    Tarefas podem repetir num ritmo, ser **públicas, privadas ou da área**, pertencer a uma **iniciativa** do roadmap e nascer como **sub-tarefa** de outra.
   </Step>
 </Steps>
+
+## Tarefas para pessoas — aceite, entrega e evidência
+
+Quando você atribui uma tarefa a uma **pessoa**, ela não cai simplesmente na pilha de alguém:
+
+1. **Aceite.** A pessoa recebe um aviso (sininho + e-mail) e decide: **aceitar** (a tarefa vai para A fazer) ou **recusar** — e recusar **exige o motivo**, que volta para quem pediu. Só quem recebeu pode decidir; nem o dono da empresa aceita no lugar do outro.
+2. **Ações.** Dentro da tarefa existe uma **checklist de ações** — os passos do trabalho. Cada item marcado registra quem fez e quando.
+3. **Conclusão com prova.** Concluir exige contar **como foi feito** e ter **pelo menos uma ação registrada** (dá para digitá-las na hora). Anexe **evidências** (planilha, print, contrato). O resultado vira um bloco completo — nota + passos + evidências + tempo de entrega — no mesmo lugar onde a IA escreve as respostas dela.
+
+<Info>
+**Auto-atribuição sem burocracia:** tarefa que você cria **para si mesmo** nasce aceita e vai direto para a coluna escolhida — o aceite existe para proteger quem recebe trabalho *de outra pessoa*.
+</Info>
+
+<Info>
+**Recorrente de pessoa:** cada nova ocorrência pede aceite de novo — aceitar o report de janeiro não é aceitar o de fevereiro. (Se a recorrência é sua, com você mesmo, ela nasce aceita.)
+</Info>
+
+<Frame caption="📸 Screenshot a inserir [/pt/automacao/quadro-de-tarefas]: o painel de aceite (Aceitar/Recusar com comentário) e a conclusão com nota, ações e evidências.">
+  <img src="/images/placeholder.svg" alt="Aceite e conclusão de tarefa humana" />
+</Frame>
+
+## Sub-tarefas e Roadmap
+
+Quebre trabalho grande em **sub-tarefas** (até 4 níveis) — cada uma pode ir para uma **pessoa ou um agente**, misturados na mesma árvore. O **progresso do pai soma sozinho** conforme as filhas terminam.
+
+Na aba **Roadmap**, crie **iniciativas** (a camada de cima: "Lançar o novo portal até setembro") e amarre tarefas a elas. A iniciativa mostra a barra de progresso real, calculada do trabalho de verdade.
+
+## Visibilidade — quem vê o quê
+
+| Modo | Quem enxerga |
+|---|---|
+| **Pública** (padrão) | Todo mundo da empresa — o comportamento de sempre. |
+| **Privada** | Só quem criou, quem recebeu e os observadores. |
+| **Área** | Todos os membros da área escolhida. |
+
+Donos e administradores sempre veem tudo (governança). O filtro é aplicado no servidor: quem não participa não vê a tarefa nem abrindo o link.
+
+## Filtros e Views salvas
+
+- **Filtros rápidos**: Minhas × Todas · 👤 Pessoas / 🤖 IA / 🌐 API · ⏳ Expirando / 🔴 Atrasadas — resolvidos no servidor, em todas as colunas.
+- **Views**: salve um filtro com nome ("Minhas críticas: prioridade alta + só minhas + atrasadas") e aplique com um clique.
+
+## Painel — as métricas do seu quadro
+
+A aba **Painel** funciona como o [painel dos Pipes](/pt/automacao/processos): escolha **o que medir** (lead time, cycle time, vazão por semana, carga por pessoa, esperando aceite, tempo até aceitar, recusadas, atrasadas com meta…), **como quebrar** (pessoa, projeto, iniciativa, prioridade, semana…) e o formato. Arraste, redimensione e salve o arranjo.
+
+O painel **obedece o filtro ativo**: filtrou "Minhas + Pessoas", os gráficos calculam sobre exatamente esse recorte — com um selo indicando o filtro aplicado.
+
+<Frame caption="📸 Screenshot a inserir [/pt/automacao/quadro-de-tarefas]: aba Painel com gráficos de lead time, carga por pessoa e esperando aceite, com o selo de filtro ativo.">
+  <img src="/images/placeholder.svg" alt="Painel do Quadro" />
+</Frame>
+
+## Histórico — tudo fica registrado
+
+Cada tarefa carrega a própria **história auditável**: quem criou, quem atribuiu, quem aceitou ou recusou (e por quê), cada movimento entre colunas (de onde → para onde), **cada edição com os campos que mudaram**, cada ação marcada, execuções da IA (sucesso/falha) e a conclusão. O registro é imutável — editar a tarefa não reescreve o passado.
+
+## O Assistente Pessoal sabe das suas tarefas
+
+- No workspace, o card **“Meu trabalho”** destaca o que espera **seu aceite** — dá para aceitar/recusar ali mesmo, e clicar em qualquer tarefa abre o **modal completo** (ações, conclusão, sub-tarefas, histórico) **sem sair da tela**.
+- Por conversa, o assistente **lista, detalha, aceita, recusa, conclui e marca ações** das suas tarefas — e **resgata qualquer tarefa por nome**, até concluída ou arquivada, sempre com o link direto.
+- O [Cortex](/pt/cortex/visao-geral) enxerga o quadro inteiro na alçada de cada um: atrasadas, esperando aceite, recusas com motivo, carga por pessoa e conclusões recentes com a nota de como foi feito.
 
 ## Recorrência — fazer rodar sozinha
 
@@ -49,45 +122,47 @@ Ao marcar uma tarefa como recorrente, escolha o intervalo:
 | **Semanal** | Relatório toda segunda. |
 | **Mensal** | Fechamento no dia 1º. |
 
-Defina também o **horário** e o **fuso** (o fuso vem das [Configurações](/pt/administracao/configuracoes) da empresa). A cada conclusão, a **próxima ocorrência é criada automaticamente**, mantendo a cadência.
+Defina também o **horário** e o **fuso** (das [Configurações](/pt/administracao/configuracoes) da empresa). A cada conclusão, a **próxima ocorrência é criada automaticamente**.
 
 <Info>
-**Confiabilidade:** as tarefas recorrentes do iTeam disparam no horário certo, com folga mínima, e **não se perdem** se o servidor reiniciar — elas retomam sozinhas. Uma de "1 em 1 minuto" roda a cada ~1 minuto, de verdade.
+**Confiabilidade:** as tarefas recorrentes disparam no horário certo e **não se perdem** se o servidor reiniciar — retomam sozinhas.
 </Info>
 
 ## Atribuir a um agente
 
-1. No card, em **Execução**, escolha **Agente** e selecione qual.
+1. No card, em **Executar com**, escolha **Agente** e selecione qual.
 2. Garanta que o agente tem acesso aos dados/ferramentas que a tarefa exige.
 3. Quando a tarefa entra em ação, o agente executa e registra o resultado no card.
 
-<Frame caption="📸 Screenshot a inserir [/pt/automacao/quadro-de-tarefas]: detalhe de um card com recorrência configurada e agente atribuído.">
-  <img src="/images/placeholder.svg" alt="Card de tarefa com recorrência" />
-</Frame>
-
-## Acompanhar execuções
-
-Abra um card recorrente para ver o **histórico de execuções** (quando rodou, sucesso/falha, resultado). Use isso para confirmar que uma rotina está saudável e para investigar falhas.
+<Info>
+Tarefa de **pessoa** nunca é executada pela IA — mesmo arrastada para "A fazer". O trabalho é humano; a IA só ajuda a acompanhar.
+</Info>
 
 ## Tarefa, processo ou time?
 
 | Use… | Quando |
 |---|---|
-| **Tarefa** | Trabalho único, ou rotina simples de **um passo**. |
-| [Processo](/pt/automacao/processos) | **Várias etapas** encadeadas que se repetem. |
-| [Time](/pt/inteligencia/times-de-agentes) | Precisa de **várias especialidades** colaborando. |
+| **Tarefa** | Trabalho único ou rotina simples de **um passo** — de pessoa ou de agente. |
+| [Processo](/pt/automacao/processos) | **Várias etapas** encadeadas que se repetem, com formulário, aprovadores e regras. |
+| [Time](/pt/inteligencia/times-de-agentes) | Precisa de **várias especialidades de IA** colaborando. |
 
 ## Solução de problemas
 
 <AccordionGroup>
+  <Accordion title="Atribuí uma tarefa e ela sumiu do quadro da pessoa">
+    Ela está em **Para Aprovar**, esperando o aceite. A pessoa também a vê no workspace (card "Meu trabalho") e nos avisos.
+  </Accordion>
+  <Accordion title="Não consigo concluir uma tarefa de pessoa">
+    Só **quem recebeu** conclui — e é preciso contar como foi feito e ter **pelo menos uma ação registrada** (dá para digitá-las na hora da conclusão).
+  </Accordion>
   <Accordion title="A tarefa recorrente não rodou no horário">
-    Verifique se ela está **ativa** (não pausada) e se o **fuso** das Configurações está correto. Veja o histórico do card para o último disparo.
+    Verifique se ela está **ativa** e se o **fuso** das Configurações está correto. Veja o histórico do card para o último disparo.
   </Accordion>
   <Accordion title="O agente atribuído não executou">
     Confirme que o agente tem **acesso aos dados/ferramentas** necessários e que você tem nível **use** nele. Teste o mesmo pedido no chat.
   </Accordion>
   <Accordion title="Quero pausar uma rotina sem apagar">
-    Desative a tarefa (toggle de ativo). Ela para de gerar novas ocorrências e pode ser reativada depois.
+    Desative a tarefa (toggle de ativo). Ela para de gerar ocorrências e pode voltar depois.
   </Accordion>
 </AccordionGroup>
 
@@ -95,9 +170,9 @@ Abra um card recorrente para ver o **histórico de execuções** (quando rodou, 
 
 <CardGroup cols={2}>
   <Card title="Processos" icon="git-branch" href="/pt/automacao/processos">
-    Automatize fluxos de várias etapas.
+    Automatize fluxos de várias etapas com aprovadores e regras.
   </Card>
-  <Card title="Agentes" icon="bot" href="/pt/inteligencia/agentes">
-    Configure quem vai executar as tarefas.
+  <Card title="Assistente Pessoal" icon="sparkles" href="/pt/conversar/assistente-pessoal">
+    Aceite, conclua e acompanhe suas tarefas por conversa.
   </Card>
 </CardGroup>

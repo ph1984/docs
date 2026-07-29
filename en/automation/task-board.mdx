@@ -1,60 +1,174 @@
 ---
 title: "Task Board"
 sidebarTitle: "Task Board"
-description: "A Kanban-style board where people and agents organize work — including tasks that run on their own at set times."
+description: "A board where people and agents work together: human tasks with acceptance and deadlines, sub-tasks with automatic progress, roadmap, saved views, a metrics dashboard and a fully auditable history."
 ---
 
-The **Task Board** is where work gets organized visually, Kanban-style (To do → Doing → Done). The differentiator: **agents and people share the same board** — and tasks can run **automatically** at the time you set.
+The **Task Board** organizes work visually (To do → Doing → Done). The differentiator: **people and agents share the same board**. AI tasks **run on their own** at the time you set; **human** tasks come with acceptance, deadlines, action checklists and evidence-backed completion — and **everything is recorded** in an auditable history.
 
-<Frame caption="📸 Screenshot to add: the Task Board with columns and cards.">
+<Frame caption="📸 Screenshot to insert [/en/automation/task-board]: the board with its lanes and cards for people (blue border, avatar), AI (purple) and API (orange).">
   <img src="/images/placeholder.svg" alt="Task Board" />
 </Frame>
 
-## Task types
+## The lanes
 
-<CardGroup cols={2}>
-  <Card title="One-off task" icon="square-check">
-    A single job: create, assign, complete.
-  </Card>
-  <Card title="Recurring task" icon="repeat">
-    Runs on its own at the set interval (e.g., every 1 min, daily at 8am).
-  </Card>
-  <Card title="Assigned to an agent" icon="bot">
-    The agent executes when the task moves to "doing".
-  </Card>
-  <Card title="With webhook / trigger" icon="webhook">
-    Fires an external system at the right moment.
-  </Card>
-</CardGroup>
+| Lane | Meaning |
+|---|---|
+| **Backlog** | Ideas and pending items without an owner or a moment yet. |
+| **Scheduled** | Tasks that kick in at a future time (recurring or dated). |
+| **To do** | Ready to be executed (by a person or an agent). |
+| **Running** | Executing right now. |
+| **For Approval** | Waiting on a human decision — execution approval or the **acceptance** of an assigned task. |
+| **Done** | Finished. Recurring tasks automatically spawn the next occurrence. |
 
-## Create a task
+## Every task type has its own look
+
+Glance at the board and know who handles what:
+
+- **👤 Person** — blue border and an avatar with the assignee's initials.
+- **🤖 AI** — purple border, executed by an agent or team.
+- **🌐 API** — orange border, calls an external system (webhook).
+
+## Creating a task
 
 <Steps>
-  <Step title="Open Automation → Task Board" />
-  <Step title="Click new task and describe what needs to be done" />
-  <Step title="(Optional) Set recurrence">
-    Choose the interval: every X minutes/hours, daily, weekly… The task starts running on its own.
+  <Step title="Open Automation → Task Board and click “New task”" />
+  <Step title="Write the description — with real formatting">
+    The description field is a **rich, document-style editor**: bold, headings, lists, links — and **pasting from outside keeps the styling**. A good description is what the person (or the agent) will read to do the work.
   </Step>
-  <Step title="(Optional) Assign it to an agent">
-    The agent executes automatically when the time comes.
+  <Step title="Choose who executes">
+    - **Agent / Team:** the AI runs it when the task kicks in.
+    - **Person:** type the name — **autocomplete** lists company members. The person receives an **acceptance request**.
+    - **Webhook/API:** triggers an external system (advanced).
+  </Step>
+  <Step title="(For people) Set the “Due by”">
+    The delivery deadline shows on the card, turns **red when it expires** and amber when it's close — and feeds the "Expiring" and "Overdue" filters.
+  </Step>
+  <Step title="(Optional) Recurrence, visibility, initiative and sub-task">
+    Tasks can repeat on a schedule, be **public, private or area-scoped**, belong to a roadmap **initiative** and be born as a **sub-task** of another.
   </Step>
 </Steps>
 
-## Reliability
+## Human tasks — acceptance, delivery and evidence
 
-iTeam's recurring tasks run **on time, with minimal slack**, and **are not lost** if the system restarts — they resume on their own. You can follow each task's execution history.
+When you assign a task to a **person**, it doesn't just land on their pile:
 
-<Tip>
-For multi-step routines (not just one task), use [Processes](/en/automation/processes) — they orchestrate an entire flow.
-</Tip>
+1. **Acceptance.** The person gets notified (bell + email) and decides: **accept** (the task moves to To do) or **decline** — declining **requires a reason**, which goes back to whoever asked. Only the assignee can decide; not even the company owner can accept on someone else's behalf.
+2. **Actions.** Inside the task lives an **action checklist** — the steps of the work. Every checked item records who did it and when.
+3. **Completion with proof.** Completing requires telling **how it was done** and having **at least one action recorded** (you can type them right there). Attach **evidence** (spreadsheet, screenshot, contract). The result becomes a complete block — note + steps + evidence + delivery time — in the same place where AI writes its answers.
+
+<Info>
+**Self-assignment without bureaucracy:** a task you create **for yourself** is born accepted and goes straight to the chosen lane — acceptance exists to protect people receiving work *from someone else*.
+</Info>
+
+<Info>
+**Recurring human tasks:** every new occurrence asks for acceptance again — accepting January's report is not accepting February's. (If the recurrence is yours, with yourself, it's born accepted.)
+</Info>
+
+<Frame caption="📸 Screenshot to insert [/en/automation/task-board]: the acceptance panel (Accept/Decline with a comment) and the completion form with note, actions and evidence.">
+  <img src="/images/placeholder.svg" alt="Human task acceptance and completion" />
+</Frame>
+
+## Sub-tasks and Roadmap
+
+Break big work into **sub-tasks** (up to 4 levels) — each can go to a **person or an agent**, mixed in the same tree. The **parent's progress adds up on its own** as children finish.
+
+On the **Roadmap** tab, create **initiatives** (the layer above: "Launch the new portal by September") and tie tasks to them. The initiative shows a real progress bar computed from actual work.
+
+## Visibility — who sees what
+
+| Mode | Who can see it |
+|---|---|
+| **Public** (default) | Everyone in the company — the behavior it's always had. |
+| **Private** | Only the creator, the assignee and watchers. |
+| **Area** | Every member of the chosen area. |
+
+Owners and admins always see everything (governance). The filter is enforced server-side: non-participants can't see the task even with a direct link.
+
+## Filters and saved Views
+
+- **Quick filters**: Mine × All · 👤 People / 🤖 AI / 🌐 API · ⏳ Expiring / 🔴 Overdue — resolved server-side, across all lanes.
+- **Views**: save a named filter ("My criticals: high priority + mine + overdue") and apply it with one click.
+
+## Dashboard — your board's metrics
+
+The **Dashboard** tab works like the [Pipes dashboard](/en/automation/pipes): pick **what to measure** (lead time, cycle time, weekly throughput, load per person, awaiting acceptance, time to accept, declined, overdue with targets…), **how to break it down** (person, project, initiative, priority, week…) and the chart type. Drag, resize and save the layout.
+
+The dashboard **obeys the active filter**: filter "Mine + People" and the charts compute over exactly that slice — with a badge showing the applied filter.
+
+## History — everything is recorded
+
+Every task carries its own **auditable history**: who created it, who assigned it, who accepted or declined (and why), every move between lanes (from → to), **every edit with the changed fields**, every checked action, AI executions (success/failure) and the completion. The record is immutable — editing a task never rewrites its past.
+
+## Your Personal Assistant knows your tasks
+
+- In the workspace, the **“My work”** card highlights what awaits **your acceptance** — accept/decline right there, and clicking any task opens the **full modal** (actions, completion, sub-tasks, history) **without leaving the screen**.
+- By conversation, the assistant **lists, details, accepts, declines, completes and checks actions** on your tasks — and can **retrieve any task by name**, even completed or archived, always with a direct link.
+- The [Cortex](/en/cortex/overview) sees the whole board within each person's clearance: overdue, awaiting acceptance, declines with reasons, load per person and recent completions with the how-it-was-done note.
+
+## Recurrence — run on its own
+
+When marking a task as recurring, pick the interval:
+
+| Type | Example |
+|---|---|
+| **Every X minutes** | Near-real-time monitoring (e.g. every 1 min). |
+| **Every X hours** | Periodic checks (e.g. every 2h). |
+| **Daily** | A summary every morning at 8am. |
+| **Weekly** | A report every Monday. |
+| **Monthly** | Closing on the 1st. |
+
+Also set the **time** and the **timezone** (from the company [Settings](/en/administration/settings)). On every completion, the **next occurrence is created automatically**.
+
+<Info>
+**Reliability:** recurring tasks fire on time and **survive server restarts** — they resume on their own.
+</Info>
+
+## Assigning to an agent
+
+1. On the card, under **Execute with**, pick **Agent** and choose one.
+2. Make sure the agent has access to the data/tools the task requires.
+3. When the task kicks in, the agent executes and records the result on the card.
+
+<Info>
+A **person's** task is never executed by AI — even if dragged to "To do". The work is human; AI only helps track it.
+</Info>
+
+## Task, process or team?
+
+| Use… | When |
+|---|---|
+| **Task** | One-off work or a simple **single-step** routine — human or agent. |
+| [Process](/en/automation/processes) | **Multiple chained steps** that repeat, with forms, approvers and rules. |
+| [Team](/en/intelligence/agent-teams) | You need **several AI specialties** collaborating. |
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="I assigned a task and it vanished from the person's board">
+    It's in **For Approval**, awaiting acceptance. The person also sees it in their workspace ("My work" card) and notifications.
+  </Accordion>
+  <Accordion title="I can't complete a human task">
+    Only **the assignee** completes it — and it requires telling how it was done plus **at least one recorded action** (you can type them at completion time).
+  </Accordion>
+  <Accordion title="A recurring task didn't fire on time">
+    Check that it's **active** and the Settings **timezone** is right. Open the card's history for the last run.
+  </Accordion>
+  <Accordion title="The assigned agent didn't execute">
+    Confirm the agent has **access to the required data/tools** and that you have **use** level on it. Try the same request in chat.
+  </Accordion>
+  <Accordion title="I want to pause a routine without deleting it">
+    Disable the task (active toggle). It stops spawning occurrences and can be re-enabled later.
+  </Accordion>
+</AccordionGroup>
 
 ## Next steps
 
 <CardGroup cols={2}>
   <Card title="Processes" icon="git-branch" href="/en/automation/processes">
-    Automate multi-step flows.
+    Automate multi-step flows with approvers and rules.
   </Card>
-  <Card title="Agents" icon="bot" href="/en/intelligence/agents">
-    Assign tasks to whoever will execute them.
+  <Card title="Personal Assistant" icon="sparkles" href="/en/chat/personal-assistant">
+    Accept, complete and track your tasks by conversation.
   </Card>
 </CardGroup>
