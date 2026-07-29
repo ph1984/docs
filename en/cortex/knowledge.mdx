@@ -1,68 +1,144 @@
 ---
 title: "Knowledge"
 sidebarTitle: "Knowledge"
-description: "Your company's knowledge base inside Cortex: documents (uploaded or written right there) and a glossary of terms, organized by area. Everything stays searchable by the agents by meaning, respecting who can see what. It's iTeam's 'smart Notion'."
+description: "Your company's knowledge base inside Cortex: Pages (living documentation, Confluence-style, with AI writing alongside you), uploaded or written documents, and a glossary of terms — organized by area. Everything searchable by the agents by meaning, respecting who can see what."
 ---
 
-**Knowledge** is your company's base of documents and definitions, inside Cortex. Instead of knowledge being scattered across drives and in people's heads, you keep it here — and the **agents start answering based on it**. Think of a "smart Notion": beyond storing, it **understands** the content and brings it up at the right moment.
+**Knowledge** is your company's base of documentation and definitions, inside Cortex. Instead of knowledge being scattered across drives, PDFs and people's heads, you keep it here — and the **agents start answering based on it**, with a link to the source.
 
-<Frame caption="📸 Screenshot to insert [/en/cortex/knowledge]: Knowledge page with the list of documents by area, the glossary of terms and the button to add a document; 'Ask Cortex' button at the top.">
+<Frame caption="📸 Screenshot to insert [/en/cortex/knowledge]: Knowledge page with the Pages tree on the left, the list of documents by area, the glossary and the 'New page', 'Note', 'Term' and 'Upload' buttons.">
   <img src="/images/placeholder.svg" alt="Knowledge base" />
 </Frame>
 
 ## How it works, in one sentence
 
-You add **documents** and **glossary terms** (by area) → iTeam **indexes** the content by meaning → when an agent (or Cortex) needs it, it **searches and uses** it automatically, respecting the **permissions** of whoever asked.
+You write **Pages**, add **documents** and **glossary terms** → iTeam **indexes** the content by meaning → when an agent (or Cortex) needs it, it **searches, uses and cites** it — respecting the **permissions** of whoever asked.
 
-## Two things you keep here
+## Three things you keep here
 
-<CardGroup cols={2}>
-  <Card title="Documents" icon="file-lines">
-    Playbooks, policies, procedures, business context. You can **upload a file** or **write the text right there** in the editor.
+<CardGroup cols={3}>
+  <Card title="Pages" icon="file-pen">
+    Your company's **living documentation**: policies, playbooks, procedures. Full editor (headings, lists, tables, images, callout panels), sub-pages, version history and **AI writing alongside you**.
+  </Card>
+  <Card title="Documents and files" icon="file-lines">
+    What already exists: PDF, spreadsheet, deck, pasted text. You **upload the file** and iTeam extracts the content.
   </Card>
   <Card title="Glossary" icon="book-open">
-    The **terms** and acronyms of your company/niche, with their definitions. E.g. in iGaming: *GGR, NGR, FTD, MTD, TDD*. That way the agent speaks your language.
+    Your company's/industry's **terms** and acronyms, with definitions. E.g. in iGaming: *GGR, NGR, FTD, MTD*. That's how the agent speaks your language.
   </Card>
 </CardGroup>
 
-## Add a document
+## Pages: living documentation
+
+A **Page** is the document your company reads every day — the refund policy, the onboarding walkthrough, the sales team rules. Click **New page** and start writing.
+
+<Frame caption="📸 Screenshot to insert [/en/cortex/knowledge]: full-screen Page editor, with the title as H1, the formatting bar, the side outline and the 'Write with AI' panel open.">
+  <img src="/images/placeholder.svg" alt="Page editor" />
+</Frame>
+
+### The editor, for non-technical people
+
+- **Plain-language formatting**: bold, italic, headings, lists, task lists, quote, code, divider, link.
+- **Images**: drag them in, **paste** (Ctrl+V) straight from a screenshot, and **drag the edge to resize**.
+- **Tables** with header row, add/remove row and column.
+- **Callout panels** (tip, info, warning, success, error) for what must not be missed.
+- **Automatic outline** built from the headings — the page navigates itself.
+- **`/` menu**: type `/` mid-text and pick a block (heading, table, image, panel, list…).
+- **Copy and paste from outside** keeps the styling (bold, lists, links, tables).
+- **Local draft** on every keystroke: if the browser closes, your text is there when you come back.
+
+<Tip>
+A page only enters search and agent answers once it is **Published**. While it's a **draft**, it's yours to work on in peace.
+</Tip>
+
+### AI writes with you — and you say what you want
+
+The **AI** button at the top of the editor opens the writing panel. The important part: there's a field where **you say what you want**, in plain language — *"focus on the sales team, include a table of minimum office days and an equipment checklist"* — and the AI follows it.
 
 <Steps>
-  <Step title="Choose the area">
-    Every document belongs to an **area** (e.g. Marketing, Finance). This organizes the base and controls who sees it.
+  <Step title="Outline">
+    Give the subject and the instruction. The AI proposes a **title + sections**, already formatted and consistent with what's already documented in your company (it reads Knowledge before writing).
   </Step>
-  <Step title="Upload or write">
-    **Upload a file** (iTeam extracts the text) **or** write directly in the built-in **text editor**. Give it a clear title and a description — they help the search find the document later.
+  <Step title="Section by section">
+    Ask for **one section** at a time ("Office days", "Exceptions"). The AI writes just that block and drops it in place — you review and move on.
   </Step>
-  <Step title="Set the visibility">
-    **Company** (everyone sees it) or **Area** (only those who belong to that area). Private area content doesn't show up for those outside the area — not even in the agents' answers.
+  <Step title="Improve what's already written">
+    Select a passage and ask to **improve, shorten, expand, or turn it into a list/table**, with whatever tone instruction you want.
   </Step>
 </Steps>
 
 <Info>
-On saving, the document is **indexed** (turned into a representation the AI searches by meaning). Large documents may take a few moments to become 100% searchable — the title and description are available right away.
+The AI uses the **platform model** and never publishes for you: the text lands in the editor as a proposal — you review and publish.
 </Info>
+
+### Organization: tree, sub-pages and labels
+
+- **Sub-pages** (up to 4 levels): click **+ sub-page** in the tree. Great for "Sales handbook → Prospecting → Contact cadence".
+- **Drag to move** a page to another parent or another position.
+- **Labels** (e.g. `policy`, `onboarding`) to filter the tree.
+- **Page mentions**: type `@` and the title to create a **link between pages**. Each page shows **who cites it**.
+
+### History and periodic review
+
+Every publish creates a **version** with author and date. You open the **history**, compare and **restore** any earlier version — nothing is lost.
+
+You can also set **"review every N days"**. Once the deadline passes, the page is flagged as **may be out of date** and the owner is **chased automatically** until they click *reviewed*.
+
+<Warning>
+The "may be out of date" flag is visible to readers and is taken into account by the agents: they warn you the source is overdue instead of answering as if it were fresh.
+</Warning>
+
+### On mobile
+
+The editor opens **full screen** on the phone, with the formatting bar scrolling horizontally, the AI panel rising as a bottom sheet, and the same **save draft**, **publish**, **history** and **access** buttons.
+
+## Adding a document or a file
+
+<Steps>
+  <Step title="Pick the area">
+    Every item belongs to an **area** (e.g. Marketing, Finance). That organizes the base and controls who sees it.
+  </Step>
+  <Step title="Upload or write">
+    **Upload a file** (iTeam extracts the text) **or** write straight in the editor. Give it a clear title — that's what search leans on later.
+  </Step>
+  <Step title="Set who can read it">
+    Company, area, chosen people, or only you (see below).
+  </Step>
+</Steps>
+
+<Info>
+On save the content is **indexed** (turned into a representation the AI searches by meaning). Large items may take a few moments to become 100% searchable — the title is available immediately.
+</Info>
+
+## Who can read it: the four options
+
+The **access** button in the page editor (and in the document form) offers exactly the same four options for every kind of content:
+
+| Option | Who reads |
+| --- | --- |
+| **Whole company** | Any member — and the agents use it in anyone's answers. |
+| **A single area** | Whoever belongs to the chosen area. Owner and admin can see it, for governance. |
+| **Chosen people** | Only the people you tick in the list (plus the author). |
+| **Only me** | Nobody else reads it — **not even an admin**, and not other people's agents. |
+
+<Warning>
+The rule covers **reading**, **search** and the **agents** — it is enforced inside the search mechanism itself, not just "hidden in the UI". What you restrict here does not show up in the answers of anyone without access.
+</Warning>
 
 ## How the agents use it
 
-The content doesn't sit idle: when you ask an agent (or **Cortex**) something, it **searches the knowledge base** and uses the relevant passages to answer — citing what it found. That's why it's worth feeding the base: each document makes **all the agents** better prepared.
+When you ask an agent (or **Cortex**, or your **Personal Assistant**) something, it **searches Knowledge** and answers with the relevant passages, citing the title. When the source is a **Page**, it hands you the page **link** — one click and you're in the document.
+
+The agent can also **propose documentation**: ask *"document this as a page"* and it creates the page as a **draft**, with the link, for a human to review and publish.
 
 <Tip>
-Start with your **niche's glossary** and **2 or 3 key documents** (a support policy, business rules, a playbook). The payoff shows up in the very first conversation with an agent.
+Start with your **industry glossary** and **2 or 3 key pages** (support policy, business rules, one playbook). The payoff shows up in the very first conversation with an agent.
 </Tip>
 
 ## Search by meaning
 
-The search is **semantic**: you don't need to hit the exact word. Asking *"what's our discount limit?"* finds the right passage even if the document says *"commercial concession policy"*.
+Search is **semantic**: you don't have to guess the exact word. Asking *"what's our discount limit?"* finds the right passage even if the page says *"commercial concessions policy"*. The **type** filter includes **Page**, alongside documents, files and glossary.
 
-## Permissions and privacy
+## Same thing in a project — and isolated
 
-Knowledge respects access by **resource** and by **area**:
-
-- Documents with **Company** visibility — all members see them.
-- Documents with **Area** visibility — only those who belong to the area (owner/admin see everything).
-- The agents and Cortex **never** bring, in an answer, content the asking user couldn't see.
-
-<Warning>
-Privacy also applies to the AI's answers: if a document is private to an area, it's **not** considered when the person asking isn't from that area. This is guaranteed in the search mechanism itself — it's not just "hiding it on screen".
-</Warning>
+Every project has its own **Project Cortex** with its own Pages tab. It works the same way, but the content is **isolated**: a project page is only read by project members and only used by that project's agent.

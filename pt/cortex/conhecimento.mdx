@@ -1,68 +1,144 @@
 ---
 title: "Conhecimento"
 sidebarTitle: "Conhecimento"
-description: "A base de conhecimento da empresa dentro do Cortex: documentos (enviados ou redigidos ali mesmo) e um glossário de termos, organizados por área. Tudo fica pesquisável pelos agentes por significado, respeitando quem pode ver o quê. É o 'Notion inteligente' do iTeam."
+description: "A base de conhecimento da empresa dentro do Cortex: Páginas (documentação viva, estilo Confluence, com a IA escrevendo junto), documentos enviados ou redigidos e um glossário de termos — organizados por área. Tudo pesquisável pelos agentes por significado, respeitando quem pode ver o quê."
 ---
 
-**Conhecimento** é a base de documentos e definições da sua empresa, dentro do Cortex. Em vez de o conhecimento ficar espalhado em drives e na cabeça das pessoas, você o guarda aqui — e os **agentes passam a responder com base nele**. Pense num "Notion inteligente": além de guardar, ele **entende** o conteúdo e o traz na hora certa.
+**Conhecimento** é a base de documentação e definições da sua empresa, dentro do Cortex. Em vez de o conhecimento ficar espalhado em drives, PDFs e na cabeça das pessoas, você o guarda aqui — e os **agentes passam a responder com base nele**, com link para a fonte.
 
-<Frame caption="📸 Screenshot a inserir [/pt/cortex/conhecimento]: página Conhecimento com a lista de documentos por área, o glossário de termos e o botão para adicionar documento; botão 'Perguntar ao Cortex' no topo.">
+<Frame caption="📸 Screenshot a inserir [/pt/cortex/conhecimento]: página Conhecimento com a árvore de Páginas à esquerda, a lista de documentos por área, o glossário e os botões 'Nova página', 'Nota', 'Termo' e 'Upload'.">
   <img src="/images/placeholder.svg" alt="Base de conhecimento" />
 </Frame>
 
 ## Como funciona, em uma frase
 
-Você adiciona **documentos** e **termos de glossário** (por área) → o iTeam **indexa** o conteúdo por significado → quando um agente (ou o Cortex) precisa, ele **busca e usa** automaticamente, respeitando a **alçada** de quem perguntou.
+Você escreve **Páginas**, adiciona **documentos** e **termos de glossário** → o iTeam **indexa** o conteúdo por significado → quando um agente (ou o Cortex) precisa, ele **busca, usa e cita** — respeitando a **alçada** de quem perguntou.
 
-## Duas coisas que você guarda aqui
+## Três coisas que você guarda aqui
 
-<CardGroup cols={2}>
-  <Card title="Documentos" icon="file-lines">
-    Playbooks, políticas, procedimentos, contexto de negócio. Você pode **enviar um arquivo** ou **redigir o texto ali mesmo** no editor.
+<CardGroup cols={3}>
+  <Card title="Páginas" icon="file-pen">
+    A **documentação viva** da empresa: políticas, playbooks, procedimentos. Editor completo (títulos, listas, tabelas, imagens, painéis de destaque), sub-páginas, histórico de versões e a **IA escrevendo junto**.
+  </Card>
+  <Card title="Documentos e arquivos" icon="file-lines">
+    O que já existe pronto: PDF, planilha, apresentação, texto colado. Você **envia o arquivo** e o iTeam extrai o conteúdo.
   </Card>
   <Card title="Glossário" icon="book-open">
-    Os **termos** e siglas da sua empresa/nicho, com a definição. Ex., em iGaming: *GGR, NGR, FTD, MTD, TDD*. Assim o agente fala a sua língua.
+    Os **termos** e siglas da sua empresa/nicho, com a definição. Ex., em iGaming: *GGR, NGR, FTD, MTD*. Assim o agente fala a sua língua.
   </Card>
 </CardGroup>
 
-## Adicionar um documento
+## Páginas: a documentação viva
+
+Uma **Página** é aquele documento que a empresa consulta todo dia — a política de reembolso, o passo a passo do onboarding, as regras do time comercial. Clique em **Nova página** e escreva.
+
+<Frame caption="📸 Screenshot a inserir [/pt/cortex/conhecimento]: editor de Página em tela cheia, com o título como H1, a barra de formatação, o sumário lateral e o painel 'Escrever com IA' aberto.">
+  <img src="/images/placeholder.svg" alt="Editor de Página" />
+</Frame>
+
+### O editor, para quem não é técnico
+
+- **Formatação em português**: negrito, itálico, títulos, listas, lista de tarefas, citação, código, linha divisória, link.
+- **Imagens**: arraste para dentro, **cole** (Ctrl+V) direto de um print, e **arraste a borda para redimensionar**.
+- **Tabelas** com cabeçalho, adicionar/remover linha e coluna.
+- **Painéis de destaque** (dica, informação, atenção, sucesso, erro) para o que não pode passar batido.
+- **Sumário automático** a partir dos títulos — a página fica navegável sozinha.
+- **Menu `/`**: digite `/` no meio do texto e escolha o bloco (título, tabela, imagem, painel, lista…).
+- **Copiar e colar de fora** preserva o estilo (negrito, listas, links, tabelas).
+- **Rascunho local** a cada tecla: se o navegador fechar, o texto está lá quando você volta.
+
+<Tip>
+A página só entra nas buscas e nas respostas dos agentes quando é **Publicada**. Enquanto estiver como **rascunho**, ela é sua para trabalhar em paz.
+</Tip>
+
+### A IA escreve com você — e você diz o que quer
+
+No topo do editor, o botão **IA** abre o painel de escrita. O ponto importante: existe um campo onde **você diz o que quer**, em português — *"foque no time comercial, inclua uma tabela de dias no escritório e um checklist de equipamentos"* — e a IA obedece.
 
 <Steps>
-  <Step title="Escolha a área">
-    Todo documento pertence a uma **área** (ex.: Marketing, Financeiro). Isso organiza a base e controla quem enxerga.
+  <Step title="Esqueleto">
+    Informe o assunto e a instrução. A IA propõe **título + seções** já formatadas, coerentes com o que já está documentado na sua empresa (ela lê o Conhecimento antes de escrever).
   </Step>
-  <Step title="Envie ou escreva">
-    **Envie um arquivo** (o iTeam extrai o texto) **ou** escreva direto no **editor de texto** embutido. Dê um título claro e uma descrição — eles ajudam a busca a encontrar o documento depois.
+  <Step title="Seção por seção">
+    Peça **uma seção** de cada vez ("Dias no escritório", "Exceções"). A IA escreve só aquele bloco e encaixa no lugar — você revisa e segue.
   </Step>
-  <Step title="Defina a visibilidade">
-    **Empresa** (todo mundo vê) ou **Área** (só quem participa daquela área). Conteúdo de área privada não aparece para quem não é da área — nem nas respostas dos agentes.
+  <Step title="Melhorar o que já está escrito">
+    Selecione um trecho e peça para **melhorar, encurtar, alongar ou virar lista/tabela**, com a instrução de tom que você quiser.
   </Step>
 </Steps>
 
 <Info>
-Ao salvar, o documento é **indexado** (transformado em uma representação que a IA busca por significado). Documentos grandes podem levar alguns instantes para ficarem 100% pesquisáveis — o título e a descrição já entram na hora.
+A IA usa o **modelo da plataforma** e nunca publica por você: o texto entra no editor como proposta, você revisa e publica.
 </Info>
+
+### Organização: árvore, sub-páginas e rótulos
+
+- **Sub-páginas** (até 4 níveis): clique em **+ sub-página** na árvore. Serve para "Manual do time comercial → Prospecção → Cadência de contato".
+- **Arraste para mover** uma página para outra mãe ou outra posição.
+- **Rótulos** (ex.: `política`, `onboarding`) para filtrar a árvore.
+- **Menção de página**: escreva `@` e o título para criar um **link entre páginas**. A página avisa **quem a cita**.
+
+### Histórico e revisão periódica
+
+Cada publicação gera uma **versão** com autor e data. Você abre o **histórico**, compara e **restaura** qualquer versão anterior — nada se perde.
+
+Você também define **"revisar a cada N dias"**. Passado o prazo, a página aparece marcada como **pode estar desatualizada** e o responsável é **cobrado automaticamente** até clicar em *revisado*.
+
+<Warning>
+A marca "pode estar desatualizada" é visível para quem lê e é considerada pelos agentes: eles avisam quando a fonte está vencida em vez de responder como se fosse verdade fresca.
+</Warning>
+
+### No celular
+
+O editor abre em **tela cheia** no celular, com a barra de formatação rolando na horizontal, o painel de IA subindo de baixo (estilo folha) e os mesmos botões de **salvar rascunho**, **publicar**, **histórico** e **acesso**.
+
+## Adicionar um documento ou um arquivo
+
+<Steps>
+  <Step title="Escolha a área">
+    Todo item pertence a uma **área** (ex.: Marketing, Financeiro). Isso organiza a base e controla quem enxerga.
+  </Step>
+  <Step title="Envie ou escreva">
+    **Envie um arquivo** (o iTeam extrai o texto) **ou** escreva direto no editor. Dê um título claro — ele ajuda a busca a encontrar depois.
+  </Step>
+  <Step title="Defina quem pode ler">
+    Empresa, área, pessoas escolhidas ou só você (veja abaixo).
+  </Step>
+</Steps>
+
+<Info>
+Ao salvar, o conteúdo é **indexado** (transformado em uma representação que a IA busca por significado). Itens grandes podem levar alguns instantes para ficarem 100% pesquisáveis — o título já entra na hora.
+</Info>
+
+## Quem pode ler: as quatro opções
+
+O botão de **acesso**, no editor da página (e no formulário dos documentos), oferece exatamente as mesmas quatro opções para todo tipo de conteúdo:
+
+| Opção | Quem lê |
+| --- | --- |
+| **Toda a empresa** | Qualquer membro — e os agentes usam nas respostas de qualquer pessoa. |
+| **Só uma área** | Quem pertence à área escolhida. Dono e admin veem, para governança. |
+| **Pessoas escolhidas** | Somente quem você marcar na lista (mais o autor). |
+| **Só eu** | Ninguém mais lê — **nem admin**, nem os agentes de outras pessoas. |
+
+<Warning>
+A regra vale para a **leitura**, para a **busca** e para os **agentes** — é aplicada no próprio mecanismo de busca, não é só "esconder na tela". O que você restringe aqui não aparece nas respostas de quem não tem acesso.
+</Warning>
 
 ## Como os agentes usam
 
-O conteúdo não fica parado: quando você pergunta algo a um agente (ou ao **Cortex**), ele **procura na base de conhecimento** e usa os trechos relevantes para responder — citando o que encontrou. É por isso que vale a pena alimentar a base: cada documento deixa **todos os agentes** mais preparados.
+Quando você pergunta algo a um agente (ou ao **Cortex**, ou ao seu **Assistente Pessoal**), ele **procura no Conhecimento** e responde com os trechos relevantes, citando o título. Quando a fonte é uma **Página**, ele devolve o **link** dela — você clica e cai direto no documento.
+
+O agente também pode **propor documentação**: peça *"documente isso como página"* e ele cria a página como **rascunho**, com o link, para uma pessoa revisar e publicar.
 
 <Tip>
-Comece pelo **glossário do seu nicho** e por **2 ou 3 documentos-chave** (política de atendimento, regras de negócio, um playbook). O ganho aparece já na primeira conversa com um agente.
+Comece pelo **glossário do seu nicho** e por **2 ou 3 páginas-chave** (política de atendimento, regras de negócio, um playbook). O ganho aparece já na primeira conversa com um agente.
 </Tip>
 
 ## Busca por significado
 
-A busca é **semântica**: você não precisa acertar a palavra exata. Perguntar *"qual nosso limite de desconto?"* encontra o trecho certo mesmo que o documento diga *"política de concessões comerciais"*.
+A busca é **semântica**: você não precisa acertar a palavra exata. Perguntar *"qual nosso limite de desconto?"* encontra o trecho certo mesmo que a página diga *"política de concessões comerciais"*. O filtro por **tipo** inclui **Página**, junto de documentos, arquivos e glossário.
 
-## Alçada e privacidade
+## No projeto, igual — e isolado
 
-O Conhecimento respeita o acesso por **recurso** e por **área**:
-
-- Documentos de **visibilidade Empresa** — todos os membros veem.
-- Documentos de **visibilidade Área** — só quem participa da área (dono/admin veem tudo).
-- Os agentes e o Cortex **nunca** trazem, na resposta, conteúdo que o usuário que perguntou não poderia ver.
-
-<Warning>
-A privacidade vale também para as respostas da IA: se um documento é privado de uma área, ele **não** é considerado quando quem pergunta não é daquela área. Isso é garantido no próprio mecanismo de busca — não é só "esconder na tela".
-</Warning>
+Todo projeto tem o **Cortex do Projeto** com a sua própria aba de Páginas. Funciona igual, mas o conteúdo é **isolado**: uma página do projeto só é lida por quem participa do projeto e só é usada pelo agente daquele projeto.
